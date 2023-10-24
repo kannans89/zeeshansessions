@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\bin\Debug\net6.0\AccountConstructorApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\bin\Debug\net6.0\AccountConstructorApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\bin\Debug\net6.0\AccountConstructorApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\bin\Debug\net6.0\AccountConstructorApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\bin\Debug\net6.0\AccountConstructorApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\refint\AccountConstructorApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\AccountConstructorApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\AccountConstructorApp\AccountConstructorApp\obj\Debug\net6.0\ref\AccountConstructorApp.dll

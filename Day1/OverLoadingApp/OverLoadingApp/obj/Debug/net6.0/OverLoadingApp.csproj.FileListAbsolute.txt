@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\bin\Debug\net6.0\OverLoadingApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\bin\Debug\net6.0\OverLoadingApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\bin\Debug\net6.0\OverLoadingApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\bin\Debug\net6.0\OverLoadingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\bin\Debug\net6.0\OverLoadingApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\refint\OverLoadingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\OverLoadingApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\OverLoadingApp\OverLoadingApp\obj\Debug\net6.0\ref\OverLoadingApp.dll

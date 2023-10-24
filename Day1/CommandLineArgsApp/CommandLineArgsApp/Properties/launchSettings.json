@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CommandLineArgsApp": {
+      "commandName": "Project",
+      "commandLineArgs": "Zeeshan Kannan London Mumbai"
+    }
+  }
+}

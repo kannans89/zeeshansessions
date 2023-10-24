@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\bin\Debug\net6.0\FunctionApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\bin\Debug\net6.0\FunctionApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\bin\Debug\net6.0\FunctionApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\bin\Debug\net6.0\FunctionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\bin\Debug\net6.0\FunctionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\refint\FunctionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\FunctionApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\FunctionApp\FunctionApp\obj\Debug\net6.0\ref\FunctionApp.dll

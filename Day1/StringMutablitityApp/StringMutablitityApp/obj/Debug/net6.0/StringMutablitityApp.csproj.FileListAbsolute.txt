@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\bin\Debug\net6.0\StringMutablitityApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\bin\Debug\net6.0\StringMutablitityApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\bin\Debug\net6.0\StringMutablitityApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\bin\Debug\net6.0\StringMutablitityApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\bin\Debug\net6.0\StringMutablitityApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\refint\StringMutablitityApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\StringMutablitityApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\StringMutablitityApp\StringMutablitityApp\obj\Debug\net6.0\ref\StringMutablitityApp.dll

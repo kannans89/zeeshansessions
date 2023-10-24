@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\bin\Debug\net7.0\welcomeapp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\bin\Debug\net7.0\welcomeapp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\bin\Debug\net7.0\welcomeapp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\bin\Debug\net7.0\welcomeapp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\bin\Debug\net7.0\welcomeapp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\refint\welcomeapp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\welcomeapp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\welcomeapp\obj\Debug\net7.0\ref\welcomeapp.dll

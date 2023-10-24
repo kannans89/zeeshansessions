@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\bin\Debug\net6.0\PassingValuesToFunctions.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\bin\Debug\net6.0\PassingValuesToFunctions.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\bin\Debug\net6.0\PassingValuesToFunctions.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\bin\Debug\net6.0\PassingValuesToFunctions.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\bin\Debug\net6.0\PassingValuesToFunctions.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\refint\PassingValuesToFunctions.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\PassingValuesToFunctions.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\PassingValuesToFunctions\PassingValuesToFunctions\obj\Debug\net6.0\ref\PassingValuesToFunctions.dll

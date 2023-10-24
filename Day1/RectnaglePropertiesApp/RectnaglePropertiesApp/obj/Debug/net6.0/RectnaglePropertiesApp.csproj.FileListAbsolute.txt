@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\bin\Debug\net6.0\RectnaglePropertiesApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\bin\Debug\net6.0\RectnaglePropertiesApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\bin\Debug\net6.0\RectnaglePropertiesApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\bin\Debug\net6.0\RectnaglePropertiesApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\bin\Debug\net6.0\RectnaglePropertiesApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\refint\RectnaglePropertiesApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\RectnaglePropertiesApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnaglePropertiesApp\RectnaglePropertiesApp\obj\Debug\net6.0\ref\RectnaglePropertiesApp.dll

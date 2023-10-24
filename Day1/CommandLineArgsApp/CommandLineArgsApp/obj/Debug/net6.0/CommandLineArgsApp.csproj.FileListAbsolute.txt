@@ -1,0 +1,16 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\bin\Debug\net6.0\CommandLineArgsApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\bin\Debug\net6.0\CommandLineArgsApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\bin\Debug\net6.0\CommandLineArgsApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\bin\Debug\net6.0\CommandLineArgsApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\bin\Debug\net6.0\CommandLineArgsApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\refint\CommandLineArgsApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\ref\CommandLineArgsApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.Properties.Resources.resources
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\CommandLineArgsApp\CommandLineArgsApp\obj\Debug\net6.0\CommandLineArgsApp.csproj.GenerateResource.cache

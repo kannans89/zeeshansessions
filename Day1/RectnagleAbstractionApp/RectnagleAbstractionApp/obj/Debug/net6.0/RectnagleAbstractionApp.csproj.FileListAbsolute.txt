@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\bin\Debug\net6.0\RectnagleAbstractionApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\bin\Debug\net6.0\RectnagleAbstractionApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\bin\Debug\net6.0\RectnagleAbstractionApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\bin\Debug\net6.0\RectnagleAbstractionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\bin\Debug\net6.0\RectnagleAbstractionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\refint\RectnagleAbstractionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\RectnagleAbstractionApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\RectnagleAbstractionApp\RectnagleAbstractionApp\obj\Debug\net6.0\ref\RectnagleAbstractionApp.dll
