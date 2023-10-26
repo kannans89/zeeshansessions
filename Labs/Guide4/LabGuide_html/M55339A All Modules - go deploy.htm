@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 4: C# Classes</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="true">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 4: C# Classes</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="4" data-line-end="5">Important Information about running this class.</p>
+<p class="has-line-data" data-line-start="6" data-line-end="7">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="8" data-line-end="9">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Adding Data Validation to the Application</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="14" data-line-end="15"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="16" data-line-end="17">Now 
+that the user interface navigation features are working, you decide to 
+replace the simple structs with classes to make your application more 
+efficient and straightforward. You have also been asked to include 
+validation logic in the application to ensure that when a user adds 
+grades to a student, that the data is valid before it is written to the 
+database. You decide to create a unit test project that will perform 
+tests against the required validation for different grade scenarios. 
+Teachers who have seen the application have expressed a concern that the
+ students in their classes are displayed in a random order. You decide 
+to use the IComparable interface to enable them to be displayed in 
+alphabetical order. Finally, you have been asked to add functionality to
+ the application to enable teachers to add students to and remove 
+students from a class, and to add student grades to the database.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="20" data-line-end="21"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="22" data-line-end="23">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="24" data-line-end="25">Create classes.</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26">Write data validation code.</li>
+<li class="has-line-data" data-line-start="26" data-line-end="27">Implement the IComparable interface.</li>
+<li class="has-line-data" data-line-start="27" data-line-end="29">Use generic collections.</li>
+</ul>
+<p class="has-line-data" data-line-start="29" data-line-end="30">Estimated Time: <strong>75 minutes</strong></p>
+</div>
+<h3>Exercise 1: Implementing the Teacher, Student, and Grade Structs as Classes</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="35" data-line-end="36"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="37" data-line-end="41">In this
+ exercise, you'll convert the existing Teacher, Student, and Grade 
+structs into classes. This will enable you to implement the additional 
+functionality required for each class, such as adding constructors, 
+properties, and methods.
+In the Teacher and Student classes, add a write-only property for the 
+password, add the VerifyPassword method, and then define their 
+respective constructors.
+You'll also modify the Logon_Click method to use the VerifyPassword 
+method to verify passwords when a user logs on.
+Finally, you'll run the application and verify that it still functions 
+correctly, allowing a student or a teacher to log on.</p>
+</div>
+<h3>Task 1: Convert the Grades struct into a class</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="45" data-line-end="47">
+<div class="task-step-checkbox" data-foo="74" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="45" data-line-end="46"> Click <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="47" data-line-end="48">
+<div class="task-step-checkbox" data-foo="79" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="47" data-line-end="48"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="48" data-line-end="54">
+<div class="task-step-checkbox" data-foo="84" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="48" data-line-end="49"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Mod04\Labfiles\Starter\Exercise 1</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="51" data-line-end="52"><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="54" data-line-end="55">
+<div class="task-step-checkbox" data-foo="94" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="54" data-line-end="55"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="55" data-line-end="56">
+<div class="task-step-checkbox" data-foo="99" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="55" data-line-end="56"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1a: Convert Grade into a class and define constructors</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="62">
+<div class="task-step-checkbox" data-foo="104" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> In the code editor, below the comment, modify the <strong>public struct Grade</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public class Grade"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="59" data-line-end="61"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Grade</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="86">
+<div class="task-step-checkbox" data-foo="110" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> Click at the end of the code <strong>public string Comments { get; set; }</strong>, press Enter twice, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Constructor to initialize the properties of a new Grade
+public Grade(int studentID, string assessmentDate, string subject, string assessment, string comments)
+{
+    StudentID = studentID;
+    AssessmentDate = assessmentDate;
+    SubjectName = subject;
+    Assessment = assessment;
+    Comments = comments;
+}
+
+// Default constructor
+public Grade()
+{
+    StudentID = 0;
+    AssessmentDate = DateTime.Now.ToString(&quot;d&quot;);
+    SubjectName = &quot;Math&quot;;
+    Assessment = &quot;A&quot;;
+    Comments = String.Empty;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="65" data-line-end="85"><span class="hljs-comment">// Constructor to initialize the properties of a new Grade</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Grade</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> studentID, <span class="hljs-built_in">string</span> assessmentDate, <span class="hljs-built_in">string</span> subject, <span class="hljs-built_in">string</span> assessment, <span class="hljs-built_in">string</span> comments</span>)</span>
+{
+    StudentID = studentID;
+    AssessmentDate = assessmentDate;
+    SubjectName = subject;
+    Assessment = assessment;
+    Comments = comments;
+}
+
+<span class="hljs-comment">// Default constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Grade</span>(<span class="hljs-params"></span>)</span>
+{
+    StudentID = <span class="hljs-number">0</span>;
+    AssessmentDate = DateTime.Now.ToString(<span class="hljs-string">"d"</span>);
+    SubjectName = <span class="hljs-string">"Math"</span>;
+    Assessment = <span class="hljs-string">"A"</span>;
+    Comments = String.Empty;
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Convert the Students and Teachers structs into classes</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="88" data-line-end="90">
+<div class="task-step-checkbox" data-foo="121" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="88" data-line-end="89"> In the <strong>Task List</strong> window, double-click the <strong>TODO:
+ Exercise 1: Task 2a: Convert Student into a class, make the password 
+property write-only, add the VerifyPassword method, and define 
+constructors</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="90" data-line-end="96">
+<div class="task-step-checkbox" data-foo="126" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="90" data-line-end="91"> In the code editor, below the comment, modify the <strong>public struct Student</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public class Student"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="93" data-line-end="95"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Student</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="96" data-line-end="102">
+<div class="task-step-checkbox" data-foo="132" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="96" data-line-end="97"> Delete the following line of code from the <strong>Student</strong> class.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public string Password {get; set;}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="99" data-line-end="101"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Password {<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="102" data-line-end="125">
+<div class="task-step-checkbox" data-foo="138" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="102" data-line-end="103"> Press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private string _password = Guid.NewGuid().ToString(); // Generate a random password by default
+
+public string Password
+{
+    set
+    {
+        _password = value;
+    }
+}
+
+public bool VerifyPassword(string pass)
+{
+    return (String.Compare(pass, _password) == 0);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="105" data-line-end="120"><span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> _password = Guid.NewGuid().ToString(); <span class="hljs-comment">// Generate a random password by default</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Password
+{
+    <span class="hljs-keyword">set</span>
+    {
+        _password = <span class="hljs-keyword">value</span>;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">VerifyPassword</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> pass</span>)</span>
+{
+    <span class="hljs-keyword">return</span> (String.Compare(pass, _password) == <span class="hljs-number">0</span>);
+}
+</code></pre>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="122" data-line-end="123"><strong>Note</strong> An application should not be able to read passwords; only set them and verify that a password is correct.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="125" data-line-end="151">
+<div class="task-step-checkbox" data-foo="149" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="125" data-line-end="126"> Click at the end of the code <strong>public string LastName { get; set; }</strong>, press Enter twice, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Constructor to initialize the properties of a new Student
+public Student(int studentID, string userName, string password, string   firstName,   string lastName, int teacherID)
+{
+StudentID = studentID;
+UserName = userName;
+Password = password;
+FirstName = firstName;
+LastName = lastName;
+TeacherID = teacherID;
+}
+
+// Default constructor
+public Student()
+{
+StudentID = 0;
+UserName = String.Empty;
+Password = String.Empty;
+FirstName = String.Empty;
+LastName = String.Empty;
+TeacherID = 0;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="128" data-line-end="150"><span class="hljs-comment">// Constructor to initialize the properties of a new Student</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> studentID, <span class="hljs-built_in">string</span> userName, <span class="hljs-built_in">string</span> password, <span class="hljs-built_in">string</span>   firstName,   <span class="hljs-built_in">string</span> lastName, <span class="hljs-built_in">int</span> teacherID</span>)</span>
+{
+StudentID = studentID;
+UserName = userName;
+Password = password;
+FirstName = firstName;
+LastName = lastName;
+TeacherID = teacherID;
+}
+
+<span class="hljs-comment">// Default constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span>(<span class="hljs-params"></span>)</span>
+{
+StudentID = <span class="hljs-number">0</span>;
+UserName = String.Empty;
+Password = String.Empty;
+FirstName = String.Empty;
+LastName = String.Empty;
+TeacherID = <span class="hljs-number">0</span>;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="151" data-line-end="153">
+<div class="task-step-checkbox" data-foo="155" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="151" data-line-end="152"> In the <strong>Task List</strong> window, double-click the <strong>TODO:
+ Exercise 1: Task 2b: Convert Teacher into a class, make the password 
+property write-only, add the VerifyPassword method, and define 
+constructors</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="153" data-line-end="159">
+<div class="task-step-checkbox" data-foo="160" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="153" data-line-end="154"> In the code editor, below the comment, modify the <strong>public struct Teacher</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public class Teacher"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="156" data-line-end="158"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="159" data-line-end="165">
+<div class="task-step-checkbox" data-foo="166" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="159" data-line-end="160"> Delete the following line of code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public string Password {get; set;},"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="162" data-line-end="164"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Password {<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;},
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="165" data-line-end="184">
+<div class="task-step-checkbox" data-foo="172" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="165" data-line-end="166"> Press Enter and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private string _password = Guid.NewGuid().ToString(); // Generate a random password by default
+    
+    public string Password
+    {
+        set
+        {
+            _password = value;
+        }
+    }
+    
+    public bool VerifyPassword(string pass)
+    {
+        return (String.Compare(pass, _password) == 0);
+    }"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="168" data-line-end="183"><span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> _password = Guid.NewGuid().ToString(); <span class="hljs-comment">// Generate a random password by default</span>
+    
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Password
+    {
+        <span class="hljs-keyword">set</span>
+        {
+            _password = <span class="hljs-keyword">value</span>;
+        }
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">VerifyPassword</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> pass</span>)</span>
+    {
+        <span class="hljs-keyword">return</span> (String.Compare(pass, _password) == <span class="hljs-number">0</span>);
+    }
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="184" data-line-end="210">
+<div class="task-step-checkbox" data-foo="178" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="184" data-line-end="185"> Click at the end of the code <strong>public string Class {get; set;}</strong>, press Enter twice, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Constructor to initialize the properties of a new Teacher
+public Teacher(int teacherID, string userName, string password, string firstName, string lastName, string className)
+{
+    TeacherID = teacherID;
+    UserName = userName;
+    Password = password;
+    FirstName = firstName;
+    LastName = lastName;
+    Class = className;
+}
+
+// Default constructor
+public Teacher()
+{
+    TeacherID = 0;
+    UserName = String.Empty;
+    Password = String.Empty;
+    FirstName = String.Empty;
+    LastName = String.Empty;
+    Class = String.Empty;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="187" data-line-end="209"><span class="hljs-comment">// Constructor to initialize the properties of a new Teacher</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> teacherID, <span class="hljs-built_in">string</span> userName, <span class="hljs-built_in">string</span> password, <span class="hljs-built_in">string</span> firstName, <span class="hljs-built_in">string</span> lastName, <span class="hljs-built_in">string</span> className</span>)</span>
+{
+    TeacherID = teacherID;
+    UserName = userName;
+    Password = password;
+    FirstName = firstName;
+    LastName = lastName;
+    Class = className;
+}
+
+<span class="hljs-comment">// Default constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params"></span>)</span>
+{
+    TeacherID = <span class="hljs-number">0</span>;
+    UserName = String.Empty;
+    Password = String.Empty;
+    FirstName = String.Empty;
+    LastName = String.Empty;
+    Class = String.Empty;
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Use the VerifyPassword method to verify the password when a user logs in</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="212" data-line-end="214">
+<div class="task-step-checkbox" data-foo="189" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="212" data-line-end="213"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Use the VerifyPassword method of the Teacher class to verify the teacher's password</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="214" data-line-end="220">
+<div class="task-step-checkbox" data-foo="194" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="214" data-line-end="215"> In the code editor, below the comment, in the code for the teacher variable, modify the <strong>String.Compare(t.Password, password.Password) == 0</strong> code to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="t.VerifyPassword(password.Password)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="217" data-line-end="219">t.VerifyPassword(password.Password)
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="220" data-line-end="222">
+<div class="task-step-checkbox" data-foo="200" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="220" data-line-end="221"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Check whether teacher is null before examining the UserName property</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="222" data-line-end="228">
+<div class="task-step-checkbox" data-foo="205" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="222" data-line-end="223"> In the code editor, in the line below the comment, modify the <strong>if</strong> statement condition from <strong>!String.IsNullOrEmpty(teacher.UserName)</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="teacher != null &amp;&amp; !String.IsNullOrEmpty(teacher.UserName)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="225" data-line-end="227">teacher != <span class="hljs-literal">null</span> &amp;&amp; !String.IsNullOrEmpty(teacher.UserName)
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="228" data-line-end="230">
+<div class="task-step-checkbox" data-foo="211" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="228" data-line-end="229"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3c: Use the VerifyPassword method of the Student class to verify the student's password</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="230" data-line-end="236">
+<div class="task-step-checkbox" data-foo="216" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="230" data-line-end="231"> In the code editor, below the comment, in the code for the student variable, modify the <strong>String.Compare(s.Password, password.Password) == 0</strong> code to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="s.VerifyPassword(password.Password)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="233" data-line-end="235">s.VerifyPassword(password.Password)
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="236" data-line-end="237">
+<div class="task-step-checkbox" data-foo="222" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="236" data-line-end="237"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Check whether student is null before examining the UserName property</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="237" data-line-end="243">
+<div class="task-step-checkbox" data-foo="227" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="237" data-line-end="238"> In the code editor, in the line below the comment, modify the <strong>if</strong> statement condition from <strong>!String.IsNullOrEmpty(student.UserName)</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="student != null &amp;&amp; !String.IsNullOrEmpty(student.UserName)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="240" data-line-end="242">student != <span class="hljs-literal">null</span> &amp;&amp; !String.IsNullOrEmpty(student.UserName)
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Build and run the application, and verify that a teacher or student can still log on</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="245" data-line-end="247">
+<div class="task-step-checkbox" data-foo="238" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="245" data-line-end="246"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="247" data-line-end="248">
+<div class="task-step-checkbox" data-foo="243" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="247" data-line-end="248"> On the <strong>Debug</strong> Menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="248" data-line-end="249">
+<div class="task-step-checkbox" data-foo="248" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="248" data-line-end="249"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="249" data-line-end="250">
+<div class="task-step-checkbox" data-foo="253" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="249" data-line-end="250"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password"><code>password</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="250" data-line-end="251">
+<div class="task-step-checkbox" data-foo="258" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="250" data-line-end="251"> Verify that the welcome screen appears, displaying the list of students.</p>
+</li>
+<li class="task-list-item" data-line-start="251" data-line-end="252">
+<div class="task-step-checkbox" data-foo="263" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="251" data-line-end="252"> Click <strong>Log off</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="252" data-line-end="253">
+<div class="task-step-checkbox" data-foo="268" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="252" data-line-end="253"> In the <strong>Username</strong> text box, delete the existing contents, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="grubere"><code>grubere</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="253" data-line-end="254">
+<div class="task-step-checkbox" data-foo="273" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="253" data-line-end="254"> Verify that the welcome screen appears, displaying the list of subjects and grades.</p>
+</li>
+<li class="task-list-item" data-line-start="254" data-line-end="255">
+<div class="task-step-checkbox" data-foo="278" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="254" data-line-end="255"> Click <strong>Log off</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="255" data-line-end="256">
+<div class="task-step-checkbox" data-foo="283" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="255" data-line-end="256"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="256" data-line-end="258">
+<div class="task-step-checkbox" data-foo="288" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="256" data-line-end="257"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="259" data-line-end="260"><strong>Results:</strong> After completing this exercise, the <strong>Teacher</strong>, <strong>Student</strong>, and <strong>Grade</strong> structs will be implemented as classes and the <strong>VerifyPassword</strong> method will be called when a user logs on.</p>
+</div>
+<h3>Exercise 2: Adding Data Validation to the Grade Class</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="265" data-line-end="266"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="267" data-line-end="270">In 
+this exercise, you'll define a public list of strings called Subjects to
+ hold the names of each subject that can be assessed and then populate 
+it with valid subject names.
+You'll then add validation logic to the Grade class to ensure that the 
+subject name appears on the list you created and that the assessment 
+date and assessment grade contain allowed values.
+Finally, you'll create a unit test project to verify that your 
+validation code functions as expected.</p>
+</div>
+<h3>Task 1: Create a list of valid subject names</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="274" data-line-end="276">
+<div class="task-step-checkbox" data-foo="314" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="274" data-line-end="275"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="276" data-line-end="282">
+<div class="task-step-checkbox" data-foo="319" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="276" data-line-end="277"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Mod04\Labfiles\Starter\Exercise 2</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="279" data-line-end="280"><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="282" data-line-end="289">
+<div class="task-step-checkbox" data-foo="329" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="282" data-line-end="284"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1a: Define a List collection for holding the names of valid subjects</strong> task.
+In the code editor, in the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public static List&lt;string&gt; Subjects;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="286" data-line-end="288"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;<span class="hljs-built_in">string</span>&gt; Subjects;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="289" data-line-end="291">
+<div class="task-step-checkbox" data-foo="335" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="289" data-line-end="290"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1b: Populate the list of valid subjects with sample data</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="291" data-line-end="297">
+<div class="task-step-checkbox" data-foo="340" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="291" data-line-end="292"> In the code editor, in the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Subjects = new List&lt;string&gt;() { &quot;Math&quot;, &quot;English&quot;, &quot;History&quot;, &quot;Geography&quot;,  &quot;Science&quot; };"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="294" data-line-end="296">Subjects = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-built_in">string</span>&gt;() { <span class="hljs-string">"Math"</span>, <span class="hljs-string">"English"</span>, <span class="hljs-string">"History"</span>, <span class="hljs-string">"Geography"</span>,  <span class="hljs-string">"Science"</span> };
+</code></pre>
+</li>
+</ol>
+<h4>Task 2: Add validation logic to the Grade class to check the data entered by the user</h4>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="299" data-line-end="301">
+<div class="task-step-checkbox" data-foo="351" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="299" data-line-end="300"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Add validation to the AssessmentDate property</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="301" data-line-end="339">
+<div class="task-step-checkbox" data-foo="356" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="301" data-line-end="302"> In the code editor under comment, delete the <strong>public string AssessmentDate { get; set; }</strong> code, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private string _assessmentDate;
+
+public string AssessmentDate
+{
+    get
+    {
+        return _assessmentDate;
+    }
+
+    set
+    {
+        DateTime assessmentDate;
+
+        // Verify that the user has provided a valid date
+        if (DateTime.TryParse(value, out assessmentDate))
+        {
+            // Check that the date is no later than the current date
+            if (assessmentDate &gt; DateTime.Now)
+            {
+                // Throw an ArgumentOutOfRangeException if the date is after the current date
+                throw new ArgumentOutOfRangeException(&quot;AssessmentDate&quot;, &quot;Assessment date must be on or before the current date&quot;);
+            }
+
+            // If the date is valid, then save it in the appropriate format
+            _assessmentDate = assessmentDate.ToString(&quot;d&quot;);
+        }
+        else
+        {
+            // If the date is not in a valid format then throw an ArgumentException
+            throw new ArgumentException(&quot;AssessmentDate&quot;, &quot;Assessment date is not recognized&quot;);
+        }
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="304" data-line-end="338"><span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> _assessmentDate;
+
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> AssessmentDate
+{
+    <span class="hljs-keyword">get</span>
+    {
+        <span class="hljs-keyword">return</span> _assessmentDate;
+    }
+
+    <span class="hljs-keyword">set</span>
+    {
+        DateTime assessmentDate;
+
+        <span class="hljs-comment">// Verify that the user has provided a valid date</span>
+        <span class="hljs-keyword">if</span> (DateTime.TryParse(<span class="hljs-keyword">value</span>, <span class="hljs-keyword">out</span> assessmentDate))
+        {
+            <span class="hljs-comment">// Check that the date is no later than the current date</span>
+            <span class="hljs-keyword">if</span> (assessmentDate &gt; DateTime.Now)
+            {
+                <span class="hljs-comment">// Throw an ArgumentOutOfRangeException if the date is after the current date</span>
+                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentOutOfRangeException(<span class="hljs-string">"AssessmentDate"</span>, <span class="hljs-string">"Assessment date must be on or before the current date"</span>);
+            }
+
+            <span class="hljs-comment">// If the date is valid, then save it in the appropriate format</span>
+            _assessmentDate = assessmentDate.ToString(<span class="hljs-string">"d"</span>);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-comment">// If the date is not in a valid format then throw an ArgumentException</span>
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">"AssessmentDate"</span>, <span class="hljs-string">"Assessment date is not recognized"</span>);
+        }
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="339" data-line-end="341">
+<div class="task-step-checkbox" data-foo="362" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="339" data-line-end="340"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2b: Add validation to the SubjectName property</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="341" data-line-end="370">
+<div class="task-step-checkbox" data-foo="367" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="341" data-line-end="342"> In the code editor, below the comment, delete the <strong>public string SubjectName { get; set; }</strong> code, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private string _subjectName;
+
+public string SubjectName
+{
+    get
+    {
+        return _subjectName;
+    }
+
+    set
+    {
+        // Check that the specified subject is valid
+        if (DataSource.Subjects.Contains(value))
+        {
+            // If the subject is valid store the subject name
+            _subjectName = value;
+        }
+        else
+        {
+            // If the subject is not valid then throw an ArgumentException
+            throw new ArgumentException(&quot;SubjectName&quot;, &quot;Subject is not recognized&quot;);
+        }
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="344" data-line-end="369"><span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> _subjectName;
+
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> SubjectName
+{
+    <span class="hljs-keyword">get</span>
+    {
+        <span class="hljs-keyword">return</span> _subjectName;
+    }
+
+    <span class="hljs-keyword">set</span>
+    {
+        <span class="hljs-comment">// Check that the specified subject is valid</span>
+        <span class="hljs-keyword">if</span> (DataSource.Subjects.Contains(<span class="hljs-keyword">value</span>))
+        {
+            <span class="hljs-comment">// If the subject is valid store the subject name</span>
+            _subjectName = <span class="hljs-keyword">value</span>;
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-comment">// If the subject is not valid then throw an ArgumentException</span>
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">"SubjectName"</span>, <span class="hljs-string">"Subject is not recognized"</span>);
+        }
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="370" data-line-end="372">
+<div class="task-step-checkbox" data-foo="373" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="370" data-line-end="371"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2c: Add validation to the Assessment property</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="372" data-line-end="403">
+<div class="task-step-checkbox" data-foo="378" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="372" data-line-end="373"> In the code editor, delete the <strong>public string Assessment { get; set; }</strong> code, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private string _assessment;
+
+public string Assessment
+{
+    get
+    {
+        return _assessment;
+    }
+
+    set
+    {
+        // Verify that the grade is in the range A+ to E-
+        // Use a regular expression: a single character in the range A-E at the start of the string followed by an optional + or - at the end of the string
+        Match matchGrade = Regex.Match(value, @&quot;[A-E][+-]?$&quot;);
+
+        if (matchGrade.Success)
+        {
+            _assessment = value;
+        }
+        else
+        {
+            // If the grade is not valid then throw an ArgumentOutOfRangeException
+            throw new ArgumentOutOfRangeException(&quot;Assessment&quot;, &quot;Assessment grade must be in the range of A+ to E-&quot;);
+        }
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="375" data-line-end="402"><span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> _assessment;
+
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Assessment
+{
+    <span class="hljs-keyword">get</span>
+    {
+        <span class="hljs-keyword">return</span> _assessment;
+    }
+
+    <span class="hljs-keyword">set</span>
+    {
+        <span class="hljs-comment">// Verify that the grade is in the range A+ to E-</span>
+        <span class="hljs-comment">// Use a regular expression: a single character in the range A-E at the start of the string followed by an optional + or - at the end of the string</span>
+        Match matchGrade = Regex.Match(<span class="hljs-keyword">value</span>, <span class="hljs-string">@"[A-E][+-]?$"</span>);
+
+        <span class="hljs-keyword">if</span> (matchGrade.Success)
+        {
+            _assessment = <span class="hljs-keyword">value</span>;
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-comment">// If the grade is not valid then throw an ArgumentOutOfRangeException</span>
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentOutOfRangeException(<span class="hljs-string">"Assessment"</span>, <span class="hljs-string">"Assessment grade must be in the range of A+ to E-"</span>);
+        }
+    }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Add a unit test to verify that the validations defined for the Grade class functions as expected</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="405" data-line-end="407">
+<div class="task-step-checkbox" data-foo="389" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="405" data-line-end="406"> On the <strong>File</strong> menu, point to <strong>Add</strong>, and then click <strong>New Project</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="407" data-line-end="409">
+<div class="task-step-checkbox" data-foo="394" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="407" data-line-end="408"> In the <strong>Add a new project</strong> dialog box, in the templates list, filter on <strong>C#</strong>, and <strong>Test</strong>, and then choose <strong>MSTest Test Project</strong> from the list.</p>
+</li>
+<li class="task-list-item" data-line-start="409" data-line-end="411">
+<div class="task-step-checkbox" data-foo="399" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="409" data-line-end="410"> In the <strong>Name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="GradesTest"><code>GradesTest</code></a></strong>, and then click <strong>Next</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="411" data-line-end="413">
+<div class="task-step-checkbox" data-foo="404" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="411" data-line-end="412"> In the <strong>Additional information</strong> dialog box, ensure that <strong>.NET 6.0 (Long-term support)</strong> is selected, and then click <strong>Create</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="413" data-line-end="415">
+<div class="task-step-checkbox" data-foo="409" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="413" data-line-end="414"> Right-click on the <strong>GradesTest</strong> project, and choose <strong>Properties</strong> from the menu.</p>
+</li>
+<li class="task-list-item" data-line-start="415" data-line-end="417">
+<div class="task-step-checkbox" data-foo="414" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="415" data-line-end="416"> In the GradesTest Application properties, change the <strong>Target OS</strong> to <strong>Windows</strong> and ensure that the <strong>Target OS version</strong> and <strong>Supported OS version</strong> fields are set to 7.0.</p>
+</li>
+<li class="task-list-item" data-line-start="417" data-line-end="418">
+<div class="task-step-checkbox" data-foo="419" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="417" data-line-end="418"> In <strong>Solution Explorer</strong>, right-click <strong>GradesTest</strong>, and click <strong>Add</strong> then click <strong>Project Reference...</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="418" data-line-end="419">
+<div class="task-step-checkbox" data-foo="424" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="418" data-line-end="419"> In the <strong>Reference Manager - GradesTest</strong> dialog box, if needed, expand <strong>Projects</strong> in the left-hand navigation, and then click <strong>Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="419" data-line-end="420">
+<div class="task-step-checkbox" data-foo="429" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="419" data-line-end="420"> Select the <strong>GradesPrototype</strong> check box, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="420" data-line-end="472">
+<div class="task-step-checkbox" data-foo="434" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="420" data-line-end="421"> In the code editor, within the <strong>UnitTest1</strong> class, delete all of the existing code, and then replace with the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[TestInitialize]
+public void Init()
+{
+// Create the data source (needed to populate the Subjects collection)
+GradesPrototype.Data.DataSource.CreateData();
+}
+
+[TestMethod]
+public void TestValidGrade()
+{
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;01/01/2012&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+    Assert.AreEqual(grade.AssessmentDate, &quot;01/01/2012&quot;);
+    Assert.AreEqual(grade.SubjectName, &quot;Math&quot;);
+    Assert.AreEqual(grade.Assessment, &quot;A-&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+public void TestBadDate()
+{
+    // Attempt to create a grade with a date in the future
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2023&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void TestDateNotRecognized ()
+{
+    // Attempt to create a grade with an unrecognized date
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;13/13/2012&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+public void TestBadAssessment()
+{
+    // Attempt to create a grade with an assessment outside the range A+ to E-
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2012&quot;, &quot;Math&quot;, &quot;F-&quot;, &quot;Terrible&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void TestBadSubject()
+{
+    // Attempt to create a grade with an unrecognized subject
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2012&quot;, &quot;French&quot;, &quot;B-&quot;, &quot;OK&quot;);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="423" data-line-end="471">[<span class="hljs-meta">TestInitialize</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span>(<span class="hljs-params"></span>)</span>
+{
+<span class="hljs-comment">// Create the data source (needed to populate the Subjects collection)</span>
+GradesPrototype.Data.DataSource.CreateData();
+}
+
+[<span class="hljs-meta">TestMethod</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestValidGrade</span>(<span class="hljs-params"></span>)</span>
+{
+    GradesPrototype.Data.Grade grade = <span class="hljs-keyword">new</span> GradesPrototype.Data.Grade(<span class="hljs-number">1</span>, <span class="hljs-string">"01/01/2012"</span>, <span class="hljs-string">"Math"</span>, <span class="hljs-string">"A-"</span>, <span class="hljs-string">"Very good"</span>);
+    Assert.AreEqual(grade.AssessmentDate, <span class="hljs-string">"01/01/2012"</span>);
+    Assert.AreEqual(grade.SubjectName, <span class="hljs-string">"Math"</span>);
+    Assert.AreEqual(grade.Assessment, <span class="hljs-string">"A-"</span>);
+}
+
+[<span class="hljs-meta">TestMethod</span>]
+[<span class="hljs-meta">ExpectedException(typeof(ArgumentOutOfRangeException))</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestBadDate</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Attempt to create a grade with a date in the future</span>
+    GradesPrototype.Data.Grade grade = <span class="hljs-keyword">new</span> GradesPrototype.Data.Grade(<span class="hljs-number">1</span>, <span class="hljs-string">"1/1/2023"</span>, <span class="hljs-string">"Math"</span>, <span class="hljs-string">"A-"</span>, <span class="hljs-string">"Very good"</span>);
+}
+
+[<span class="hljs-meta">TestMethod</span>]
+[<span class="hljs-meta">ExpectedException(typeof(ArgumentException))</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestDateNotRecognized</span> (<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Attempt to create a grade with an unrecognized date</span>
+    GradesPrototype.Data.Grade grade = <span class="hljs-keyword">new</span> GradesPrototype.Data.Grade(<span class="hljs-number">1</span>, <span class="hljs-string">"13/13/2012"</span>, <span class="hljs-string">"Math"</span>, <span class="hljs-string">"A-"</span>, <span class="hljs-string">"Very good"</span>);
+}
+
+[<span class="hljs-meta">TestMethod</span>]
+[<span class="hljs-meta">ExpectedException(typeof(ArgumentOutOfRangeException))</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestBadAssessment</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Attempt to create a grade with an assessment outside the range A+ to E-</span>
+    GradesPrototype.Data.Grade grade = <span class="hljs-keyword">new</span> GradesPrototype.Data.Grade(<span class="hljs-number">1</span>, <span class="hljs-string">"1/1/2012"</span>, <span class="hljs-string">"Math"</span>, <span class="hljs-string">"F-"</span>, <span class="hljs-string">"Terrible"</span>);
+}
+
+[<span class="hljs-meta">TestMethod</span>]
+[<span class="hljs-meta">ExpectedException(typeof(ArgumentException))</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestBadSubject</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Attempt to create a grade with an unrecognized subject</span>
+    GradesPrototype.Data.Grade grade = <span class="hljs-keyword">new</span> GradesPrototype.Data.Grade(<span class="hljs-number">1</span>, <span class="hljs-string">"1/1/2012"</span>, <span class="hljs-string">"French"</span>, <span class="hljs-string">"B-"</span>, <span class="hljs-string">"OK"</span>);
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="472" data-line-end="473">
+<div class="task-step-checkbox" data-foo="440" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="472" data-line-end="473"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="473" data-line-end="474">
+<div class="task-step-checkbox" data-foo="445" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="473" data-line-end="474"> On the <strong>Test</strong> menu, click <strong>Run All Tests</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="474" data-line-end="475">
+<div class="task-step-checkbox" data-foo="450" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="474" data-line-end="475"> In the <strong>Test Explorer</strong> window, verify that all the tests have passed.</p>
+</li>
+<li class="task-list-item" data-line-start="475" data-line-end="476">
+<div class="task-step-checkbox" data-foo="455" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="475" data-line-end="476"> Close <strong>Test Explorer</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="476" data-line-end="478">
+<div class="task-step-checkbox" data-foo="460" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="476" data-line-end="477"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="479" data-line-end="480"><strong>Results:</strong> After completing this exercise, the <strong>Grade</strong> class will contain validation logic.</p>
+</div>
+<h3>Exercise 3: Displaying Students in Name Order</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="485" data-line-end="486"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="487" data-line-end="488">In this exercise, you'll write code to display the students in alphabetical order of the last name and then the first name.</p>
+<ul>
+<li class="has-line-data" data-line-start="489" data-line-end="490">The 
+application currently displays students in no specific order when logged
+ on as a teacher, but you now want them to be displayed in alphabetical 
+order of the last name and then the first name.</li>
+<li class="has-line-data" data-line-start="490" data-line-end="491">To 
+achieve this, you decide that the Student class should implement the 
+IComparable&lt;&gt; interface to enable comparison of student data.</li>
+<li class="has-line-data" data-line-start="491" data-line-end="492">You 
+can then add code to the CompareTo method in the Student class, enabling
+ students to be sorted based on their last name and first name.</li>
+<li class="has-line-data" data-line-start="492" data-line-end="493">Currently,
+ students are stored in a non-type-safe ArrayList collection. You decide
+ to modify this so they are stored in a type-safe List collection.</li>
+<li class="has-line-data" data-line-start="493" data-line-end="494">Finally,
+ you'll sort the student data and then run the application to verify 
+that the students are retrieved and displayed in alphabetical order of 
+their last name and first name.</li>
+</ul>
+</div>
+<h3>Task 1: Run the application and verify that the students are not displayed in any specific order when logged on as a teacher</h3>
+<ol class="task-list" data-group="8">
+<li class="task-list-item" data-line-start="498" data-line-end="500">
+<div class="task-step-checkbox" data-foo="513" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="498" data-line-end="499"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="500" data-line-end="506">
+<div class="task-step-checkbox" data-foo="518" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="500" data-line-end="501"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Mod04\Labfiles\Starter\Exercise 3</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="503" data-line-end="504"><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="506" data-line-end="508">
+<div class="task-step-checkbox" data-foo="528" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="506" data-line-end="507"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="508" data-line-end="509">
+<div class="task-step-checkbox" data-foo="533" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="508" data-line-end="509"> On the <strong>Debug</strong> Menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="509" data-line-end="510">
+<div class="task-step-checkbox" data-foo="538" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="509" data-line-end="510"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="510" data-line-end="511">
+<div class="task-step-checkbox" data-foo="543" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="510" data-line-end="511"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password"><code>password</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="511" data-line-end="512">
+<div class="task-step-checkbox" data-foo="548" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="511" data-line-end="512"> Verify that the students are not displayed in any specific order.</p>
+</li>
+<li class="task-list-item" data-line-start="512" data-line-end="514">
+<div class="task-step-checkbox" data-foo="553" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="512" data-line-end="513"> Close the application.</p>
+</li>
+</ol>
+<h3>Task 2: Implement the IComparable&lt;Student&gt; interface to enable comparison of students</h3>
+<ol class="task-list" data-group="9">
+<li class="task-list-item" data-line-start="516" data-line-end="518">
+<div class="task-step-checkbox" data-foo="563" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="516" data-line-end="517"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2a: Specify that the Student class implements the IComparable&lt;Student&gt; interface</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="518" data-line-end="524">
+<div class="task-step-checkbox" data-foo="568" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="518" data-line-end="519"> In the code editor, click at the end of the <strong>public class Student</strong> declaration, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code=": IComparable&lt;Student&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="521" data-line-end="523">: IComparable&lt;Student&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="524" data-line-end="525">
+<div class="task-step-checkbox" data-foo="574" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="524" data-line-end="525"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2b: Compare Student objects based on their LastName and FirstName properties</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="525" data-line-end="542">
+<div class="task-step-checkbox" data-foo="579" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="525" data-line-end="526"> In the code editor, in the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Compare Student objects based on their LastName and FirstName properties
+public int CompareTo(Student other)
+{
+    // Concatenate the LastName and FirstName of this student
+    string thisStudentsFullName = LastName + FirstName;
+
+    // Concatenate the LastName and FirstName of the &quot;other&quot; student
+    string otherStudentsFullName = other.LastName + other.FirstName;
+
+    // Use String.Compare to compare the concatenated names and return the result
+    return(String.Compare(thisStudentsFullName, otherStudentsFullName));
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="528" data-line-end="541"><span class="hljs-comment">// Compare Student objects based on their LastName and FirstName properties</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">CompareTo</span>(<span class="hljs-params">Student other</span>)</span>
+{
+    <span class="hljs-comment">// Concatenate the LastName and FirstName of this student</span>
+    <span class="hljs-built_in">string</span> thisStudentsFullName = LastName + FirstName;
+
+    <span class="hljs-comment">// Concatenate the LastName and FirstName of the "other" student</span>
+    <span class="hljs-built_in">string</span> otherStudentsFullName = other.LastName + other.FirstName;
+
+    <span class="hljs-comment">// Use String.Compare to compare the concatenated names and return the result</span>
+    <span class="hljs-keyword">return</span>(String.Compare(thisStudentsFullName, otherStudentsFullName));
+}
+</code></pre>
+</li>
+</ol>
+<h4>Task 3: Change the Students ArrayList collection into a List&lt;Student&gt; collection</h4>
+<ol class="task-list" data-group="10">
+<li class="task-list-item" data-line-start="544" data-line-end="546">
+<div class="task-step-checkbox" data-foo="590" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="544" data-line-end="545"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 3a: Change the Students collection into a List<student></student></strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="546" data-line-end="552">
+<div class="task-step-checkbox" data-foo="595" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="546" data-line-end="547"> In the code editor, below the comment, modify the <strong>public static ArrayList Students;</strong> code to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public static List&lt;Student&gt; Students;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="549" data-line-end="551"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;Student&gt; Students;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="552" data-line-end="554">
+<div class="task-step-checkbox" data-foo="601" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="552" data-line-end="553"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 3b: Populate the List<student> collection</student></strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="554" data-line-end="560">
+<div class="task-step-checkbox" data-foo="606" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="554" data-line-end="555"> In the code editor, below the comment, modify the <strong>Students = new ArrayList()</strong> code to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Students = new List&lt;Student&gt;()"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="557" data-line-end="559">Students = <span class="hljs-keyword">new</span> List&lt;Student&gt;()
+</code></pre>
+</li>
+</ol>
+<h4>Task 4: Sort the data in the Students collection</h4>
+<ol class="task-list" data-group="11">
+<li class="task-list-item" data-line-start="562" data-line-end="564">
+<div class="task-step-checkbox" data-foo="617" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="562" data-line-end="563"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 4a: Sort the data in the Students collection</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="564" data-line-end="570">
+<div class="task-step-checkbox" data-foo="622" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="564" data-line-end="565"> In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="DataSource.Students.Sort();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="567" data-line-end="569">DataSource.Students.Sort();
+</code></pre>
+</li>
+</ol>
+<h3>Task 5: Verify that Students are retrieved and displayed in the order of their first name and last name</h3>
+<ol class="task-list" data-group="12">
+<li class="task-list-item" data-line-start="572" data-line-end="574">
+<div class="task-step-checkbox" data-foo="633" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="572" data-line-end="573"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="574" data-line-end="575">
+<div class="task-step-checkbox" data-foo="638" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="574" data-line-end="575"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="575" data-line-end="576">
+<div class="task-step-checkbox" data-foo="643" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="575" data-line-end="576"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="576" data-line-end="577">
+<div class="task-step-checkbox" data-foo="648" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="576" data-line-end="577"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password"><code>password</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="577" data-line-end="578">
+<div class="task-step-checkbox" data-foo="653" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="577" data-line-end="578"> Verify that the students are displayed in the alphabetical order, based on their last names.</p>
+</li>
+<li class="task-list-item" data-line-start="578" data-line-end="579">
+<div class="task-step-checkbox" data-foo="658" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="578" data-line-end="579"> Log off and then close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="579" data-line-end="581">
+<div class="task-step-checkbox" data-foo="663" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="579" data-line-end="580"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="582" data-line-end="583"><strong>Results:</strong>
+ After completing this exercise, the application will display the 
+students in the alphabetical order, based on last names, and then first 
+names.</p>
+</div>
+<h3>Exercise 4: Enabling Teachers to Modify Class and Grade Data</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="588" data-line-end="589"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="590" data-line-end="593">In 
+this exercise, you'll write code that enables a teacher to add a student
+ and then enroll them in a class.
+This will be implemented as two separate steps, because a teacher may 
+want to add a student before knowing which class they will be enrolled 
+in.
+You'll also enable a teacher to remove a student from a class. When 
+adding or removing a student, you'll display a prompt to confirm that 
+the teacher wants to perform the action.</p>
+<ul>
+<li class="has-line-data" data-line-start="594" data-line-end="595">To enroll a student in a class or remove them from a class, you modify the TeacherID property of that student.</li>
+<li class="has-line-data" data-line-start="595" data-line-end="596">The application now includes the AssignStudentDialog window, which displays a list of students who are not assigned to a class.</li>
+<li class="has-line-data" data-line-start="596" data-line-end="597">You 
+need to add code to this window to assign a student to the teacher's 
+class and to update the list of students as appropriate.</li>
+<li class="has-line-data" data-line-start="597" data-line-end="598">You also need to add code to remove a student from a class and to enable teachers to add grades to their students.</li>
+<li class="has-line-data" data-line-start="598" data-line-end="599">After a student has been added to the database, that student will be able to log on to view their grades.</li>
+</ul>
+</div>
+<h3>Task 1: Change the Teachers and Grades collections to be generic List collections</h3>
+<ol class="task-list" data-group="13">
+<li class="task-list-item" data-line-start="603" data-line-end="605">
+<div class="task-step-checkbox" data-foo="716" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="603" data-line-end="604"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="605" data-line-end="611">
+<div class="task-step-checkbox" data-foo="721" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="605" data-line-end="606"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod04\Labfiles\Starter\Exercise 4</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="608" data-line-end="609"><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="611" data-line-end="613">
+<div class="task-step-checkbox" data-foo="731" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="611" data-line-end="612"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1a: Change the Teachers collection into a generic List</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="613" data-line-end="619">
+<div class="task-step-checkbox" data-foo="736" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="613" data-line-end="614"> In the code editor, below the comment, modify the code <strong>public static ArrayList Teachers;</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public static List&lt;Teacher&gt; Teachers;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="616" data-line-end="618"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;Teacher&gt; Teachers;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="619" data-line-end="621">
+<div class="task-step-checkbox" data-foo="742" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="619" data-line-end="620"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1b: Change the Grades collection into a generic List</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="621" data-line-end="627">
+<div class="task-step-checkbox" data-foo="747" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="621" data-line-end="622"> In the code editor, below the comment, modify the code <strong>public static ArrayList Grades;</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public static List&lt;Grade&gt; Grades;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="624" data-line-end="626"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;Grade&gt; Grades;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="627" data-line-end="629">
+<div class="task-step-checkbox" data-foo="753" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="627" data-line-end="628"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1c: Populate the Teachers collection</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="629" data-line-end="635">
+<div class="task-step-checkbox" data-foo="758" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="629" data-line-end="630"> In the code editor, below the comment, modify the code <strong>Teachers = new ArrayList()</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Teachers = new List&lt;Teacher&gt;()"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="632" data-line-end="634">Teachers = <span class="hljs-keyword">new</span> List&lt;Teacher&gt;()
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="635" data-line-end="637">
+<div class="task-step-checkbox" data-foo="764" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="635" data-line-end="636"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1d: Populate the Grades collection</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="637" data-line-end="643">
+<div class="task-step-checkbox" data-foo="769" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="637" data-line-end="638"> In the code editor, below the comment, modify the code <strong>Grades = new ArrayList()</strong> to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Grades = new List&lt;Grade&gt;()"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="640" data-line-end="642">Grades = <span class="hljs-keyword">new</span> List&lt;Grade&gt;()
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Add the EnrollInClass and RemoveFromClass methods for the Teacher class</h3>
+<ol class="task-list" data-group="14">
+<li class="task-list-item" data-line-start="645" data-line-end="647">
+<div class="task-step-checkbox" data-foo="780" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="645" data-line-end="646"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2a: Enroll a student in the class for this teacher</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="647" data-line-end="667">
+<div class="task-step-checkbox" data-foo="785" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="647" data-line-end="648"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Enroll a student in the class for this teacher
+public void EnrollInClass(Student student)
+{
+    // Verify that the student is not already enrolled in another class
+    if (student.TeacherID == 0)
+    {
+        // Set the TeacherID property of the student
+        student.TeacherID = TeacherID;
+    }
+    else
+    {
+        // If the student is already assigned to a class, throw an  ArgumentException
+        throw new ArgumentException(&quot;Student&quot;, &quot;Student is already assigned to a class&quot;);
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="650" data-line-end="666"><span class="hljs-comment">// Enroll a student in the class for this teacher</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">EnrollInClass</span>(<span class="hljs-params">Student student</span>)</span>
+{
+    <span class="hljs-comment">// Verify that the student is not already enrolled in another class</span>
+    <span class="hljs-keyword">if</span> (student.TeacherID == <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-comment">// Set the TeacherID property of the student</span>
+        student.TeacherID = TeacherID;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// If the student is already assigned to a class, throw an  ArgumentException</span>
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">"Student"</span>, <span class="hljs-string">"Student is already assigned to a class"</span>);
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="667" data-line-end="669">
+<div class="task-step-checkbox" data-foo="791" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="667" data-line-end="668"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2b: Remove a student from the class for this teacher</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="669" data-line-end="689">
+<div class="task-step-checkbox" data-foo="796" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="669" data-line-end="670"> In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Remove a student from the class for this teacher
+public void RemoveFromClass(Student student)
+{
+// Verify that the student is actually assigned to the class for this teacher
+if (student.TeacherID == TeacherID)
+{
+    // Reset the TeacherID property of the student
+    student.TeacherID = 0;
+}
+else
+{
+    // If the student is not assigned to the class for this teacher, throw an ArgumentException
+    throw new ArgumentException(&quot;Student&quot;, &quot;Student is not assigned to this class&quot;);
+}
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="672" data-line-end="688"><span class="hljs-comment">// Remove a student from the class for this teacher</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RemoveFromClass</span>(<span class="hljs-params">Student student</span>)</span>
+{
+<span class="hljs-comment">// Verify that the student is actually assigned to the class for this teacher</span>
+<span class="hljs-keyword">if</span> (student.TeacherID == TeacherID)
+{
+    <span class="hljs-comment">// Reset the TeacherID property of the student</span>
+    student.TeacherID = <span class="hljs-number">0</span>;
+}
+<span class="hljs-keyword">else</span>
+{
+    <span class="hljs-comment">// If the student is not assigned to the class for this teacher, throw an ArgumentException</span>
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">"Student"</span>, <span class="hljs-string">"Student is not assigned to this class"</span>);
+}
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="689" data-line-end="691">
+<div class="task-step-checkbox" data-foo="802" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="689" data-line-end="690"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2c: Add a grade to a student (the grade is already populated)</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="691" data-line-end="711">
+<div class="task-step-checkbox" data-foo="807" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="691" data-line-end="692"> In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Add a grade to a student (the grade is already populated)
+public void AddGrade(Grade grade)
+{
+// Verify that the grade does not belong to another student - the StudentID  should be zero
+if (grade.StudentID == 0)
+{
+    // Add the grade to the student's record
+    grade.StudentID = StudentID;
+    }
+    else
+    {
+        // If the grade belongs to a different student, throw an ArgumentException
+        throw new ArgumentException(&quot;Grade&quot;, &quot;Grade belongs to a different  student&quot;);
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="694" data-line-end="710"><span class="hljs-comment">// Add a grade to a student (the grade is already populated)</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddGrade</span>(<span class="hljs-params">Grade grade</span>)</span>
+{
+<span class="hljs-comment">// Verify that the grade does not belong to another student - the StudentID  should be zero</span>
+<span class="hljs-keyword">if</span> (grade.StudentID == <span class="hljs-number">0</span>)
+{
+    <span class="hljs-comment">// Add the grade to the student's record</span>
+    grade.StudentID = StudentID;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// If the grade belongs to a different student, throw an ArgumentException</span>
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">"Grade"</span>, <span class="hljs-string">"Grade belongs to a different  student"</span>);
+    }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Add code to enroll a student in a teacher's class</h3>
+<ol class="task-list" data-group="15">
+<li class="task-list-item" data-line-start="713" data-line-end="716">
+<div class="task-step-checkbox" data-foo="818" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="713" data-line-end="715"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3a: Enroll a student in the teacher's class</strong> task.
+33</p>
+</li>
+<li class="task-list-item" data-line-start="716" data-line-end="754">
+<div class="task-step-checkbox" data-foo="823" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="716" data-line-end="717"> In the code editor, below the comment, click in the blank line in the <strong>Student_Click</strong> method, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="try
+{
+    // Determine which student the user clicked
+    // the StudentID is held in the Tag property of the Button that the user    clicked
+    Button studentClicked = sender as Button;
+    int studentID = (int)studentClicked.Tag;
+
+    // Find this student in the Students collection
+    Student student = (from s in DataSource.Students
+                    where s.StudentID == studentID
+                    select s).First();
+
+    // Prompt the user to confirm that they wish to add this student to their class
+    string message = String.Format(&quot;Add {0} {1} to your class?&quot;, student.FirstName,  student.LastName);
+    MessageBoxResult reply = MessageBox.Show(message, &quot;Confirm&quot;, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+    // If the user confirms, add the student to their class
+    if (reply == MessageBoxResult.Yes)
+    {
+        // Get the ID of the currently logged-on teacher
+        int teacherID = SessionContext.CurrentTeacher.TeacherID;
+
+        // Assign the student to this teacher's class
+        SessionContext.CurrentTeacher.EnrollInClass(student);
+
+        // Refresh the display - the new assigned student should disappear from     the list of unassigned students
+        Refresh();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, &quot;Error enrolling student&quot;, MessageBoxButton.OK, MessageBoxImage.Error);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="719" data-line-end="753"><span class="hljs-keyword">try</span>
+{
+    <span class="hljs-comment">// Determine which student the user clicked</span>
+    <span class="hljs-comment">// the StudentID is held in the Tag property of the Button that the user    clicked</span>
+    Button studentClicked = sender <span class="hljs-keyword">as</span> Button;
+    <span class="hljs-built_in">int</span> studentID = (<span class="hljs-built_in">int</span>)studentClicked.Tag;
+
+    <span class="hljs-comment">// Find this student in the Students collection</span>
+    Student student = (<span class="hljs-keyword">from</span> s <span class="hljs-keyword">in</span> DataSource.Students
+                    <span class="hljs-keyword">where</span> s.StudentID == studentID
+                    <span class="hljs-keyword">select</span> s).First();
+
+    <span class="hljs-comment">// Prompt the user to confirm that they wish to add this student to their class</span>
+    <span class="hljs-built_in">string</span> message = String.Format(<span class="hljs-string">"Add {0} {1} to your class?"</span>, student.FirstName,  student.LastName);
+    MessageBoxResult reply = MessageBox.Show(message, <span class="hljs-string">"Confirm"</span>, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+    <span class="hljs-comment">// If the user confirms, add the student to their class</span>
+    <span class="hljs-keyword">if</span> (reply == MessageBoxResult.Yes)
+    {
+        <span class="hljs-comment">// Get the ID of the currently logged-on teacher</span>
+        <span class="hljs-built_in">int</span> teacherID = SessionContext.CurrentTeacher.TeacherID;
+
+        <span class="hljs-comment">// Assign the student to this teacher's class</span>
+        SessionContext.CurrentTeacher.EnrollInClass(student);
+
+        <span class="hljs-comment">// Refresh the display - the new assigned student should disappear from     the list of unassigned students</span>
+        Refresh();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, <span class="hljs-string">"Error enrolling student"</span>, MessageBoxButton.OK, MessageBoxImage.Error);
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="754" data-line-end="756">
+<div class="task-step-checkbox" data-foo="829" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="754" data-line-end="755"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3b: Refresh the display of unassigned students</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="756" data-line-end="784">
+<div class="task-step-checkbox" data-foo="834" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="756" data-line-end="757"> In the code editor, below the comment, click in the blank line in the <strong>Refresh</strong> method, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Find all unassigned students - they have a TeacherID of 0
+var unassignedStudents = from s in DataSource.Students
+                        where s.TeacherID == 0
+                        select s;
+
+// If there are no unassigned students, then display the &quot;No unassigned students&quot; message
+// and hide the list of unassigned students
+if (unassignedStudents.Count() == 0)
+{
+    txtMessage.Visibility = Visibility.Visible;
+    list.Visibility = Visibility.Collapsed;
+}
+else
+{
+    // If there are unassigned students, hide the &quot;No unassigned students&quot; message
+    // and display the list of unassigned students
+    txtMessage.Visibility = Visibility.Collapsed;
+    list.Visibility = Visibility.Visible;
+
+    // Bind the ItemControl on the dialog to the list of unassigned students
+    // The names of the students will appear in the ItemsControl on the dialog
+    list.ItemsSource = unassignedStudents;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="759" data-line-end="783"><span class="hljs-comment">// Find all unassigned students - they have a TeacherID of 0</span>
+<span class="hljs-keyword">var</span> unassignedStudents = <span class="hljs-keyword">from</span> s <span class="hljs-keyword">in</span> DataSource.Students
+                        <span class="hljs-keyword">where</span> s.TeacherID == <span class="hljs-number">0</span>
+                        <span class="hljs-keyword">select</span> s;
+
+<span class="hljs-comment">// If there are no unassigned students, then display the "No unassigned students" message</span>
+<span class="hljs-comment">// and hide the list of unassigned students</span>
+<span class="hljs-keyword">if</span> (unassignedStudents.Count() == <span class="hljs-number">0</span>)
+{
+    txtMessage.Visibility = Visibility.Visible;
+    list.Visibility = Visibility.Collapsed;
+}
+<span class="hljs-keyword">else</span>
+{
+    <span class="hljs-comment">// If there are unassigned students, hide the "No unassigned students" message</span>
+    <span class="hljs-comment">// and display the list of unassigned students</span>
+    txtMessage.Visibility = Visibility.Collapsed;
+    list.Visibility = Visibility.Visible;
+
+    <span class="hljs-comment">// Bind the ItemControl on the dialog to the list of unassigned students</span>
+    <span class="hljs-comment">// The names of the students will appear in the ItemsControl on the dialog</span>
+    list.ItemsSource = unassignedStudents;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="784" data-line-end="786">
+<div class="task-step-checkbox" data-foo="840" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="784" data-line-end="785"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3c: Enroll a student in the teacher's class</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="786" data-line-end="798">
+<div class="task-step-checkbox" data-foo="845" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="786" data-line-end="787"> In the code editor, below the comment, click in the blank line in the <strong>EnrollStudent_Click</strong> method, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Use the AssignStudentDialog to display unassigned students and add them to the teacher's class
+// All of the work is performed in the code behind the dialog
+AssignStudentDialog asd = new AssignStudentDialog();
+asd.ShowDialog();
+
+// Refresh the display to show any newly enrolled students
+Refresh();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="789" data-line-end="797"><span class="hljs-comment">// Use the AssignStudentDialog to display unassigned students and add them to the teacher's class</span>
+<span class="hljs-comment">// All of the work is performed in the code behind the dialog</span>
+AssignStudentDialog asd = <span class="hljs-keyword">new</span> AssignStudentDialog();
+asd.ShowDialog();
+
+<span class="hljs-comment">// Refresh the display to show any newly enrolled students</span>
+Refresh();
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Add code to enable a teacher to remove the student from the assigned class</h3>
+<ol class="task-list" data-group="16">
+<li class="task-list-item" data-line-start="800" data-line-end="801">
+<div class="task-step-checkbox" data-foo="856" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="800" data-line-end="801"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 4a: Enable a teacher to remove a student from a class</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="801" data-line-end="834">
+<div class="task-step-checkbox" data-foo="861" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="801" data-line-end="802"> In the code editor, below the comment, click in the blank line in the <strong>Remove_Click</strong> method, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// If the user is not a teacher, do nothing (the button should not appear anyway)
+if (SessionContext.UserRole != Role.Teacher)
+{
+    return;
+}
+
+try
+{
+    // If the user is a teacher, ask the user to confirm that this student should be removed from their class
+    string message = String.Format(&quot;Remove {0} {1}&quot;, SessionContext.CurrentStudent.FirstName, SessionContext.CurrentStudent.LastName);
+    MessageBoxResult reply = MessageBox.Show(message, &quot;Confirm&quot;, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+    // If the user confirms, then call the RemoveFromClass method of the current teacher to remove this student from their class 
+    if (reply == MessageBoxResult.Yes)
+    {
+        SessionContext.CurrentTeacher.RemoveFromClass(SessionContext.CurrentStudent);
+
+        // Go back to the previous page - the student is no longer a member of the class for the current teacher
+        if (Back != null)
+        {
+            Back(sender, e);
+        }
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, &quot;Error removing student from class&quot;, MessageBoxButton.OK, MessageBoxImage.Error);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="804" data-line-end="833"><span class="hljs-comment">// If the user is not a teacher, do nothing (the button should not appear anyway)</span>
+<span class="hljs-keyword">if</span> (SessionContext.UserRole != Role.Teacher)
+{
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">try</span>
+{
+    <span class="hljs-comment">// If the user is a teacher, ask the user to confirm that this student should be removed from their class</span>
+    <span class="hljs-built_in">string</span> message = String.Format(<span class="hljs-string">"Remove {0} {1}"</span>, SessionContext.CurrentStudent.FirstName, SessionContext.CurrentStudent.LastName);
+    MessageBoxResult reply = MessageBox.Show(message, <span class="hljs-string">"Confirm"</span>, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+    <span class="hljs-comment">// If the user confirms, then call the RemoveFromClass method of the current teacher to remove this student from their class </span>
+    <span class="hljs-keyword">if</span> (reply == MessageBoxResult.Yes)
+    {
+        SessionContext.CurrentTeacher.RemoveFromClass(SessionContext.CurrentStudent);
+
+        <span class="hljs-comment">// Go back to the previous page - the student is no longer a member of the class for the current teacher</span>
+        <span class="hljs-keyword">if</span> (Back != <span class="hljs-literal">null</span>)
+        {
+            Back(sender, e);
+        }
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, <span class="hljs-string">"Error removing student from class"</span>, MessageBoxButton.OK, MessageBoxImage.Error);
+}
+</code></pre>
+</li>
+</ol>
+<h4>Task 5: Add code to enable a teacher to add a grade to a student</h4>
+<ol class="task-list" data-group="17">
+<li class="task-list-item" data-line-start="836" data-line-end="838">
+<div class="task-step-checkbox" data-foo="872" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="836" data-line-end="837"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 5a: Enable a teacher to add a grade to a student</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="838" data-line-end="879">
+<div class="task-step-checkbox" data-foo="877" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="838" data-line-end="839"> In the code editor, below the comment, click in the blank line in the <strong>AddGrade_Click</strong> method, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// If the user is not a teacher, do nothing (the button should not appear anyway)
+if (SessionContext.UserRole != Role.Teacher)
+{
+    return;
+}
+
+try
+{
+    // Use the GradeDialog to get the details of the assessment grade
+    GradeDialog gd = new GradeDialog();
+
+    // Display the form and get the details of the new grade
+    if (gd.ShowDialog().Value)
+    {
+        // When the user closes the form, retrieve the details of the assessment grade from the form
+        // and use them to create a new Grade object
+        Grade newGrade = new Grade();
+        newGrade.AssessmentDate = gd.assessmentDate.SelectedDate.Value.ToString(&quot;d&quot;);
+        newGrade.SubjectName = gd.subject.SelectedValue.ToString();
+        newGrade.Assessment = gd.assessmentGrade.Text;
+        newGrade.Comments = gd.comments.Text;
+
+        // Save the grade to the list of grades
+        DataSource.Grades.Add(newGrade);
+
+        // Add the grade to the current student
+        SessionContext.CurrentStudent.AddGrade(newGrade);
+
+        // Refresh the display so that the new grade appears
+        Refresh();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, &quot;Error adding assessment grade&quot;, MessageBoxButton.OK, MessageBoxImage.Error);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="841" data-line-end="878"><span class="hljs-comment">// If the user is not a teacher, do nothing (the button should not appear anyway)</span>
+<span class="hljs-keyword">if</span> (SessionContext.UserRole != Role.Teacher)
+{
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">try</span>
+{
+    <span class="hljs-comment">// Use the GradeDialog to get the details of the assessment grade</span>
+    GradeDialog gd = <span class="hljs-keyword">new</span> GradeDialog();
+
+    <span class="hljs-comment">// Display the form and get the details of the new grade</span>
+    <span class="hljs-keyword">if</span> (gd.ShowDialog().Value)
+    {
+        <span class="hljs-comment">// When the user closes the form, retrieve the details of the assessment grade from the form</span>
+        <span class="hljs-comment">// and use them to create a new Grade object</span>
+        Grade newGrade = <span class="hljs-keyword">new</span> Grade();
+        newGrade.AssessmentDate = gd.assessmentDate.SelectedDate.Value.ToString(<span class="hljs-string">"d"</span>);
+        newGrade.SubjectName = gd.subject.SelectedValue.ToString();
+        newGrade.Assessment = gd.assessmentGrade.Text;
+        newGrade.Comments = gd.comments.Text;
+
+        <span class="hljs-comment">// Save the grade to the list of grades</span>
+        DataSource.Grades.Add(newGrade);
+
+        <span class="hljs-comment">// Add the grade to the current student</span>
+        SessionContext.CurrentStudent.AddGrade(newGrade);
+
+        <span class="hljs-comment">// Refresh the display so that the new grade appears</span>
+        Refresh();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, <span class="hljs-string">"Error adding assessment grade"</span>, MessageBoxButton.OK, MessageBoxImage.Error);
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 6: Run the application and verify that students can be added to
+ and removed from classes, and that grades can be added to students</h3>
+<ol class="task-list" data-group="18">
+<li class="task-list-item" data-line-start="881" data-line-end="883">
+<div class="task-step-checkbox" data-foo="888" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="881" data-line-end="882"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="883" data-line-end="885">
+<div class="task-step-checkbox" data-foo="893" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="883" data-line-end="884"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="885" data-line-end="887">
+<div class="task-step-checkbox" data-foo="898" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="885" data-line-end="886"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="887" data-line-end="889">
+<div class="task-step-checkbox" data-foo="903" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="887" data-line-end="888"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password"><code>password</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="889" data-line-end="895">
+<div class="task-step-checkbox" data-foo="908" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="889" data-line-end="890"> Click <strong>New Student</strong>.</p>
+<ul>
+<li class="has-line-data" data-line-start="891" data-line-end="892">In the <strong>First Name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Darren"><code>Darren</code></a></strong>.</li>
+<li class="has-line-data" data-line-start="892" data-line-end="893">In the <strong>Last Name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Parker"><code>Parker</code></a></strong>.</li>
+<li class="has-line-data" data-line-start="893" data-line-end="895">In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password"><code>password</code></a></strong>, and then click <strong>OK</strong>.</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="895" data-line-end="897">
+<div class="task-step-checkbox" data-foo="930" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="895" data-line-end="896"> Click <strong>Enroll Student</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="897" data-line-end="899">
+<div class="task-step-checkbox" data-foo="935" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="897" data-line-end="898"> Verify that the <strong>Assign Student</strong> dialog box appears and that <strong>Darren Parker</strong> is in the list.</p>
+</li>
+<li class="task-list-item" data-line-start="899" data-line-end="901">
+<div class="task-step-checkbox" data-foo="940" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="899" data-line-end="900"> Click <strong>Darren Parker</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="901" data-line-end="903">
+<div class="task-step-checkbox" data-foo="945" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="901" data-line-end="902"> Verify that the <strong>Confirm</strong> message box appears, and then click <strong>Yes</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="903" data-line-end="905">
+<div class="task-step-checkbox" data-foo="950" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="903" data-line-end="904"> In the <strong>Assign Student</strong> dialog box, verify that <strong>Darren Parker</strong> disappears and that the text <strong>No unassigned students</strong> is displayed.</p>
+</li>
+<li class="task-list-item" data-line-start="905" data-line-end="907">
+<div class="task-step-checkbox" data-foo="955" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="905" data-line-end="906"> Click <strong>Close</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="907" data-line-end="909">
+<div class="task-step-checkbox" data-foo="960" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="907" data-line-end="908"> Verify that <strong>Darren Parker</strong> is added to the student list.</p>
+</li>
+<li class="task-list-item" data-line-start="909" data-line-end="911">
+<div class="task-step-checkbox" data-foo="965" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="909" data-line-end="910"> Click the student <strong>Kevin Liu</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="911" data-line-end="913">
+<div class="task-step-checkbox" data-foo="970" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="911" data-line-end="912"> Click <strong>Remove Student</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="913" data-line-end="915">
+<div class="task-step-checkbox" data-foo="975" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="913" data-line-end="914"> Verify that the <strong>Confirm</strong> message box appears, and then click <strong>Yes</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="915" data-line-end="917">
+<div class="task-step-checkbox" data-foo="980" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="915" data-line-end="916"> Verify that <strong>Kevin Liu</strong> is removed from the student list.</p>
+</li>
+<li class="task-list-item" data-line-start="917" data-line-end="919">
+<div class="task-step-checkbox" data-foo="985" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="917" data-line-end="918"> Click the student <strong>Darren Parker</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="919" data-line-end="921">
+<div class="task-step-checkbox" data-foo="990" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="919" data-line-end="920"> Click <strong>Add Grade</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="921" data-line-end="929">
+<div class="task-step-checkbox" data-foo="995" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="921" data-line-end="922"> Verify that the <strong>New Grade Details</strong> dialog box appears.</p>
+<ul>
+<li class="has-line-data" data-line-start="923" data-line-end="925">
+<p class="has-line-data" data-line-start="923" data-line-end="924">Verify that the <strong>Date</strong> text box contains the current date.</p>
+</li>
+<li class="has-line-data" data-line-start="925" data-line-end="927">
+<p class="has-line-data" data-line-start="925" data-line-end="926">In the <strong>Subject</strong> list, click <strong>English</strong>.</p>
+</li>
+<li class="has-line-data" data-line-start="927" data-line-end="929">
+<p class="has-line-data" data-line-start="927" data-line-end="928">In the <strong>Assessment</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="B"><code>B</code></a></strong>.</p>
+</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="929" data-line-end="931">
+<div class="task-step-checkbox" data-foo="1017" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="929" data-line-end="930"> In the <strong>Comments</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Good"><code>Good</code></a></strong> and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="931" data-line-end="933">
+<div class="task-step-checkbox" data-foo="1022" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="931" data-line-end="932"> Verify that the grade information appears on the report card.</p>
+</li>
+<li class="task-list-item" data-line-start="933" data-line-end="935">
+<div class="task-step-checkbox" data-foo="1027" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="933" data-line-end="934"> Click <strong>Log off</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="935" data-line-end="937">
+<div class="task-step-checkbox" data-foo="1032" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="935" data-line-end="936"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="parkerd"><code>parkerd</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="937" data-line-end="939">
+<div class="task-step-checkbox" data-foo="1037" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="937" data-line-end="938"> Click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="939" data-line-end="942">
+<div class="task-step-checkbox" data-foo="1042" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="939" data-line-end="941"> Verify that the <strong>Welcome Darren Parker</strong> screen is displayed, showing the
+report card and the previously added grade.</p>
+</li>
+<li class="task-list-item" data-line-start="942" data-line-end="944">
+<div class="task-step-checkbox" data-foo="1047" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="942" data-line-end="943"> Click <strong>Log off</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="944" data-line-end="946">
+<div class="task-step-checkbox" data-foo="1052" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="944" data-line-end="945"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="946" data-line-end="948">
+<div class="task-step-checkbox" data-foo="1057" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="946" data-line-end="947"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="949" data-line-end="950"><strong>Results:</strong>
+ After completing this exercise, the application will enable teachers to
+ add and remove students from their classes, and to add grades to 
+students.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="953" data-line-end="954"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div></body></html>

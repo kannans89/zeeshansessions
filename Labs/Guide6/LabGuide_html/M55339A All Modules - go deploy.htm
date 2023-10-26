@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help show" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="" aria-describedby="popover776417">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button">Module 6: Input and Output</button>
+    <div class="dropdown-menu dropdown-menu-left show" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="true">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 6: Input and Output</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="4" data-line-end="5"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="6" data-line-end="7">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="8" data-line-end="9">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Creating the Grades Report</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="15" data-line-end="16"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="17" data-line-end="18">You 
+have been asked to upgrade the Grades Prototype application to enable 
+users to save a student's grades as a JSON file on the local disk. The 
+user should be able to click a new button on the StudentProfile view 
+that asks the user where they would like to save the file, displays a 
+preview of the data to the user, and asks the user to confirm that they 
+wish to save the file to disk. If they do, the application should save 
+the grade data in the JSON format at the location that the user 
+specified. Then, you should be able to change the report that you just 
+saved and load it into the user interface. After doing it, you should be
+ able to see the changes reflected in the user interface.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="21" data-line-end="22"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="23" data-line-end="24">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="25" data-line-end="26">Serialize data to a JSON.</li>
+<li class="has-line-data" data-line-start="26" data-line-end="27">Save serialized data to a file using FileStream.</li>
+<li class="has-line-data" data-line-start="27" data-line-end="28">Load serialized data from a file.</li>
+<li class="has-line-data" data-line-start="28" data-line-end="30">Deserialize data from a JSON file.</li>
+</ul>
+<p class="has-line-data" data-line-start="30" data-line-end="31">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Serializing Data for the Grades Report as JSON</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="36" data-line-end="37"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="38" data-line-end="39">In this
+ exercise, you'll write code that runs when the user clicks the Save 
+Report button on the Student Profile view. You'll enable a user to 
+specify where to save the grade report, and to serialize the grades data
+ so it is ready to save to a file.</p>
+<ul>
+<li class="has-line-data" data-line-start="39" data-line-end="40">You'll
+ use the SaveFileDialog object to ask the user for the file name and 
+location where they want to save the file. You'll extract the grade data
+ from the application data source and store it in a list of grade 
+objects.</li>
+<li class="has-line-data" data-line-start="40" data-line-end="41">You'll
+ then write the code in SaveReport_Click. This code will use a 
+StreamWriter object to create a JSON document and populate it with grade
+ information from the list of grade objects.</li>
+<li class="has-line-data" data-line-start="41" data-line-end="42">Finally, you'll save the student report in the disk and view the data held in the disk.</li>
+</ul>
+</div>
+<h3>Task 1: Prompt the user for a file name and retrieve the grade data</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="46" data-line-end="49">
+<div class="task-step-checkbox" data-foo="91" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="46" data-line-end="47"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="49" data-line-end="51">
+<div class="task-step-checkbox" data-foo="96" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="49" data-line-end="50"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="51" data-line-end="56">
+<div class="task-step-checkbox" data-foo="101" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="51" data-line-end="52"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod06\Labfiles\Starter\Exercise 1</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="53" data-line-end="54"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="58">
+<div class="task-step-checkbox" data-foo="111" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> In <strong>Solution Explorer</strong>, expand <strong>GradesPrototype</strong>, expand <strong>Views</strong>, and then double-click <strong>StudentProfile.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="58" data-line-end="60">
+<div class="task-step-checkbox" data-foo="116" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="58" data-line-end="59"> Note that this view displays and enables users to add grades for a student. The solution has been updated to include a <strong>Save Report</strong> button that users will click to generate and save the grades report.</p>
+</li>
+<li class="task-list-item" data-line-start="60" data-line-end="62">
+<div class="task-step-checkbox" data-foo="121" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="60" data-line-end="61"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="64">
+<div class="task-step-checkbox" data-foo="126" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 01: Task 1a: Add Using for System.Text.Json and System.IO</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="64" data-line-end="71">
+<div class="task-step-checkbox" data-foo="131" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="64" data-line-end="65"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using System.Text.Json;
+using System.IO;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="67" data-line-end="70"><span class="hljs-keyword">using</span> System.Text.Json;
+<span class="hljs-keyword">using</span> System.IO;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="71" data-line-end="73">
+<div class="task-step-checkbox" data-foo="137" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="71" data-line-end="72"> Double-click the <strong>TODO: Exercise 1: Task 1b: Store the return value from the SaveFileDialog in a nullable Boolean variable.</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="73" data-line-end="80">
+<div class="task-step-checkbox" data-foo="142" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="73" data-line-end="74"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="bool? result = dialog.ShowDialog();
+if (result.HasValue &amp;&amp; result.Value)
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="76" data-line-end="80"><span class="hljs-built_in">bool</span>? result = dialog.ShowDialog();
+<span class="hljs-keyword">if</span> (result.HasValue &amp;&amp; result.Value)
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="80" data-line-end="85">
+<div class="task-step-checkbox" data-foo="148" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="80" data-line-end="81"> Click at the end of the last comment in this method, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="83" data-line-end="85">}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="85" data-line-end="87">
+<div class="task-step-checkbox" data-foo="154" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="85" data-line-end="86"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1c: Get the grades for the currently selected student.</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="87" data-line-end="95">
+<div class="task-step-checkbox" data-foo="159" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="87" data-line-end="88"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="List&lt;Grade&gt; grades = (from g in DataSource.Grades
+where g.StudentID == SessionContext.CurrentStudent.StudentID
+select g).ToList();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="90" data-line-end="94">List&lt;Grade&gt; grades = (<span class="hljs-keyword">from</span> g <span class="hljs-keyword">in</span> DataSource.Grades
+<span class="hljs-keyword">where</span> g.StudentID == SessionContext.CurrentStudent.StudentID
+<span class="hljs-keyword">select</span> g).ToList();
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Serialize the grade data to a file stream</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="97" data-line-end="99">
+<div class="task-step-checkbox" data-foo="170" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="97" data-line-end="98"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2: Serialize the grades to a JSON.</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="99" data-line-end="106">
+<div class="task-step-checkbox" data-foo="175" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="99" data-line-end="100"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
+var gradesAsJson = JsonSerializer.Serialize(grades, jsonOptions);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="102" data-line-end="105"><span class="hljs-keyword">var</span> jsonOptions = <span class="hljs-keyword">new</span> JsonSerializerOptions { WriteIndented = <span class="hljs-literal">true</span> };
+<span class="hljs-keyword">var</span> gradesAsJson = JsonSerializer.Serialize(grades, jsonOptions);
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Save the JSON document to disk by using FileStream</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="108" data-line-end="110">
+<div class="task-step-checkbox" data-foo="186" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="108" data-line-end="109"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Modify the message box and ask the user whether they wish to save the report</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="110" data-line-end="116">
+<div class="task-step-checkbox" data-foo="191" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="110" data-line-end="111"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="MessageBoxResult reply = MessageBox.Show(gradesAsJson, &quot;Save Report?&quot;, MessageBoxButton.YesNo, MessageBoxImage.Question);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="113" data-line-end="115">MessageBoxResult reply = MessageBox.Show(gradesAsJson, <span class="hljs-string">"Save Report?"</span>, MessageBoxButton.YesNo, MessageBoxImage.Question);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="116" data-line-end="118">
+<div class="task-step-checkbox" data-foo="197" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="116" data-line-end="117"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Check if the user what to save the report or not</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="118" data-line-end="125">
+<div class="task-step-checkbox" data-foo="202" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="118" data-line-end="119"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="if (reply == MessageBoxResult.Yes)
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="121" data-line-end="124"><span class="hljs-keyword">if</span> (reply == MessageBoxResult.Yes)
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="125" data-line-end="131">
+<div class="task-step-checkbox" data-foo="208" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="125" data-line-end="126"> Click at the end of the last comment in this method, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="128" data-line-end="130">}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="131" data-line-end="133">
+<div class="task-step-checkbox" data-foo="214" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="131" data-line-end="132"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3c: Save the data to the file by using FileStream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="133" data-line-end="142">
+<div class="task-step-checkbox" data-foo="219" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="133" data-line-end="134"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="FileStream file = new FileStream(dialog.FileName, FileMode.Create, FileAccess.Write);
+StreamWriter streamWriter = new StreamWriter(file);
+streamWriter.Write(gradesAsJson);
+file.Position = 0;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="136" data-line-end="141">FileStream file = <span class="hljs-keyword">new</span> FileStream(dialog.FileName, FileMode.Create, FileAccess.Write);
+StreamWriter streamWriter = <span class="hljs-keyword">new</span> StreamWriter(file);
+streamWriter.Write(gradesAsJson);
+file.Position = <span class="hljs-number">0</span>;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="142" data-line-end="144">
+<div class="task-step-checkbox" data-foo="225" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="142" data-line-end="143"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Release all the stream resources</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="144" data-line-end="154">
+<div class="task-step-checkbox" data-foo="230" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="144" data-line-end="145"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="streamWriter.Close();
+streamWriter.Dispose();
+
+file.Close();
+file.Dispose();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="147" data-line-end="153">streamWriter.Close();
+streamWriter.Dispose();
+
+file.Close();
+file.Dispose();
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Run the application and check the save functionality</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="156" data-line-end="158">
+<div class="task-step-checkbox" data-foo="241" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="156" data-line-end="157"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="158" data-line-end="160">
+<div class="task-step-checkbox" data-foo="246" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="158" data-line-end="159"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="160" data-line-end="162">
+<div class="task-step-checkbox" data-foo="251" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="160" data-line-end="161"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="162" data-line-end="164">
+<div class="task-step-checkbox" data-foo="256" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="162" data-line-end="163"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="164" data-line-end="166">
+<div class="task-step-checkbox" data-foo="261" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="164" data-line-end="165"> In the main application window, click <strong>Kevin Liu</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="166" data-line-end="168">
+<div class="task-step-checkbox" data-foo="266" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="166" data-line-end="167"> In the <strong>Report Card</strong> view, click <strong>Save Report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="168" data-line-end="170">
+<div class="task-step-checkbox" data-foo="271" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="168" data-line-end="169"> In the <strong>Save As</strong> dialog box, click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="170" data-line-end="172">
+<div class="task-step-checkbox" data-foo="276" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="170" data-line-end="171"> Review the JSON data displayed in the message box, and then click <strong>Yes</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="172" data-line-end="174">
+<div class="task-step-checkbox" data-foo="281" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="172" data-line-end="173"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="174" data-line-end="176">
+<div class="task-step-checkbox" data-foo="286" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="174" data-line-end="175"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="176" data-line-end="178">
+<div class="task-step-checkbox" data-foo="291" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="176" data-line-end="177"> Close <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="178" data-line-end="184">
+<div class="task-step-checkbox" data-foo="296" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="178" data-line-end="179"> Locate the destination folder that you have just saved the file to, and open the <strong>Grades.Json</strong> file.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="181" data-line-end="182"><strong>Note:</strong> If JSON file is not opening, right-click on saved file and point to open with and then click <strong>more apps</strong> and select <strong>Microsoft Visual Studio Version Selector</strong> and click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="184" data-line-end="186">
+<div class="task-step-checkbox" data-foo="306" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="184" data-line-end="185"> Locate the <strong>SubjectName</strong> element with the value <strong>Math</strong> inside the JSON array.</p>
+</li>
+<li class="task-list-item" data-line-start="186" data-line-end="188">
+<div class="task-step-checkbox" data-foo="311" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="186" data-line-end="187"> Change <strong>'Math' Assessment</strong> to be <strong>A</strong> and the <strong>Comments</strong> to be <strong>Very Good</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="188" data-line-end="191">
+<div class="task-step-checkbox" data-foo="316" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="188" data-line-end="189"> Save and close the file.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="192" data-line-end="193"><strong>Result:</strong> After completing this exercise, users will be able to save student reports to the local hard disk in JSON format.</p>
+</div>
+<h3>Exercise 2: Deserialize Data from the JSON Report to Grades Object</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="199" data-line-end="200"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="201" data-line-end="203">In 
+this exercise, you'll write code to define load settings and load the 
+student report from the disk. At the end of this exercise, you'll be 
+able to display the loaded student report from the disk to the user.
+you'll add code to the LoadReport_Click method to define the settings to
+ load the report as a JSON file and display a dialog box to the user to 
+get a filename. To the LoadReport_Click method, you'll also add code 
+that loads the report from the disk as a JSON, deserializes it to the 
+grades model, and displays it to the user.</p>
+</div>
+<h3>Task 1: Define the File Dialog settings to load the report file</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="207" data-line-end="209">
+<div class="task-step-checkbox" data-foo="342" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="207" data-line-end="208"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="209" data-line-end="211">
+<div class="task-step-checkbox" data-foo="347" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="209" data-line-end="210"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="211" data-line-end="217">
+<div class="task-step-checkbox" data-foo="352" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="211" data-line-end="212"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod06\Labfiles\Starter\Exercise 2</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="214" data-line-end="215"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="217" data-line-end="219">
+<div class="task-step-checkbox" data-foo="362" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="217" data-line-end="218"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="219" data-line-end="221">
+<div class="task-step-checkbox" data-foo="367" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="219" data-line-end="220"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 02: Task 1: Define the File Dialog settings to load the report file</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="221" data-line-end="231">
+<div class="task-step-checkbox" data-foo="372" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="221" data-line-end="222"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="OpenFileDialog dialog = new OpenFileDialog();
+dialog.Filter = &quot;JSON documents|*.json&quot;;
+
+// Display the dialog and get a filename from the user
+bool? result = dialog.ShowDialog();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="224" data-line-end="230">OpenFileDialog dialog = <span class="hljs-keyword">new</span> OpenFileDialog();
+dialog.Filter = <span class="hljs-string">"JSON documents|*.json"</span>;
+
+<span class="hljs-comment">// Display the dialog and get a filename from the user</span>
+<span class="hljs-built_in">bool</span>? result = dialog.ShowDialog();
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Load the report and display it to the user</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="233" data-line-end="235">
+<div class="task-step-checkbox" data-foo="383" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="233" data-line-end="234"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 02: Task 2a: Check the user file selection</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="235" data-line-end="242">
+<div class="task-step-checkbox" data-foo="388" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="235" data-line-end="236"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="if (result.HasValue &amp;&amp; result.Value)
+   {"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="238" data-line-end="241"><span class="hljs-keyword">if</span> (result.HasValue &amp;&amp; result.Value)
+   {
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="242" data-line-end="248">
+<div class="task-step-checkbox" data-foo="394" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="242" data-line-end="243"> Click at the end of the last comment in this method, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="245" data-line-end="247">}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="248" data-line-end="250">
+<div class="task-step-checkbox" data-foo="400" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="248" data-line-end="249"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 02: Task 2b: Read the report data from Disk</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="250" data-line-end="256">
+<div class="task-step-checkbox" data-foo="405" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="250" data-line-end="251"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="string gradesAsJson = File.ReadAllText(dialog.FileName);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="253" data-line-end="255"><span class="hljs-built_in">string</span> gradesAsJson = File.ReadAllText(dialog.FileName);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="256" data-line-end="258">
+<div class="task-step-checkbox" data-foo="411" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="256" data-line-end="257"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 02: Task 2c: Deserialize the JSON data to grades list</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="258" data-line-end="264">
+<div class="task-step-checkbox" data-foo="416" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="258" data-line-end="259"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var gradeList = JsonSerializer.Deserialize&lt;List&lt;Grade&gt;&gt;(gradesAsJson);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="261" data-line-end="263"><span class="hljs-keyword">var</span> gradeList = JsonSerializer.Deserialize&lt;List&lt;Grade&gt;&gt;(gradesAsJson);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="264" data-line-end="266">
+<div class="task-step-checkbox" data-foo="422" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="264" data-line-end="265"> In the <strong>Task List</strong> window, double-click the <strong>TODO: 02: Task 2d: Display the saved report to the user</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="266" data-line-end="272">
+<div class="task-step-checkbox" data-foo="427" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="266" data-line-end="267"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="studentGrades.ItemsSource = gradeList;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="269" data-line-end="271">studentGrades.ItemsSource = gradeList;
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Run the application and check the load functionality</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="274" data-line-end="277">
+<div class="task-step-checkbox" data-foo="438" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="274" data-line-end="275"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="277" data-line-end="279">
+<div class="task-step-checkbox" data-foo="443" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="277" data-line-end="278"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="279" data-line-end="281">
+<div class="task-step-checkbox" data-foo="448" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="279" data-line-end="280"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="281" data-line-end="283">
+<div class="task-step-checkbox" data-foo="453" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="281" data-line-end="282"> In the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="283" data-line-end="285">
+<div class="task-step-checkbox" data-foo="458" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="283" data-line-end="284"> In the main application window, click <strong>Kevin Liu</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="285" data-line-end="287">
+<div class="task-step-checkbox" data-foo="463" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="285" data-line-end="286"> In the <strong>Report Card</strong> view, click <strong>Load Report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="287" data-line-end="289">
+<div class="task-step-checkbox" data-foo="468" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="287" data-line-end="288"> In the <strong>Open</strong> dialog box, go to your destination folder where the report was saved in the previous task and locate the saved report.</p>
+</li>
+<li class="task-list-item" data-line-start="289" data-line-end="291">
+<div class="task-step-checkbox" data-foo="473" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="289" data-line-end="290"> Select the report file and then click <strong>Open</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="291" data-line-end="293">
+<div class="task-step-checkbox" data-foo="478" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="291" data-line-end="292"> Review the data displayed in the <strong>Report Card</strong> view and verify that the changes that you made manually to the JSON report file are shown.</p>
+</li>
+<li class="task-list-item" data-line-start="293" data-line-end="295">
+<div class="task-step-checkbox" data-foo="483" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="293" data-line-end="294"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="295" data-line-end="297">
+<div class="task-step-checkbox" data-foo="488" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="295" data-line-end="296"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="297" data-line-end="299">
+<div class="task-step-checkbox" data-foo="493" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="297" data-line-end="298"> Close <strong>Visual Studio</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="300" data-line-end="301"><strong>Result:</strong> After completing this exercise, users will be able to load student reports from the local hard disk.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="304" data-line-end="305"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div><div class="popover bs-popover-top show" role="tooltip" id="popover776417" style="position: absolute; transform: translate3d(43px, 10px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="top"><div class="arrow" style="left: 61px;"></div><h3 class="popover-header"></h3><div class="popover-body">Select Lab Guide page</div></div></body></html>
