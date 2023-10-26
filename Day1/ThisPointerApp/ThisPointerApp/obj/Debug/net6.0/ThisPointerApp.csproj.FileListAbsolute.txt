@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\bin\Debug\net6.0\ThisPointerApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\bin\Debug\net6.0\ThisPointerApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\bin\Debug\net6.0\ThisPointerApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\bin\Debug\net6.0\ThisPointerApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\bin\Debug\net6.0\ThisPointerApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\refint\ThisPointerApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ThisPointerApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\Day1\ThisPointerApp\ThisPointerApp\obj\Debug\net6.0\ref\ThisPointerApp.dll

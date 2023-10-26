@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\AccountConstructorApp\\AccountConstructorApp\\AccountConstructorApp.csproj": {}
+    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {}
   },
   "projects": {
-    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\AccountConstructorApp\\AccountConstructorApp\\AccountConstructorApp.csproj": {
+    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\AccountConstructorApp\\AccountConstructorApp\\AccountConstructorApp.csproj",
-        "projectName": "AccountConstructorApp",
-        "projectPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\AccountConstructorApp\\AccountConstructorApp\\AccountConstructorApp.csproj",
+        "projectUniqueName": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
+        "projectName": "ThisPointerApp",
+        "projectPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
         "packagesPath": "C:\\Users\\kanna\\.nuget\\packages\\",
-        "outputPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\AccountConstructorApp\\AccountConstructorApp\\obj\\",
+        "outputPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kanna\\AppData\\Roaming\\NuGet\\NuGet.Config",
