@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {}
+    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {}
   },
   "projects": {
-    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {
+    "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
+        "projectUniqueName": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
         "projectName": "ThisPointerApp",
-        "projectPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
+        "projectPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\ThisPointerApp\\ThisPointerApp\\ThisPointerApp.csproj",
         "packagesPath": "C:\\Users\\kanna\\.nuget\\packages\\",
-        "outputPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\Day1\\ThisPointerApp\\ThisPointerApp\\obj\\",
+        "outputPath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day1\\ThisPointerApp\\ThisPointerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kanna\\AppData\\Roaming\\NuGet\\NuGet.Config",

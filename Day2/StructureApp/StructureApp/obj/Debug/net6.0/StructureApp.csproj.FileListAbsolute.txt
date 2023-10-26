@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\bin\Debug\net6.0\StructureApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\bin\Debug\net6.0\StructureApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\bin\Debug\net6.0\StructureApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\bin\Debug\net6.0\StructureApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\bin\Debug\net6.0\StructureApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\refint\StructureApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\StructureApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\StructureApp\StructureApp\obj\Debug\net6.0\ref\StructureApp.dll

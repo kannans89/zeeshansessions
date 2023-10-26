@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\bin\Debug\net6.0\CollectionApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\bin\Debug\net6.0\CollectionApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\bin\Debug\net6.0\CollectionApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\bin\Debug\net6.0\CollectionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\bin\Debug\net6.0\CollectionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\refint\CollectionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\CollectionApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\CollectionApp\CollectionApp\obj\Debug\net6.0\ref\CollectionApp.dll

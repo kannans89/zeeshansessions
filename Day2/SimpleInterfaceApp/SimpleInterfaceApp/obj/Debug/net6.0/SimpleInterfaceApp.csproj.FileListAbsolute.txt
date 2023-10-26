@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\bin\Debug\net6.0\SimpleInterfaceApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\bin\Debug\net6.0\SimpleInterfaceApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\bin\Debug\net6.0\SimpleInterfaceApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\bin\Debug\net6.0\SimpleInterfaceApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\bin\Debug\net6.0\SimpleInterfaceApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\refint\SimpleInterfaceApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\SimpleInterfaceApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\SimpleInterfaceApp\SimpleInterfaceApp\obj\Debug\net6.0\ref\SimpleInterfaceApp.dll

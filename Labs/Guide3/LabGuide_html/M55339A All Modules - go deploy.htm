@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 3: C# Structures, Collections and Events</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="true">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 3: C# Structures, Collections and Events</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="3" data-line-end="4"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Building the Grades Prototype Application</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="13" data-line-end="14"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="15" data-line-end="20">The 
+School of Fine Arts has decided that they want to extend their basic 
+class enrollment application to enable teachers to record the grades 
+that students in their class have achieved for each subject, and to 
+allow students to view their own grades.
+This functionality necessitates implementing a log on functionality to 
+authenticate the user and to determine whether the user is a teacher or a
+ student.
+You decide to start by developing parts of a prototype application to 
+test proof of concept and to obtain client feedback before developing 
+the final application.
+The prototype application will use basic WPF views rather than separate 
+forms for the user interface. These views have already been designed and
+ you must add the code to navigate through them.
+You also decide to begin by storing the user and grade information in 
+basic structs, and to use a dummy data source in the application to test
+ the log on functionality.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="23" data-line-end="24"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="25" data-line-end="26">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="27" data-line-end="28">Navigate among views.</li>
+<li class="has-line-data" data-line-start="28" data-line-end="29">Create and use collections of structs.</li>
+<li class="has-line-data" data-line-start="29" data-line-end="30">Handle events.</li>
+</ul>
+</div>
+<h3>Exercise 1: Adding Navigation Logic to the Grades Prototype Application</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="35" data-line-end="36"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="37" data-line-end="38">In this exercise, you'll add navigation logic to the <strong>Grades Prototype</strong> application.</p>
+<ul>
+<li class="has-line-data" data-line-start="39" data-line-end="41">
+<p class="has-line-data" data-line-start="39" data-line-end="40">First, 
+you'll examine the window and views in the application so that you are 
+familiar with the existing structure of the application.</p>
+</li>
+<li class="has-line-data" data-line-start="41" data-line-end="43">
+<p class="has-line-data" data-line-start="41" data-line-end="42">You'll define a public event handler named <strong>LogonSuccess</strong> that will be raised when a user successfully logs on to the application.</p>
+</li>
+<li class="has-line-data" data-line-start="43" data-line-end="45">
+<p class="has-line-data" data-line-start="43" data-line-end="44">You'll add dummy code to the <strong>Logon_Click</strong> event handler to store the username and role of the current user and calls the <strong>LogonSuccess</strong> event.</p>
+</li>
+<li class="has-line-data" data-line-start="45" data-line-end="47">
+<p class="has-line-data" data-line-start="45" data-line-end="46">Then you'll add markup to the <strong>LogonPage</strong> XAML code to connect the <strong>Logon</strong> button to the <strong>Logon_Click</strong> event handler.</p>
+</li>
+<li class="has-line-data" data-line-start="47" data-line-end="49">
+<p class="has-line-data" data-line-start="47" data-line-end="48">Next, you'll add code to the <strong>GotoLogon</strong> method to display the log on view and to hide the other views.</p>
+</li>
+<li class="has-line-data" data-line-start="49" data-line-end="51">
+<p class="has-line-data" data-line-start="49" data-line-end="50">You'll implement the <strong>Logon_Success</strong> method to handle a successful log on by displaying the logged-on views, and then you'll add markup to the <strong>MainWindow</strong> XAML code to connect the <strong>LogonSuccess</strong> event to the <strong>Logon_Success</strong> method.</p>
+</li>
+<li class="has-line-data" data-line-start="51" data-line-end="53">
+<p class="has-line-data" data-line-start="51" data-line-end="52">You'll add code to <strong>MainWindow</strong> to determine whether the user is a teacher or a student, display their name in the application, and display either the <strong>StudentsPage</strong> view for teachers or the <strong>StudentProfile</strong> view for students.</p>
+</li>
+<li class="has-line-data" data-line-start="53" data-line-end="55">
+<p class="has-line-data" data-line-start="53" data-line-end="55">You'll then add code to the <strong>StudentsPage</strong> view that catches a student name being clicked, calls the <strong>StudentSelected</strong>
+ event for that student, and displays their student profile.
+Finally, you'll run the application and verify that the appropriate 
+views are displayed for students and teachers upon a successful log on.</p>
+</li>
+</ul>
+</div>
+<h3>Task 1: Examine the window and views in the application</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="59" data-line-end="61">
+<div class="task-step-checkbox" data-foo="108" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="59" data-line-end="60"> Start <strong>Microsoft Visual Studio</strong> and open the <strong>GradesPrototype.sln</strong> solution from the <strong>E:\Allfiles\Mod03\Labfiles\Starter\Exercise 1</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="61" data-line-end="62">
+<div class="task-step-checkbox" data-foo="113" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="61" data-line-end="62"> Build the solution.</p>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="68">
+<div class="task-step-checkbox" data-foo="118" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> Review <strong>MainWindow.xaml</strong>, which is the main window for the application and will host the following views:</p>
+<ul>
+<li class="has-line-data" data-line-start="64" data-line-end="65">LogonPage.xaml</li>
+<li class="has-line-data" data-line-start="65" data-line-end="66">StudentProfile.xaml</li>
+<li class="has-line-data" data-line-start="66" data-line-end="68">StudentsPage.xaml</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="68" data-line-end="70">
+<div class="task-step-checkbox" data-foo="140" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="68" data-line-end="69"> In the <strong>Views</strong> folder, review <strong>LogonPage.xaml</strong>.
+ Notice that this view contains text boxes for the username and 
+password, a check box to identify the user as a teacher, and a button to
+ log on to the application.</p>
+</li>
+<li class="task-list-item" data-line-start="70" data-line-end="72">
+<div class="task-step-checkbox" data-foo="145" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="70" data-line-end="71"> In the <strong>Views</strong> folder, review <strong>StudentProfile.xaml</strong>.
+ Notice that this view contains a report card that currently displays a 
+list of dummy grades. The view also contains a back button and a blank 
+space that will display the student's name. This view is displayed when a
+ student logs on or when a teacher views a student's profile.</p>
+</li>
+<li class="task-list-item" data-line-start="72" data-line-end="74">
+<div class="task-step-checkbox" data-foo="150" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="72" data-line-end="73"> In the <strong>Views</strong> folder, review <strong>StudentsPage.xaml</strong>.
+ Notice that this view contains the list of students in a particular 
+class. This view is displayed when a teacher logs on. A teacher can 
+click a student and the <strong>Students Profile</strong> view that contains the selected students' data will be displayed.</p>
+</li>
+</ol>
+<h3>Task 2: Define the LogonSuccess event and add dummy code for the Logon_Click event</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="76" data-line-end="81">
+<div class="task-step-checkbox" data-foo="160" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="76" data-line-end="77"> In the <strong>LogonPage.xaml.cs</strong> class, in the <strong>Event Members</strong> region, define a public event handler named <strong>LogonSuccess</strong>.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public event EventHandler LogonSuccess;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="78" data-line-end="80"><span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> EventHandler LogonSuccess;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="81" data-line-end="82">
+<div class="task-step-checkbox" data-foo="166" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="81" data-line-end="82"> In the <strong>Logon Validation</strong> region, add an event handler for the <strong>Logon_Click</strong> event, which takes an <strong>object</strong> parameter named <strong>sender</strong> and a <strong>RoutedEventArgs</strong> parameter named <strong>e</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="82" data-line-end="90">
+<div class="task-step-checkbox" data-foo="171" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="82" data-line-end="83"> In the <strong>Logon_Click</strong> event handler, add code to do the following:</p>
+<ul>
+<li class="has-line-data" data-line-start="84" data-line-end="86">
+<p class="has-line-data" data-line-start="84" data-line-end="85">Save the username and role that the user specified on the form in the relevant properties of the <strong>SessionContext</strong> object.</p>
+</li>
+<li class="has-line-data" data-line-start="86" data-line-end="88">
+<p class="has-line-data" data-line-start="86" data-line-end="87">If the user is a student, set the <strong>CurrentStudent</strong> property of the <strong>SessionContext</strong> object to the string <strong>Eric Gruber</strong>.</p>
+</li>
+<li class="has-line-data" data-line-start="88" data-line-end="90">
+<p class="has-line-data" data-line-start="88" data-line-end="89">Raise the <strong>LogonSuccess</strong> event.</p>
+</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="90" data-line-end="113">
+<div class="task-step-checkbox" data-foo="193" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="90" data-line-end="91"> Verify that the code you have written resembles the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Simulate logging on (no validation or authentication performed yet)
+private void Logon_Click(object sender, RoutedEventArgs e)
+{
+    // Save the username and role (type of user) specified on the form in the global context
+    SessionContext.UserName = username.Text;
+    SessionContext.UserRole = (bool)userrole.IsChecked ? Role.Teacher : Role.Student;
+
+    // If the role is Student, set the CurrentStudent property in the global context to a dummy student; Eric Gruber
+    if (SessionContext.UserRole == Role.Student)
+    {
+        SessionContext.CurrentStudent = &quot;Eric Gruber&quot;;
+    }
+
+    // Raise the LogonSuccess event
+    if (LogonSuccess != null)
+    {
+        LogonSuccess(this, null);
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="92" data-line-end="112"><span class="hljs-comment">// Simulate logging on (no validation or authentication performed yet)</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Logon_Click</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, RoutedEventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Save the username and role (type of user) specified on the form in the global context</span>
+    SessionContext.UserName = username.Text;
+    SessionContext.UserRole = (<span class="hljs-built_in">bool</span>)userrole.IsChecked ? Role.Teacher : Role.Student;
+
+    <span class="hljs-comment">// If the role is Student, set the CurrentStudent property in the global context to a dummy student; Eric Gruber</span>
+    <span class="hljs-keyword">if</span> (SessionContext.UserRole == Role.Student)
+    {
+        SessionContext.CurrentStudent = <span class="hljs-string">"Eric Gruber"</span>;
+    }
+
+    <span class="hljs-comment">// Raise the LogonSuccess event</span>
+    <span class="hljs-keyword">if</span> (LogonSuccess != <span class="hljs-literal">null</span>)
+    {
+        LogonSuccess(<span class="hljs-keyword">this</span>, <span class="hljs-literal">null</span>);
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="113" data-line-end="115">
+<div class="task-step-checkbox" data-foo="199" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="113" data-line-end="114"> In the <strong>LogonPage.xaml</strong> XAML editor, locate the definition of the <strong>Log on</strong> button.</p>
+</li>
+<li class="task-list-item" data-line-start="115" data-line-end="121">
+<div class="task-step-checkbox" data-foo="204" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="115" data-line-end="116"> Modify the definition to call the <strong>Logon_Click</strong> method when the button is clicked, either by using the Properties pane and modifying the <strong>Click</strong> event, or by adding the <strong>Click="Logon_Click"</strong> attribute to the <strong>Button</strong> element in the XAML.</p>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="118" data-line-end="119">If needed, you can verify your changes by looking at the completed solution in <strong>E:\Allfiles\Mod03\Labfiles\Solution\Exercise 1\GradesPrototype</strong>.</p>
+</div>
+</li>
+</ol>
+<h3>Task 3: Add code to display the Log On view</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="123" data-line-end="135">
+<div class="task-step-checkbox" data-foo="219" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="123" data-line-end="124"> In the <strong>MainWindow.xaml.cs</strong> code, locate the <strong>GotoLogon</strong> method, and then add code to display the <strong>logonPage</strong> view and hide <strong>studentsPage</strong> and <strong>studentProfile</strong> views:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Display the logon view
+public void GotoLogon()
+{
+    // Display the logon view and hide the list of students and single student view
+    logonPage.Visibility = Visibility.Visible;
+    studentsPage.Visibility = Visibility.Collapsed;
+    studentProfile.Visibility = Visibility.Collapsed;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="125" data-line-end="134"><span class="hljs-comment">// Display the logon view</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GotoLogon</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Display the logon view and hide the list of students and single student view</span>
+    logonPage.Visibility = Visibility.Visible;
+    studentsPage.Visibility = Visibility.Collapsed;
+    studentProfile.Visibility = Visibility.Collapsed;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="135" data-line-end="147">
+<div class="task-step-checkbox" data-foo="225" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="135" data-line-end="136"> In the <strong>Event Handlers</strong> region, add a <strong>Logon_Success</strong> method to handle a successful log on. This method should take an <strong>object</strong> parameter named <strong>sender</strong> and an <strong>EventArgs</strong> parameter named <strong>e</strong>. The method should update the display and show the data for the current user:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Handle successful logon
+private void Logon_Success(object sender, EventArgs e)
+{
+    // Update the display and show the data for the logged on user
+    logonPage.Visibility = Visibility.Collapsed;
+    gridLoggedIn.Visibility = Visibility.Visible;
+    Refresh();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="137" data-line-end="146"><span class="hljs-comment">// Handle successful logon</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Logon_Success</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, EventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Update the display and show the data for the logged on user</span>
+    logonPage.Visibility = Visibility.Collapsed;
+    gridLoggedIn.Visibility = Visibility.Visible;
+    Refresh();
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="147" data-line-end="148">
+<div class="task-step-checkbox" data-foo="231" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="147" data-line-end="148"> In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>LogonPage</strong> page.</p>
+</li>
+<li class="task-list-item" data-line-start="148" data-line-end="153">
+<div class="task-step-checkbox" data-foo="236" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="148" data-line-end="149"> Modify the definition to call the <strong>Logon_Success</strong> method for the <strong>LogonSuccess</strong> event.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;y:LogonPage x:Name=&quot;logonPage&quot;  Visibility=&quot;Collapsed&quot; LogonSuccess =&quot;Logon_Success&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="150" data-line-end="152">&lt;y:LogonPage x:Name="logonPage"  Visibility="Collapsed" LogonSuccess ="Logon_Success" /&gt;
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Add code to determine the type of user</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="155" data-line-end="176">
+<div class="task-step-checkbox" data-foo="247" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="155" data-line-end="156"> In the <strong>MainWindow.xaml.cs</strong> file, in the <strong>Refresh</strong> method, add code to determine the type of user, display <strong>Welcome &lt;username&gt;</strong> in the <strong>txtName</strong> text box, and then call either the <strong>GotoStudentProfile</strong> method (for students) or the <strong>GotoStudentsPage</strong> method (for teachers) to display the appropriate view:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="switch (SessionContext.UserRole)
+{
+    case Role.Student:
+        // Display the student name in the banner at the top of the page
+        txtName.Text = string.Format(&quot;Welcome {0}&quot;, SessionContext.UserName);
+
+        // Display the details for the current student
+        GotoStudentProfile();
+        break;
+
+    case Role.Teacher:
+        // Display the teacher name in the banner at the top of the page
+        txtName.Text = string.Format(&quot;Welcome {0}&quot;, SessionContext.UserName);
+
+        // Display the list of students for the teacher
+        GotoStudentsPage();                    
+        break;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="157" data-line-end="176"><span class="hljs-keyword">switch</span> (SessionContext.UserRole)
+{
+    <span class="hljs-keyword">case</span> Role.Student:
+        <span class="hljs-comment">// Display the student name in the banner at the top of the page</span>
+        txtName.Text = <span class="hljs-built_in">string</span>.Format(<span class="hljs-string">"Welcome {0}"</span>, SessionContext.UserName);
+
+        <span class="hljs-comment">// Display the details for the current student</span>
+        GotoStudentProfile();
+        <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">case</span> Role.Teacher:
+        <span class="hljs-comment">// Display the teacher name in the banner at the top of the page</span>
+        txtName.Text = <span class="hljs-built_in">string</span>.Format(<span class="hljs-string">"Welcome {0}"</span>, SessionContext.UserName);
+
+        <span class="hljs-comment">// Display the list of students for the teacher</span>
+        GotoStudentsPage();                    
+        <span class="hljs-keyword">break</span>;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="176" data-line-end="189">
+<div class="task-step-checkbox" data-foo="253" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="176" data-line-end="177"> In the <strong>GotoStudentsPage</strong> method, add code to hide the <strong>studentProfile</strong> view, and then add code to display and refresh the <strong>studentsPage</strong> view.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void GotoStudentsPage()
+{
+    // Hide the view for a single student (if it is visible)
+    studentProfile.Visibility = Visibility.Collapsed;
+
+    // Display the list of students
+    studentsPage.Visibility = Visibility.Visible;
+    studentsPage.Refresh();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="178" data-line-end="188"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GotoStudentsPage</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Hide the view for a single student (if it is visible)</span>
+    studentProfile.Visibility = Visibility.Collapsed;
+
+    <span class="hljs-comment">// Display the list of students</span>
+    studentsPage.Visibility = Visibility.Visible;
+    studentsPage.Refresh();
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="189" data-line-end="191">
+<div class="task-step-checkbox" data-foo="259" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="189" data-line-end="190"> Using similar code, in the <strong>GotoStudentProfile</strong> method, add code to hide the <strong>studentsPage</strong> view, and then add code to display and refresh the <strong>studentProfile</strong> view.</p>
+</li>
+<li class="task-list-item" data-line-start="191" data-line-end="204">
+<div class="task-step-checkbox" data-foo="264" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="191" data-line-end="192"> In the <strong>StudentProfile.xaml.cs</strong> file, in the <strong>Refresh</strong> method, add code to:</p>
+<ul>
+<li class="has-line-data" data-line-start="192" data-line-end="194">Parse the student name into the first name and last name by using a regular expression as shown in the following example:</li>
+</ul>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Match matchNames = Regex.Match(SessionContext.CurrentStudent, @&quot;([^ ]+) ([^ ]+)&quot;);
+if (matchNames.Success)
+{
+    string firstName = matchNames.Groups[1].Value; 
+    string lastName = matchNames.Groups[2].Value;
+
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="195" data-line-end="203">Match matchNames = Regex.Match(SessionContext.CurrentStudent, <span class="hljs-string">@"([^ ]+) ([^ ]+)"</span>);
+<span class="hljs-keyword">if</span> (matchNames.Success)
+{
+    <span class="hljs-built_in">string</span> firstName = matchNames.Groups[<span class="hljs-number">1</span>].Value; 
+    <span class="hljs-built_in">string</span> lastName = matchNames.Groups[<span class="hljs-number">2</span>].Value;
+
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="204" data-line-end="212">
+<div class="task-step-checkbox" data-foo="277" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="204" data-line-end="205"> If a name is successfully parsed, display the first name and last name of the student in the appropriate boxes:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Display the first name and last name in the TextBlock controls in the studentName StackPanel
+((TextBlock)studentName.Children[0]).Text = firstName;
+((TextBlock)studentName.Children[1]).Text = lastName;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="207" data-line-end="211"><span class="hljs-comment">// Display the first name and last name in the TextBlock controls in the studentName StackPanel</span>
+((TextBlock)studentName.Children[<span class="hljs-number">0</span>]).Text = firstName;
+((TextBlock)studentName.Children[<span class="hljs-number">1</span>]).Text = lastName;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="212" data-line-end="218">
+<div class="task-step-checkbox" data-foo="283" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="212" data-line-end="213"> If the user is a student, hide the <strong>btnBack</strong> button, or if the user is a teacher, display the <strong>btnBack</strong> button.</p>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="215" data-line-end="216"><strong>Note:</strong> If needed, you can verify your changes by looking at the completed solution in <strong>E:\Allfiles\Mod03\Labfiles\Solution\Exercise 1\GradesPrototype\Views\StudentProfile.xaml.cs</strong>.</p>
+</div>
+</li>
+</ol>
+<h3>Task 5: Handle the Student_Click event</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="220" data-line-end="222">
+<div class="task-step-checkbox" data-foo="298" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="220" data-line-end="221"> In the <strong>StudentsPage.xaml.cs</strong> file, in the <strong>StudentsPage</strong> class, locate the <strong>Student_Click</strong> method.</p>
+</li>
+<li class="task-list-item" data-line-start="222" data-line-end="238">
+<div class="task-step-checkbox" data-foo="303" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="222" data-line-end="223"> Add code to this method to identify which student was clicked by using the <strong>Tag</strong> property of the button, and then raise the <strong>StudentSelected</strong> event, passing the student name as the second parameter:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Button itemClicked = sender as Button;
+if (itemClicked != null)
+{
+    // Find out which student was clicked - the Tag property of the button contains the name
+    string studentName = (string)itemClicked.Tag;
+    if (StudentSelected != null)
+    {
+        // Raise the StudentSelected event (handled by MainWindow) to display the details for this student
+        StudentSelected(sender, new StudentEventArgs(studentName));
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="225" data-line-end="237">Button itemClicked = sender <span class="hljs-keyword">as</span> Button;
+<span class="hljs-keyword">if</span> (itemClicked != <span class="hljs-literal">null</span>)
+{
+    <span class="hljs-comment">// Find out which student was clicked - the Tag property of the button contains the name</span>
+    <span class="hljs-built_in">string</span> studentName = (<span class="hljs-built_in">string</span>)itemClicked.Tag;
+    <span class="hljs-keyword">if</span> (StudentSelected != <span class="hljs-literal">null</span>)
+    {
+        <span class="hljs-comment">// Raise the StudentSelected event (handled by MainWindow) to display the details for this student</span>
+        StudentSelected(sender, <span class="hljs-keyword">new</span> StudentEventArgs(studentName));
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="238" data-line-end="242">
+<div class="task-step-checkbox" data-foo="309" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="238" data-line-end="239"> In the <strong>MainWindow.xaml.cs</strong> file, in the <strong>studentsPage_StudentSelected</strong> method, add code to set the <strong>CurrentStudent</strong> property of the <strong>SessionContext</strong> object to the student who was clicked by using the <strong>Child</strong> property of the <strong>e</strong> argument:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="SessionContext.CurrentStudent = e.Child;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="240" data-line-end="242">SessionContext.CurrentStudent = e.Child;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="242" data-line-end="243">
+<div class="task-step-checkbox" data-foo="315" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="242" data-line-end="243"> Add a call to the <strong>GotoStudentProfile</strong> method.</p>
+</li>
+<li class="task-list-item" data-line-start="243" data-line-end="244">
+<div class="task-step-checkbox" data-foo="320" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="243" data-line-end="244"> In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>StudentsPage</strong> page.</p>
+</li>
+<li class="task-list-item" data-line-start="244" data-line-end="246">
+<div class="task-step-checkbox" data-foo="325" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="244" data-line-end="245"> Modify the definition to call the <strong>studentsPage_StudentSelected</strong> method for the <strong>StudentSelected</strong> event.</p>
+</li>
+</ol>
+<h3>Task 6: Build and test the application</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="248" data-line-end="250">
+<div class="task-step-checkbox" data-foo="335" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="248" data-line-end="249"> Build the solution and resolve any compilation errors.</p>
+</li>
+<li class="task-list-item" data-line-start="250" data-line-end="251">
+<div class="task-step-checkbox" data-foo="340" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="250" data-line-end="251"> Run the application.</p>
+</li>
+<li class="task-list-item" data-line-start="251" data-line-end="252">
+<div class="task-step-checkbox" data-foo="345" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="251" data-line-end="252"> Log on as the teacher, <strong>vallee</strong>, with the password <strong>password</strong>, and the teacher box checked.</p>
+</li>
+<li class="task-list-item" data-line-start="252" data-line-end="256">
+<div class="task-step-checkbox" data-foo="350" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="252" data-line-end="253"> Verify that the application displays the <strong>StudentPage</strong> view.</p>
+<p class="has-line-data" data-line-start="254" data-line-end="255"><img src="M55339A%20All%20Modules%20-%20go%20deploy_files/f2238376-d2fe-426d-a652-c8dc32cbac36.png" alt="Screenshot"></p>
+</li>
+<li class="task-list-item" data-line-start="256" data-line-end="260">
+<div class="task-step-checkbox" data-foo="358" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="256" data-line-end="257"> Click <strong>Kevin Liu</strong> and verify that the application displays the <strong>StudentProfile</strong> view.</p>
+<p class="has-line-data" data-line-start="258" data-line-end="259"><img src="M55339A%20All%20Modules%20-%20go%20deploy_files/12e9c48c-33f1-4c59-8f79-18d82cde4d42.png" alt="Screenshot"></p>
+</li>
+<li class="task-list-item" data-line-start="260" data-line-end="261">
+<div class="task-step-checkbox" data-foo="366" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="260" data-line-end="261"> Log off the application.</p>
+</li>
+<li class="task-list-item" data-line-start="261" data-line-end="262">
+<div class="task-step-checkbox" data-foo="371" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="261" data-line-end="262"> Log on as the student, <strong>Gruber</strong>, with password as the <strong>password</strong>, and leave the teacher box unchecked.</p>
+</li>
+<li class="task-list-item" data-line-start="262" data-line-end="263">
+<div class="task-step-checkbox" data-foo="376" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="262" data-line-end="263"> Verify that the application displays the student profile page for Eric Gruber.</p>
+</li>
+<li class="task-list-item" data-line-start="263" data-line-end="265">
+<div class="task-step-checkbox" data-foo="381" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="263" data-line-end="264"> Close the application and then close the solution.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="266" data-line-end="267"><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades Prototype</strong> application to respond to user events and move among the application views appropriately.</p>
+</div>
+<h3>Exercise 2: Creating Data Types to Store User and Grade Information</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="272" data-line-end="273"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="274" data-line-end="275">In 
+this exercise, you'll define basic structs that will hold the teacher, 
+student, and grade information for the application. You'll then examine 
+the dummy data source that the application uses to populate the 
+collections in this exercise.</p>
+</div>
+<h3>Task 1: Define basic structs for holding Grade, Student, and Teacher information</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="279" data-line-end="281">
+<div class="task-step-checkbox" data-foo="407" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="279" data-line-end="280"> Open the <strong>GradesPrototype</strong> solution from the <strong>E:\Allfiles\Mod03\Labfiles\Starter\Exercise 2</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="281" data-line-end="283">
+<div class="task-step-checkbox" data-foo="412" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="281" data-line-end="282"> In the <strong>Data</strong> folder, open <strong>Grade.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="283" data-line-end="295">
+<div class="task-step-checkbox" data-foo="417" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="283" data-line-end="284"> In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Grade</strong> that contains the following fields:</p>
+<ul>
+<li class="has-line-data" data-line-start="285" data-line-end="286">
+<p class="has-line-data" data-line-start="285" data-line-end="286"><strong>StudentID</strong> as an integer</p>
+</li>
+<li class="has-line-data" data-line-start="286" data-line-end="287">
+<p class="has-line-data" data-line-start="286" data-line-end="287"><strong>AssessmentDate</strong> as a string</p>
+</li>
+<li class="has-line-data" data-line-start="287" data-line-end="288">
+<p class="has-line-data" data-line-start="287" data-line-end="288"><strong>SubjectName</strong> as a string</p>
+</li>
+<li class="has-line-data" data-line-start="288" data-line-end="289">
+<p class="has-line-data" data-line-start="288" data-line-end="289"><strong>Assessment</strong> as a string</p>
+</li>
+<li class="has-line-data" data-line-start="289" data-line-end="295">
+<p class="has-line-data" data-line-start="289" data-line-end="290"><strong>Comments</strong> as a string</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="292" data-line-end="293">You need to use properties (see example below) to support WPF databinding.</p>
+</div>
+</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="295" data-line-end="307">
+<div class="task-step-checkbox" data-foo="454" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="295" data-line-end="296"> Verify that your code looks something like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public struct Grade
+{
+    public int StudentID { get; set; }
+    public string AssessmentDate { get; set; }
+    public string SubjectName { get; set; }
+    public string Assessment { get; set; }
+    public string Comments { get; set; }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="297" data-line-end="306"><span class="hljs-keyword">public</span> <span class="hljs-keyword">struct</span> Grade
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> StudentID { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> AssessmentDate { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> SubjectName { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Assessment { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Comments { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="307" data-line-end="316">
+<div class="task-step-checkbox" data-foo="460" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="307" data-line-end="308"> In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Student</strong> that contains the following fields:</p>
+<ul>
+<li class="has-line-data" data-line-start="309" data-line-end="310"><strong>StudentID</strong> as an integer</li>
+<li class="has-line-data" data-line-start="310" data-line-end="311"><strong>UserName</strong> as a string</li>
+<li class="has-line-data" data-line-start="311" data-line-end="312"><strong>Password</strong> as a string</li>
+<li class="has-line-data" data-line-start="312" data-line-end="313"><strong>TeacherID</strong> as an integer</li>
+<li class="has-line-data" data-line-start="313" data-line-end="314"><strong>FirstName</strong> as a string</li>
+<li class="has-line-data" data-line-start="314" data-line-end="316"><strong>LastName</strong> as a string</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="316" data-line-end="325">
+<div class="task-step-checkbox" data-foo="497" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="316" data-line-end="317"> In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Teacher</strong> that contains the following fields:</p>
+<ul>
+<li class="has-line-data" data-line-start="318" data-line-end="319"><strong>TeacherID</strong> as an integer</li>
+<li class="has-line-data" data-line-start="319" data-line-end="320"><strong>UserName</strong> as a string</li>
+<li class="has-line-data" data-line-start="320" data-line-end="321"><strong>Password</strong> as a string</li>
+<li class="has-line-data" data-line-start="321" data-line-end="322"><strong>FirstName</strong> as a string</li>
+<li class="has-line-data" data-line-start="322" data-line-end="323"><strong>LastName</strong> as a string</li>
+<li class="has-line-data" data-line-start="323" data-line-end="325"><strong>Class</strong> as a string</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="325" data-line-end="327">
+<div class="task-step-checkbox" data-foo="534" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="325" data-line-end="326"> In the <strong>Services</strong> folder, open <strong>SessionContext.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="327" data-line-end="336">
+<div class="task-step-checkbox" data-foo="539" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="327" data-line-end="328"> Modify the <strong>SessionContext</strong> class so that it contains the following fields:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public static int UserID;
+public static string UserName;
+public static Role UserRole;
+public static Student CurrentStudent;
+public static Teacher CurrentTeacher;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="329" data-line-end="335"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> UserID;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">string</span> UserName;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Role UserRole;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Student CurrentStudent;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Teacher CurrentTeacher;
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Examine the dummy data source used to populate the collections</h3>
+<ol class="task-list" data-group="8">
+<li class="task-list-item" data-line-start="338" data-line-end="340">
+<div class="task-step-checkbox" data-foo="550" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="338" data-line-end="339"> In the <strong>Data</strong> folder, in the <strong>DataSource.cs</strong> file, expand the <strong>Sample Data</strong> region.</p>
+</li>
+<li class="task-list-item" data-line-start="340" data-line-end="341">
+<div class="task-step-checkbox" data-foo="555" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="340" data-line-end="341"> Note how the <strong>Teachers ArrayList</strong> is populated with the <strong>Teacher</strong> data, each containing <strong>TeacherID</strong>, <strong>UserName</strong>, <strong>Password</strong>, <strong>FirstName</strong>, <strong>LastName</strong>, and <strong>Class</strong> fields.</p>
+</li>
+<li class="task-list-item" data-line-start="341" data-line-end="342">
+<div class="task-step-checkbox" data-foo="560" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="341" data-line-end="342"> Note how the <strong>Students ArrayList</strong> is populated with the <strong>Student</strong> data, each containing a <strong>StudentID</strong>, <strong>UserName</strong>, <strong>Password</strong>, <strong>TeacherID</strong>, <strong>FirstName</strong>, and <strong>LastName</strong> fields.</p>
+</li>
+<li class="task-list-item" data-line-start="342" data-line-end="343">
+<div class="task-step-checkbox" data-foo="565" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="342" data-line-end="343"> Note how the <strong>Grades ArrayList</strong> is populated with the <strong>Grade</strong> data, each containing a <strong>StudentID</strong>, <strong>AssessmentDate</strong>, <strong>SubjectName</strong>, <strong>Assessment</strong>, and <strong>Comments</strong> fields.</p>
+</li>
+<li class="task-list-item" data-line-start="343" data-line-end="349">
+<div class="task-step-checkbox" data-foo="570" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="343" data-line-end="344"> In <strong>MainWindow.xaml.cs</strong>, in the <strong>MainWindow</strong> constructor, after the call to <strong>InitializeComponent</strong>, add the following line of code to create the dummy data when the application is started:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="DataSource.CreateData();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="346" data-line-end="348">DataSource.CreateData();
+</code></pre>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="350" data-line-end="351"><strong>Result:</strong> After completing this exercise, the application will contain structs for the teacher, student, and grade types.</p>
+</div>
+<h3>Exercise 3: Displaying User and Grade Information</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="356" data-line-end="357"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="358" data-line-end="359">In this exercise, you'll first define a public event handler named <strong>LogonFailed</strong> that will be raised when a user fails to log on successfully.</p>
+<p class="has-line-data" data-line-start="360" data-line-end="361">You'll add code to the <strong>Logon_Click</strong> event handler to validate the username and password entered by the user against the Users collection in the <strong>MainWindow</strong> window.</p>
+<p class="has-line-data" data-line-start="362" data-line-end="363">If the user is a teacher or a student, you'll store their details in the global context and then raise the <strong>LogonSuccess</strong> event, but if the user is not validated, you'll raise the <strong>LogonFailed</strong> event.</p>
+<p class="has-line-data" data-line-start="364" data-line-end="365">You'll handle logon failure in the <strong>Logon_Failed</strong> method to display a message to the user and then you'll add markup to the <strong>MainWindow</strong> XAML code to connect the <strong>LogonFailed</strong> event to the <strong>Logon_Failed</strong> method.</p>
+<p class="has-line-data" data-line-start="366" data-line-end="367">You'll add code to the <strong>StudentsPage</strong> view to display students for the current teacher, and to display the details for a student when the user clicks their name.</p>
+<p class="has-line-data" data-line-start="368" data-line-end="370">You'll then use data binding to display the details and grades for the current student in the <strong>StudentProfile</strong> view, and to display only the <strong>Back</strong>
+ button if the user is a teacher.
+Finally, you'll run the application and verify that only valid users can
+ log on and that valid users can see only data appropriate to their 
+role.</p>
+</div>
+<h3>Task 1: Add the LogonFailed event</h3>
+<ol class="task-list" data-group="9">
+<li class="task-list-item" data-line-start="374" data-line-end="376">
+<div class="task-step-checkbox" data-foo="612" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="374" data-line-end="375"> Open the <strong>GradesPrototype</strong> solution from the <strong>E:\Allfiles\Mod03\Labfiles\Starter\Exercise 3</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="376" data-line-end="377">
+<div class="task-step-checkbox" data-foo="617" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="376" data-line-end="377"> In the <strong>LogonPage.xaml.cs</strong> file, in the <strong>Event Members</strong> region, define a second event handler named <strong>LogonFailed</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="377" data-line-end="384">
+<div class="task-step-checkbox" data-foo="622" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="377" data-line-end="378"> In <strong>LogonPage.xaml</strong>, locate the following code and delete it:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;TextBlock Grid.Row=&quot;2&quot; FontSize=&quot;24&quot; Text=&quot;Teacher:&quot; /&gt;
+&lt;CheckBox x:Name=&quot;userrole&quot; Grid.Row=&quot;2&quot;  Grid.Column=&quot;2&quot; FontSize=&quot;24&quot; IsChecked=&quot;False&quot; VerticalAlignment=&quot;Center&quot;/&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="380" data-line-end="383"><span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Grid.Row</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"24"</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"Teacher:"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">CheckBox</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"userrole"</span> <span class="hljs-attr">Grid.Row</span>=<span class="hljs-string">"2"</span>  <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"24"</span> <span class="hljs-attr">IsChecked</span>=<span class="hljs-string">"False"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span>/&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="384" data-line-end="394">
+<div class="task-step-checkbox" data-foo="628" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="384" data-line-end="385"> In the <strong>MainWindow.xaml.cs</strong> file, add another handler called <strong>Logon_Failed</strong> after the <strong>Logon_Success</strong> method:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Handle logon failure
+private void Logon_Failed(object sender, EventArgs e)
+{
+    // Display an error message. The user must try again
+    MessageBox.Show(&quot;Invalid Username or Password&quot;, &quot;Logon Failed&quot;, MessageBoxButton.OK, MessageBoxImage.Error);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="387" data-line-end="394"><span class="hljs-comment">// Handle logon failure</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Logon_Failed</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, EventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Display an error message. The user must try again</span>
+    MessageBox.Show(<span class="hljs-string">"Invalid Username or Password"</span>, <span class="hljs-string">"Logon Failed"</span>, MessageBoxButton.OK, MessageBoxImage.Error);
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="394" data-line-end="400">
+<div class="task-step-checkbox" data-foo="634" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="394" data-line-end="395"> In the <strong>MainWindow.xaml</strong> file, add the handler for the <strong>LogonFailed</strong> event so that the <strong>LogonPage</strong> element looks like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;y:LogonPage x:Name=&quot;logonPage&quot; Visibility=&quot;Collapsed&quot; LogonSuccess=&quot;Logon_Success&quot; LogonFailed=&quot;Logon_Failed&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="397" data-line-end="399">&lt;y:LogonPage x:Name="logonPage" Visibility="Collapsed" LogonSuccess="Logon_Success" LogonFailed="Logon_Failed" /&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="400" data-line-end="401">
+<div class="task-step-checkbox" data-foo="640" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="400" data-line-end="401"> In the <strong>Logon_Click</strong> event, remove the existing code.</p>
+</li>
+<li class="task-list-item" data-line-start="401" data-line-end="409">
+<div class="task-step-checkbox" data-foo="645" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="401" data-line-end="402"> In the <strong>Logon_Click</strong>
+ event, add code to do determine whether the user is a teacher by using a
+ LINQ query to retrieve teachers with the same username and password as 
+the current user. If the LINQ query returns a result, then the user is a
+ teacher:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var teacher = (from Teacher t in DataSource.Teachers
+                where String.Compare(t.UserName, username.Text) == 0
+                &amp;&amp; String.Compare(t.Password, password.Password) == 0
+                select t).FirstOrDefault();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="403" data-line-end="408"><span class="hljs-keyword">var</span> teacher = (<span class="hljs-keyword">from</span> Teacher t <span class="hljs-keyword">in</span> DataSource.Teachers
+                <span class="hljs-keyword">where</span> String.Compare(t.UserName, username.Text) == <span class="hljs-number">0</span>
+                &amp;&amp; String.Compare(t.Password, password.Password) == <span class="hljs-number">0</span>
+                <span class="hljs-keyword">select</span> t).FirstOrDefault();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="409" data-line-end="426">
+<div class="task-step-checkbox" data-foo="651" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="409" data-line-end="410"> If the user is a teacher, set the <strong>UserID</strong>, <strong>UserRole</strong>, <strong>UserName</strong>, and <strong>CurrentTeacher</strong> properties of the <strong>SessionContext</strong> object to the appropriate fields from the data source, and then raise the <strong>LogonSuccess</strong> event:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="if (!String.IsNullOrEmpty(teacher.UserName))
+{
+    // Save the UserID and Role (teacher or student) and UserName in the global context
+    SessionContext.UserID = teacher.TeacherID;
+    SessionContext.UserRole = Role.Teacher;
+    SessionContext.UserName = teacher.UserName;
+    SessionContext.CurrentTeacher = teacher;
+
+    // Raise the LogonSuccess event and finish
+    LogonSuccess(this, null);
+    return;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="412" data-line-end="425"><span class="hljs-keyword">if</span> (!String.IsNullOrEmpty(teacher.UserName))
+{
+    <span class="hljs-comment">// Save the UserID and Role (teacher or student) and UserName in the global context</span>
+    SessionContext.UserID = teacher.TeacherID;
+    SessionContext.UserRole = Role.Teacher;
+    SessionContext.UserName = teacher.UserName;
+    SessionContext.CurrentTeacher = teacher;
+
+    <span class="hljs-comment">// Raise the LogonSuccess event and finish</span>
+    LogonSuccess(<span class="hljs-keyword">this</span>, <span class="hljs-literal">null</span>);
+    <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="426" data-line-end="438">
+<div class="task-step-checkbox" data-foo="657" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="426" data-line-end="427">
+ If the user is not a teacher, determine whether the user is a student 
+by using a LINQ query to retrieve students with the same username and 
+password as the current user:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="else
+{
+    var student = (from Student s in DataSource.Students
+                    where String.Compare(s.UserName, username.Text) == 0
+                    &amp;&amp; String.Compare(s.Password, password.Password) == 0
+                    select s).FirstOrDefault();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="429" data-line-end="437"><span class="hljs-keyword">else</span>
+{
+    <span class="hljs-keyword">var</span> student = (<span class="hljs-keyword">from</span> Student s <span class="hljs-keyword">in</span> DataSource.Students
+                    <span class="hljs-keyword">where</span> String.Compare(s.UserName, username.Text) == <span class="hljs-number">0</span>
+                    &amp;&amp; String.Compare(s.Password, password.Password) == <span class="hljs-number">0</span>
+                    <span class="hljs-keyword">select</span> s).FirstOrDefault();
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="438" data-line-end="454">
+<div class="task-step-checkbox" data-foo="663" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="438" data-line-end="439"> If the user is a student, set the <strong>UserID</strong>, <strong>UserRole</strong>, <strong>UserName</strong>, and <strong>CurrentStudent</strong> properties of the <strong>SessionContext</strong> object to the appropriate fields from the data source, and then raise the <strong>LogonSuccess</strong> event:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="if (!String.IsNullOrEmpty(student.UserName))
+{
+    // Save the details of the student in the global context
+    SessionContext.UserID = student.StudentID;
+    SessionContext.UserRole = Role.Student;
+    SessionContext.UserName = student.UserName;
+    SessionContext.CurrentStudent = student;
+
+    // Raise the LogonSuccess event and finish
+    LogonSuccess(this, null);
+    return;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="440" data-line-end="453"><span class="hljs-keyword">if</span> (!String.IsNullOrEmpty(student.UserName))
+{
+    <span class="hljs-comment">// Save the details of the student in the global context</span>
+    SessionContext.UserID = student.StudentID;
+    SessionContext.UserRole = Role.Student;
+    SessionContext.UserName = student.UserName;
+    SessionContext.CurrentStudent = student;
+
+    <span class="hljs-comment">// Raise the LogonSuccess event and finish</span>
+    LogonSuccess(<span class="hljs-keyword">this</span>, <span class="hljs-literal">null</span>);
+    <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="454" data-line-end="460">
+<div class="task-step-checkbox" data-foo="669" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="454" data-line-end="455"> If the credentials do not match any teachers or students, raise the <strong>LogonFailed</strong> event:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="LogonFailed(this, null);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="457" data-line-end="459">LogonFailed(<span class="hljs-keyword">this</span>, <span class="hljs-literal">null</span>);
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Add the Logon_Failed event handler</h3>
+<ol class="task-list" data-group="10">
+<li class="task-list-item" data-line-start="462" data-line-end="471">
+<div class="task-step-checkbox" data-foo="680" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="462" data-line-end="463"> In the <strong>MainWindow.xaml.cs</strong> class, in the <strong>Event Handlers</strong> region, add an event handler for the <strong>Logon_Failed</strong> event that takes an <strong>object</strong> parameter named <strong>sender</strong> and an <strong>EventArgs</strong> parameter named <strong>e</strong>.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Handle logon failure
+private void Logon_Failed(object sender, EventArgs e)
+{
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="465" data-line-end="470"><span class="hljs-comment">// Handle logon failure</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Logon_Failed</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, EventArgs e</span>)</span>
+{
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="471" data-line-end="476">
+<div class="task-step-checkbox" data-foo="686" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="471" data-line-end="472"> In the <strong>Logon_Failed</strong> event handler, add code to display an error message to the user.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Display an error message. The user must try again
+MessageBox.Show(&quot;Invalid Username or Password&quot;, &quot;Logon Failed&quot;, MessageBoxButton.OK, MessageBoxImage.Error);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="473" data-line-end="476"><span class="hljs-comment">// Display an error message. The user must try again</span>
+MessageBox.Show(<span class="hljs-string">"Invalid Username or Password"</span>, <span class="hljs-string">"Logon Failed"</span>, MessageBoxButton.OK, MessageBoxImage.Error);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="476" data-line-end="477">
+<div class="task-step-checkbox" data-foo="692" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="476" data-line-end="477"> In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the <strong>LogonPage</strong> element.</p>
+</li>
+<li class="task-list-item" data-line-start="477" data-line-end="478">
+<div class="task-step-checkbox" data-foo="697" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="477" data-line-end="478"> Modify the definition to call the <strong>Logon_Failed</strong> method for the <strong>LogonFailed</strong> event, in a similar way to the <strong>LogonSuccess</strong> attribute.</p>
+</li>
+<li class="task-list-item" data-line-start="478" data-line-end="479">
+<div class="task-step-checkbox" data-foo="702" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="478" data-line-end="479"> In the <strong>MainWindow.xaml.cs</strong> code, locate the <strong>Refresh</strong> method.</p>
+</li>
+<li class="task-list-item" data-line-start="479" data-line-end="486">
+<div class="task-step-checkbox" data-foo="707" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="479" data-line-end="481"> In the <strong>case</strong> statement for a student, modify the code to display the student
+name in <strong>txtName</strong> text box at the top of the page as follows:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="txtName.Text = string.Format(&quot;Welcome {0} {1}&quot;, SessionContext.CurrentStudent.FirstName, SessionContext.CurrentStudent.LastName);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="483" data-line-end="485">txtName.Text = <span class="hljs-built_in">string</span>.Format(<span class="hljs-string">"Welcome {0} {1}"</span>, SessionContext.CurrentStudent.FirstName, SessionContext.CurrentStudent.LastName);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="486" data-line-end="492">
+<div class="task-step-checkbox" data-foo="713" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="486" data-line-end="487"> In the <strong>case</strong> statement for a teacher, modify the code to display the teacher name in the banner at the top of the page as follows:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="txtName.Text = string.Format(&quot;Welcome {0} {1}&quot;, SessionContext.CurrentTeacher.FirstName, SessionContext.CurrentTeacher.LastName);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="489" data-line-end="491">txtName.Text = <span class="hljs-built_in">string</span>.Format(<span class="hljs-string">"Welcome {0} {1}"</span>, SessionContext.CurrentTeacher.FirstName, SessionContext.CurrentTeacher.LastName);
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Display the students for the current teacher</h3>
+<ol class="task-list" data-group="11">
+<li class="task-list-item" data-line-start="494" data-line-end="521">
+<div class="task-step-checkbox" data-foo="724" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="494" data-line-end="495"> In <strong>StudentsPage.xaml</strong> <strong>XAML</strong> editor, locate the ScrollViewer element, and replace its content with an <strong>ItemsControl</strong>:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;ItemsControl x:Name=&quot;list&quot;&gt;
+    &lt;ItemsControl.ItemsPanel&gt;
+        &lt;ItemsPanelTemplate&gt;
+            &lt;WrapPanel Margin=&quot;0&quot; Orientation=&quot;Horizontal&quot; HorizontalAlignment=&quot;Center&quot; /&gt;
+        &lt;/ItemsPanelTemplate&gt;
+    &lt;/ItemsControl.ItemsPanel&gt;
+    &lt;ItemsControl.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Grid Margin=&quot;8&quot;&gt;
+                &lt;Button Height=&quot;150&quot; Width=&quot;127.5&quot; Click=&quot;Student_Click&quot; Tag=&quot;{Binding StudentID}&quot;&gt;
+                    &lt;StackPanel&gt;
+                        &lt;TextBlock Text=&quot;{Binding FirstName}&quot; FontSize=&quot;16&quot; /&gt;
+                        &lt;TextBlock Text=&quot;{Binding LastName}&quot; FontSize=&quot;16&quot;  /&gt;
+                    &lt;/StackPanel&gt;
+                &lt;/Button&gt;
+            &lt;/Grid&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ItemsControl.ItemTemplate&gt;
+&lt;/ItemsControl&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="497" data-line-end="517"><span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl.ItemsPanel</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ItemsPanelTemplate</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">WrapPanel</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">Orientation</span>=<span class="hljs-string">"Horizontal"</span> <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Center"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ItemsPanelTemplate</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ItemsControl.ItemsPanel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl.ItemTemplate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DataTemplate</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"8"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"127.5"</span> <span class="hljs-attr">Click</span>=<span class="hljs-string">"Student_Click"</span> <span class="hljs-attr">Tag</span>=<span class="hljs-string">"{Binding StudentID}"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">StackPanel</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding FirstName}"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding LastName}"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span>  /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">StackPanel</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">DataTemplate</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ItemsControl.ItemTemplate</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ItemsControl</span>&gt;</span>
+</code></pre>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="518" data-line-end="519"><strong>Note:</strong> In the <strong>ItemsControl</strong>, databinding is used to display the name of each student. DataBinding is also used to retrieve the <strong>StudentID</strong> of a student. This binding is used when a user clicks a student on the <strong>Student Page</strong> list to identify which student's data to display in the <strong>Student Profile</strong> page.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="521" data-line-end="531">
+<div class="task-step-checkbox" data-foo="735" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="521" data-line-end="522"> In the <strong>StudentsPage.xaml.cs</strong> code, locate the <strong>Refresh</strong> method, and then replace the existing code with code that does the following:</p>
+<ul>
+<li class="has-line-data" data-line-start="523" data-line-end="524">Find all the students for the current teacher and store them in a new <strong>ArrayList</strong> object.</li>
+<li class="has-line-data" data-line-start="524" data-line-end="525">Bind the collection to the <strong>ItemsSource</strong> property of the <strong>list</strong> control.</li>
+<li class="has-line-data" data-line-start="525" data-line-end="526">Display the class name.</li>
+<li class="has-line-data" data-line-start="526" data-line-end="527">Locate the <strong>Student_Click</strong> event and then add code to do the following:</li>
+<li class="has-line-data" data-line-start="527" data-line-end="528">Identify which student was clicked by using the <strong>Tag</strong> property of the button.</li>
+<li class="has-line-data" data-line-start="528" data-line-end="529">Find the details of that student by examining the <strong>DataContext</strong> of the button.</li>
+<li class="has-line-data" data-line-start="529" data-line-end="531">Raise the <strong>StudentSelected</strong> event, passing the student as the second parameter.</li>
+</ul>
+</li>
+<li class="task-list-item" data-line-start="531" data-line-end="552">
+<div class="task-step-checkbox" data-foo="777" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="531" data-line-end="532"> Verify that your code looks something like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public void Refresh()
+{
+    // Find students for the current teacher
+    ArrayList students = new ArrayList();
+    foreach (Student student in DataSource.Students)
+    {
+        if (student.TeacherID == SessionContext.CurrentTeacher.TeacherID)
+        {
+            students.Add(student);
+        }
+    }
+
+    // Bind the collection to the list item template
+    list.ItemsSource = students;
+
+    // Display the class name
+    txtClass.Text = String.Format(&quot;Class {0}&quot;, SessionContext.CurrentTeacher.Class);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="533" data-line-end="552"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Refresh</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Find students for the current teacher</span>
+    ArrayList students = <span class="hljs-keyword">new</span> ArrayList();
+    <span class="hljs-keyword">foreach</span> (Student student <span class="hljs-keyword">in</span> DataSource.Students)
+    {
+        <span class="hljs-keyword">if</span> (student.TeacherID == SessionContext.CurrentTeacher.TeacherID)
+        {
+            students.Add(student);
+        }
+    }
+
+    <span class="hljs-comment">// Bind the collection to the list item template</span>
+    list.ItemsSource = students;
+
+    <span class="hljs-comment">// Display the class name</span>
+    txtClass.Text = String.Format(<span class="hljs-string">"Class {0}"</span>, SessionContext.CurrentTeacher.Class);
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="552" data-line-end="570">
+<div class="task-step-checkbox" data-foo="783" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="552" data-line-end="553"> In the <strong>StudentsPage_Click</strong> event handler, delete the existing code and replace it with the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Button itemClicked = sender as Button;
+if (itemClicked != null)
+{
+    // Find out which student was clicked
+    int studentID = (int)itemClicked.Tag;
+    if (StudentSelected != null)
+    {
+        // Find the details of the student by examining the DataContext of the Button
+        Student student = (Student)itemClicked.DataContext;
+
+        // Raise the StudentSelected event (handled by MainWindow) to display the details for this student
+        StudentSelected(sender, new StudentEventArgs(student));
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="555" data-line-end="570">Button itemClicked = sender <span class="hljs-keyword">as</span> Button;
+<span class="hljs-keyword">if</span> (itemClicked != <span class="hljs-literal">null</span>)
+{
+    <span class="hljs-comment">// Find out which student was clicked</span>
+    <span class="hljs-built_in">int</span> studentID = (<span class="hljs-built_in">int</span>)itemClicked.Tag;
+    <span class="hljs-keyword">if</span> (StudentSelected != <span class="hljs-literal">null</span>)
+    {
+        <span class="hljs-comment">// Find the details of the student by examining the DataContext of the Button</span>
+        Student student = (Student)itemClicked.DataContext;
+
+        <span class="hljs-comment">// Raise the StudentSelected event (handled by MainWindow) to display the details for this student</span>
+        StudentSelected(sender, <span class="hljs-keyword">new</span> StudentEventArgs(student));
+    }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="570" data-line-end="584">
+<div class="task-step-checkbox" data-foo="789" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="570" data-line-end="571"> Still in <strong>StudentsPage.xaml.cs</strong>, change the parameter type and member type for the <strong>StudentEventArgs</strong> method from a <strong>string</strong> to a <strong>Student</strong>:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public class StudentEventArgs : EventArgs
+{
+    public Student Child { get; set; }
+
+    public StudentEventArgs(Student s)
+    {
+        Child = s;
+    }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="573" data-line-end="583"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">StudentEventArgs</span> : <span class="hljs-title">EventArgs</span>
+{
+    <span class="hljs-keyword">public</span> Student Child { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StudentEventArgs</span>(<span class="hljs-params">Student s</span>)</span>
+    {
+        Child = s;
+    }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Set the DataContext for the student profile page</h3>
+<ol class="task-list" data-group="12">
+<li class="task-list-item" data-line-start="586" data-line-end="609">
+<div class="task-step-checkbox" data-foo="800" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="586" data-line-end="587"> In the <strong>StudentProfile.xaml.cs</strong> file, replace the dummy data inside the <strong>ScrollViewer</strong> element with the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;ItemsControl x:Name=&quot;studentGrades&quot; ItemsSource=&quot;{Binding}&quot;&gt;
+    &lt;ItemsControl.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Grid Margin=&quot;0&quot; Height=&quot;36&quot;&gt;
+                &lt;Grid.ColumnDefinitions&gt;
+                    &lt;ColumnDefinition Width=&quot;100&quot;/&gt;
+                    &lt;ColumnDefinition Width=&quot;140&quot;/&gt;
+                    &lt;ColumnDefinition Width=&quot;50&quot;/&gt;
+                    &lt;ColumnDefinition Width=&quot;200&quot;/&gt;
+                &lt;/Grid.ColumnDefinitions&gt;
+
+                &lt;TextBlock Grid.Column=&quot;0&quot; Margin=&quot;5,0,5,0&quot; Text=&quot;{Binding AssessmentDate}&quot; HorizontalAlignment=&quot;Left&quot; FontSize=&quot;16&quot; VerticalAlignment=&quot;Center&quot;  /&gt;
+                &lt;TextBlock Grid.Column=&quot;1&quot; Margin=&quot;5,0,5,0&quot; Text=&quot;{Binding SubjectName}&quot; HorizontalAlignment=&quot;Left&quot; FontSize=&quot;16&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+                &lt;TextBlock Grid.Column=&quot;2&quot; Margin=&quot;5,0,5,0&quot; Text=&quot;{Binding Assessment}&quot; HorizontalAlignment=&quot;Left&quot; FontSize=&quot;16&quot; VerticalAlignment=&quot;Center&quot;  /&gt;
+                &lt;TextBlock Grid.Column=&quot;3&quot; Margin=&quot;5,0,5,0&quot; Text=&quot;{Binding Comments}&quot; Width=&quot;175&quot; FontSize=&quot;16&quot; TextWrapping=&quot;Wrap&quot; VerticalAlignment=&quot;Center&quot;  /&gt;
+            &lt;/Grid&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ItemsControl.ItemTemplate&gt;
+&lt;/ItemsControl&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="589" data-line-end="609"><span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"studentGrades"</span> <span class="hljs-attr">ItemsSource</span>=<span class="hljs-string">"{Binding}"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl.ItemTemplate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DataTemplate</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"36"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Grid.ColumnDefinitions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ColumnDefinition</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"100"</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ColumnDefinition</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"140"</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ColumnDefinition</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"50"</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ColumnDefinition</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"200"</span>/&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Grid.ColumnDefinitions</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"5,0,5,0"</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding AssessmentDate}"</span> <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Left"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span>  /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"5,0,5,0"</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding SubjectName}"</span> <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Left"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"5,0,5,0"</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding Assessment}"</span> <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Left"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span>  /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"5,0,5,0"</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding Comments}"</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"175"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">TextWrapping</span>=<span class="hljs-string">"Wrap"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span>  /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">DataTemplate</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ItemsControl.ItemTemplate</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ItemsControl</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="609" data-line-end="610">
+<div class="task-step-checkbox" data-foo="806" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="609" data-line-end="610"> In the <strong>StudentProfile.xaml.cs</strong> file, in the <strong>Refresh</strong> method, delete the existing code.</p>
+</li>
+<li class="task-list-item" data-line-start="610" data-line-end="643">
+<div class="task-step-checkbox" data-foo="811" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="610" data-line-end="611"> In the <strong>StudentProfile.xaml.cs</strong> file, add code to display the details of the current student in the <strong>studentName StackPanel</strong> object and to display the <strong>Back</strong> button only if the user is a teacher:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void Back_Click(object sender, RoutedEventArgs e)
+{
+    // Bind the studentName StackPanel to display the details of the student
+    studentName.DataContext = SessionContext.CurrentStudent;
+
+    // If the current user is a student, hide the Back button 
+    // (only applicable to teachers who can use the Back button to return to the list of students)
+    if (SessionContext.UserRole == Role.Student)
+    {
+        btnBack.Visibility = Visibility.Hidden;
+    }
+    else
+    {
+        btnBack.Visibility = Visibility.Visible;
+    }
+
+    // Find all the grades for the student
+    ArrayList grades = new ArrayList();
+    foreach (Grade grade in DataSource.Grades)
+    {
+        if (grade.StudentID == SessionContext.CurrentStudent.StudentID)
+        {
+            grades.Add(grade);
+        }
+    }
+    
+    // Display the grades in the studentGrades ItemsControl by using databinding
+    studentGrades.ItemsSource = grades;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="612" data-line-end="642"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Back_Click</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, RoutedEventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Bind the studentName StackPanel to display the details of the student</span>
+    studentName.DataContext = SessionContext.CurrentStudent;
+
+    <span class="hljs-comment">// If the current user is a student, hide the Back button </span>
+    <span class="hljs-comment">// (only applicable to teachers who can use the Back button to return to the list of students)</span>
+    <span class="hljs-keyword">if</span> (SessionContext.UserRole == Role.Student)
+    {
+        btnBack.Visibility = Visibility.Hidden;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        btnBack.Visibility = Visibility.Visible;
+    }
+
+    <span class="hljs-comment">// Find all the grades for the student</span>
+    ArrayList grades = <span class="hljs-keyword">new</span> ArrayList();
+    <span class="hljs-keyword">foreach</span> (Grade grade <span class="hljs-keyword">in</span> DataSource.Grades)
+    {
+        <span class="hljs-keyword">if</span> (grade.StudentID == SessionContext.CurrentStudent.StudentID)
+        {
+            grades.Add(grade);
+        }
+    }
+    
+    <span class="hljs-comment">// Display the grades in the studentGrades ItemsControl by using databinding</span>
+    studentGrades.ItemsSource = grades;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="643" data-line-end="644">
+<div class="task-step-checkbox" data-foo="817" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="643" data-line-end="644"> In the <strong>StudentProfile.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>firstName</strong> text block.</p>
+</li>
+<li class="task-list-item" data-line-start="644" data-line-end="650">
+<div class="task-step-checkbox" data-foo="822" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="644" data-line-end="645"> Modify the definition to bind the <strong>Text</strong> property to the <strong>FirstName</strong> field, either using the tooling in Visual Studio or by editing the XAML directly as follows:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;TextBlock x:Name=&quot;firstName&quot; Text=&quot;{Binding FirstName}&quot; FontSize=&quot;16&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="647" data-line-end="649">&lt;TextBlock x:Name=<span class="hljs-string">"firstName"</span> Text=<span class="hljs-string">"{Binding FirstName}"</span> FontSize=<span class="hljs-string">"16"</span> /&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="650" data-line-end="651">
+<div class="task-step-checkbox" data-foo="828" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="650" data-line-end="651"> Locate the definition of the <strong>lastName</strong> text block and make the corresponding change to use the <strong>LastName</strong> field.</p>
+</li>
+<li class="task-list-item" data-line-start="651" data-line-end="656">
+<div class="task-step-checkbox" data-foo="833" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="651" data-line-end="652"> In the <strong>StudentProfile.xaml.cs</strong> file, delete the contents of the <strong>Refresh</strong> method up to the section that hides the back button, and replace the deleted code with the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="studentName.DataContext = SessionContext.CurrentStudent;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="654" data-line-end="656">studentName.DataContext = SessionContext.CurrentStudent;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="656" data-line-end="674">
+<div class="task-step-checkbox" data-foo="839" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="656" data-line-end="657"> In the <strong>StudentProfile.xaml.cs</strong> file, at the end of the <strong>Refresh</strong> method, add the following code to iterate the grades for the current student in the <strong>DataSource.Grades</strong> list and then display them in the <strong>studentGrades</strong> control by using data binding:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="// Find all the grades for the student
+ArrayList grades = new ArrayList();
+foreach (Grade grade in DataSource.Grades)
+{
+    if (grade.StudentID == SessionContext.CurrentStudent.StudentID)
+    {
+        grades.Add(grade);
+    }
+}
+
+// Display the grades in the studentGrades ItemsControl by using databinding
+studentGrades.ItemsSource = grades;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="659" data-line-end="672"><span class="hljs-comment">// Find all the grades for the student</span>
+ArrayList grades = <span class="hljs-keyword">new</span> ArrayList();
+<span class="hljs-keyword">foreach</span> (Grade grade <span class="hljs-keyword">in</span> DataSource.Grades)
+{
+    <span class="hljs-keyword">if</span> (grade.StudentID == SessionContext.CurrentStudent.StudentID)
+    {
+        grades.Add(grade);
+    }
+}
+
+<span class="hljs-comment">// Display the grades in the studentGrades ItemsControl by using databinding</span>
+studentGrades.ItemsSource = grades;
+</code></pre>
+</li>
+</ol>
+<h3>Task 5: Build and test the application</h3>
+<ol class="task-list" data-group="13">
+<li class="task-list-item" data-line-start="676" data-line-end="678">
+<div class="task-step-checkbox" data-foo="850" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="676" data-line-end="677"> Build the solution and resolve any compilation errors.</p>
+</li>
+<li class="task-list-item" data-line-start="678" data-line-end="680">
+<div class="task-step-checkbox" data-foo="855" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="678" data-line-end="679"> Run the application.</p>
+</li>
+<li class="task-list-item" data-line-start="680" data-line-end="682">
+<div class="task-step-checkbox" data-foo="860" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="680" data-line-end="681"> Log on as <strong>parkerd</strong> with <strong>password</strong> as the password and verify that the <strong>Logon Failed</strong> message box appears.</p>
+</li>
+<li class="task-list-item" data-line-start="682" data-line-end="684">
+<div class="task-step-checkbox" data-foo="865" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="682" data-line-end="683"> Log on as <strong>vallee</strong> with <strong>password</strong> as the password and verify that the <strong>Students</strong> page appears.</p>
+</li>
+<li class="task-list-item" data-line-start="684" data-line-end="686">
+<div class="task-step-checkbox" data-foo="870" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="684" data-line-end="685"> Click <strong>Kevin Liu</strong>, verify that the <strong>Student Profile</strong> page appears, and then log off.</p>
+</li>
+<li class="task-list-item" data-line-start="686" data-line-end="688">
+<div class="task-step-checkbox" data-foo="875" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="686" data-line-end="687"> Log on as <strong>grubere</strong> with <strong>password</strong> as the password and verify that the <strong>Student Profile</strong> page appears.</p>
+</li>
+<li class="task-list-item" data-line-start="688" data-line-end="690">
+<div class="task-step-checkbox" data-foo="880" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="688" data-line-end="689"> Close the application and then close the solution.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="691" data-line-end="692"><strong>Result:</strong>
+ After completing this exercise, only valid users will be able to log on
+ to the application and they will see only data appropriate to their 
+role. This is a rather simplistic user login solution that we have used 
+to demonstrate a number of principles. If you were implementing a system
+ like this for production use, we'd recommend that you use an existing 
+authentication library, rather than writing the low-level authentication
+ code yourself.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="695" data-line-end="696"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div></body></html>

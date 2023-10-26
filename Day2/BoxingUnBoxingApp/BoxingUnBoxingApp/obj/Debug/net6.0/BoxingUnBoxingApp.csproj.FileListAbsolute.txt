@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\bin\Debug\net6.0\BoxingUnBoxingApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\bin\Debug\net6.0\BoxingUnBoxingApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\bin\Debug\net6.0\BoxingUnBoxingApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\bin\Debug\net6.0\BoxingUnBoxingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\bin\Debug\net6.0\BoxingUnBoxingApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\refint\BoxingUnBoxingApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\BoxingUnBoxingApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day2\BoxingUnBoxingApp\BoxingUnBoxingApp\obj\Debug\net6.0\ref\BoxingUnBoxingApp.dll
