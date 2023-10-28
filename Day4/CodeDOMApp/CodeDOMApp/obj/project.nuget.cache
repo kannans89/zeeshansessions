@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/7l+h/0JWfpfUK1JnYuodIzo9q4vkPbJsU8jrfrAF6CxNSYVwLomqka83//xwlqzwL9ZGwIQRMUdLtt087Kvzw==",
+  "success": true,
+  "projectFilePath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day4\\CodeDOMApp\\CodeDOMApp\\CodeDOMApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kanna\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

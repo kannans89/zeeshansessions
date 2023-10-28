@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "7xf+MtmJagrvJygWj5TSjV6k6GriocqEk1czEZ5Tm2Kf87jYQ3xLWKzXGHy21PBXxPqCA9r1/6O/+pnuAJxGjQ==",
+  "success": true,
+  "projectFilePath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day4\\PythonDLRApp\\PythonDLRApp\\PythonDLRApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kanna\\.nuget\\packages\\dynamiclanguageruntime\\1.3.4\\dynamiclanguageruntime.1.3.4.nupkg.sha512",
+    "C:\\Users\\kanna\\.nuget\\packages\\ironpython\\3.4.1\\ironpython.3.4.1.nupkg.sha512",
+    "C:\\Users\\kanna\\.nuget\\packages\\mono.unix\\7.1.0-final.1.21458.1\\mono.unix.7.1.0-final.1.21458.1.nupkg.sha512",
+    "C:\\Users\\kanna\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

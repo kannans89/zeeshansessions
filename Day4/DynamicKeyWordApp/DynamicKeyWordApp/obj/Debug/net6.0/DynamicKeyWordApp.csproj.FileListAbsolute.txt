@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\bin\Debug\net6.0\DynamicKeyWordApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\bin\Debug\net6.0\DynamicKeyWordApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\bin\Debug\net6.0\DynamicKeyWordApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\bin\Debug\net6.0\DynamicKeyWordApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\bin\Debug\net6.0\DynamicKeyWordApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\refint\DynamicKeyWordApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\DynamicKeyWordApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\DynamicKeyWordApp\DynamicKeyWordApp\obj\Debug\net6.0\ref\DynamicKeyWordApp.dll

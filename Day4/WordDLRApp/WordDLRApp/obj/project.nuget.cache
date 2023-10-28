@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5w9LehgJXcLJ5Cs6/u6nmjVeCmyoBoVbRIjROKSC3uWTT1CBIyL9/OruUkrkz5tyuLWqHBxpfLuPv2QsUgsNJw==",
+  "success": true,
+  "projectFilePath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day4\\WordDLRApp\\WordDLRApp\\WordDLRApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kanna\\.nuget\\packages\\microsoft.office.interop.word\\15.0.4797.1004\\microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512"
+  ],
+  "logs": []
+}

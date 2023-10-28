@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\bin\Debug\net6.0\SingleTonAndThread.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\bin\Debug\net6.0\SingleTonAndThread.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\bin\Debug\net6.0\SingleTonAndThread.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\bin\Debug\net6.0\SingleTonAndThread.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\bin\Debug\net6.0\SingleTonAndThread.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\refint\SingleTonAndThread.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\SingleTonAndThread.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\SingleTonAndThread\SingleTonAndThread\obj\Debug\net6.0\ref\SingleTonAndThread.dll

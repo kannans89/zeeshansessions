@@ -1,0 +1,17 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\WordDLRApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\WordDLRApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\WordDLRApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\WordDLRApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\WordDLRApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\bin\Debug\net6.0\Microsoft.Office.Interop.Word.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.csproj.AssemblyReference.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.csproj.CopyComplete
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\refint\WordDLRApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\WordDLRApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\WordDLRApp\WordDLRApp\obj\Debug\net6.0\ref\WordDLRApp.dll
