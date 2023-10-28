@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 9: Graphical User Interfaces</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="true">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 9: Graphical User Interfaces</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="3" data-line-end="4"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Adding a Graphical User Interface</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="13" data-line-end="14"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="15" data-line-end="16">Now 
+that you and The School of Fine Arts are happy with the basic 
+functionality of the application, you need to improve the appearance of 
+the interface to give the user a nicer experience through the use of 
+animations and a consistent look and feel. You have already done some 
+refactoring of the application to improve its structure compared to the 
+prototype. You have a separate data layer (Grades.DataModel), a simple 
+web server for profile images (Grades.Web), and a desktop application 
+(Grades.WPF).</p>
+<p class="has-line-data" data-line-start="17" data-line-end="20">You 
+decide to create a StudentPhoto control that will enable you to display 
+the profile images of students in the student list and other views.
+You also decide to create a fluid method for a teacher to remove a 
+student from their class.
+Finally, you want to update the look of the various views, keeping their
+ look consistent across the application.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="23" data-line-end="24"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="25" data-line-end="26">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="27" data-line-end="28">Create and use user controls.</li>
+<li class="has-line-data" data-line-start="28" data-line-end="30">Use styles and animations.</li>
+</ul>
+<p class="has-line-data" data-line-start="30" data-line-end="31">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Customizing the Appearance of Student Photographs</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="36" data-line-end="37"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="38" data-line-end="39">In this exercise, you'll customize the appearance of student photographs in the production application.</p>
+<ul>
+<li class="has-line-data" data-line-start="40" data-line-end="41">You'll begin by creating a StudentPhoto user control that will host the photographs on the various pages in the UI.</li>
+<li class="has-line-data" data-line-start="41" data-line-end="42">Then you'll lay out the user controls and write code to raise the Student_Click method when a user clicks a student photograph.</li>
+<li class="has-line-data" data-line-start="42" data-line-end="43">Next, 
+you'll add a remove button with a red X to the user control that users 
+can click to remove a student from a class. When a user places their 
+mouse over the button, the opacity of the button and the photograph will
+ change.</li>
+<li class="has-line-data" data-line-start="43" data-line-end="45">Finally, you'll run the application to verify that the student's image is displayed correctly on the StudentsPage view.</li>
+</ul>
+</div>
+<h3>Task 1: Create the StudentPhoto user control</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="48" data-line-end="50">
+<div class="task-step-checkbox" data-foo="89" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="48" data-line-end="49"> Navigate to the <strong>E:\Allfiles\Mod09\Labfiles\Databases</strong> folder, and then double-click <strong>SetupSchoolGradesDB.cmd</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="50" data-line-end="51">
+<div class="task-step-checkbox" data-foo="94" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="50" data-line-end="51"> Open <strong>Visual Studio</strong>, and on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="51" data-line-end="56">
+<div class="task-step-checkbox" data-foo="99" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="51" data-line-end="52"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod09\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="53" data-line-end="54"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="58">
+<div class="task-step-checkbox" data-foo="109" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="58" data-line-end="59">
+<div class="task-step-checkbox" data-foo="114" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="58" data-line-end="59"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>. Set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="59" data-line-end="60">
+<div class="task-step-checkbox" data-foo="119" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="59" data-line-end="60"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, and then expand <strong>Controls</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="60" data-line-end="61">
+<div class="task-step-checkbox" data-foo="124" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="60" data-line-end="61"> Right-click <strong>Controls</strong>, point to <strong>Add</strong>, and then click <strong>User Control (WPF)</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="61" data-line-end="62">
+<div class="task-step-checkbox" data-foo="129" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="61" data-line-end="62"> In the <strong>Name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="StudentPhoto"><code>StudentPhoto</code></a></strong>, and then click <strong>Add</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="79">
+<div class="task-step-checkbox" data-foo="134" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> In the XAML editor, modify the markup to look like the following markup (the changes are highlighted as bold text):</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;UserControl x:Class=&quot;Grades.WPF.StudentPhoto&quot;
+            xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+            xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+            xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+            xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+            &gt;
+    &lt;Grid&gt;
+        &lt;Image Stretch=&quot;Uniform&quot; Source=&quot;{Binding File}&quot; Margin=&quot;8&quot; /&gt;
+        &lt;Image Margin=&quot;0&quot; Source=&quot;../Images/Image_Frame.png&quot; Stretch=&quot;Fill&quot; /&gt;
+        &lt;TextBlock Text=&quot;{Binding Name}&quot; Style=&quot;{StaticResource LabelCenter}&quot; FontSize=&quot;16&quot; VerticalAlignment=&quot;Bottom&quot; Margin=&quot;8,0,14.583,8&quot; /&gt;
+    &lt;/Grid&gt;
+&lt;/UserControl&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="65" data-line-end="78"><span class="hljs-tag">&lt;<span class="hljs-name">UserControl</span> <span class="hljs-attr">x:Class</span>=<span class="hljs-string">"Grades.WPF.StudentPhoto"</span>
+            <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
+            <span class="hljs-attr">xmlns:x</span>=<span class="hljs-string">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
+            <span class="hljs-attr">xmlns:mc</span>=<span class="hljs-string">"http://schemas.openxmlformats.org/markup-compatibility/2006"</span>
+            <span class="hljs-attr">xmlns:d</span>=<span class="hljs-string">"http://schemas.microsoft.com/expression/blend/2008"</span>
+            &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Grid</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">Stretch</span>=<span class="hljs-string">"Uniform"</span> <span class="hljs-attr">Source</span>=<span class="hljs-string">"{Binding File}"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"8"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">Source</span>=<span class="hljs-string">"../Images/Image_Frame.png"</span> <span class="hljs-attr">Stretch</span>=<span class="hljs-string">"Fill"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">Text</span>=<span class="hljs-string">"{Binding Name}"</span> <span class="hljs-attr">Style</span>=<span class="hljs-string">"{StaticResource LabelCenter}"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Bottom"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"8,0,14.583,8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UserControl</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="79" data-line-end="81">
+<div class="task-step-checkbox" data-foo="140" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="79" data-line-end="80"> In <strong>Solution Explorer</strong>, expand <strong>StudentPhoto.xaml</strong>, and then double-click <strong>StudentPhoto.xaml.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="81" data-line-end="88">
+<div class="task-step-checkbox" data-foo="145" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="81" data-line-end="82"> In the code editor, delete all of the <strong>using</strong> directives, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using System.Windows.Controls;
+using System.Windows.Media.Animation;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="84" data-line-end="87"><span class="hljs-keyword">using</span> System.Windows.Controls;
+<span class="hljs-keyword">using</span> System.Windows.Media.Animation;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="88" data-line-end="94">
+<div class="task-step-checkbox" data-foo="151" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="88" data-line-end="89"> Modify the <strong>namespace Grades.WPF.Controls</strong> code to look like the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="namespace Grades.WPF"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="91" data-line-end="93"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Grades.WPF</span>
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Display the students' photographs in the StudentsPage view</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="96" data-line-end="97">
+<div class="task-step-checkbox" data-foo="162" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="96" data-line-end="97"> In <strong>Solution Explorer</strong>, expand <strong>Views</strong>, and then double-click <strong>StudentsPage.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="97" data-line-end="110">
+<div class="task-step-checkbox" data-foo="167" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="97" data-line-end="98"> Locate the <strong>&lt;!--
+ TODO: Exercise 1: Task 2a: Define the DataTemplate for the "list" 
+ItemsControl including the StudentPhoto user control --&gt;</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;ItemsControl.ItemTemplate&gt;
+    &lt;DataTemplate&gt;
+        &lt;Grid Margin=&quot;8&quot;&gt;
+            &lt;local:StudentPhoto Height=&quot;150&quot; Width=&quot;127.5&quot; Cursor=&quot;Hand&quot;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="100" data-line-end="105"><span class="hljs-tag">&lt;<span class="hljs-name">ItemsControl.ItemTemplate</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">DataTemplate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"8"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">local:StudentPhoto</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"127.5"</span> <span class="hljs-attr">Cursor</span>=<span class="hljs-string">"Hand"</span>
+</span></code></pre>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="106" data-line-end="107"><strong>Note:</strong> When you type an opening tag for an element, such as <strong>&lt;ItemsControl.ItemTemplate&gt;</strong>, the XAML editor automatically creates a corresponding closing tag, such as <strong>&lt;/ItemsControl.ItemTemplate&gt;</strong>.
+ For the purposes of these instructions, and to ensure that the code 
+appears in the correctly commented place, delete any closing tags that 
+are generated automatically. You'll add them in at the appropriate point
+ in the XAML markup in later steps.</p>
+</div>
+</li>
+</ol>
+<h3>Task 3: Enable the user to display the details for a student</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="112" data-line-end="114">
+<div class="task-step-checkbox" data-foo="183" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="112" data-line-end="113"> In <strong>StudentsPage.xaml</strong>, locate the <strong>&lt;!-- TODO: Exercise 1: Task 3a: Set the handler for the click event for the StudentPhoto control --&gt;</strong> comment, and above the comment, click at the end of the <strong>Cursor="Hand"</strong> markup.</p>
+</li>
+<li class="task-list-item" data-line-start="114" data-line-end="119">
+<div class="task-step-checkbox" data-foo="188" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="114" data-line-end="115"> Press Spacebar, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="MouseLeftButtonUp=&quot;Student_Click&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="117" data-line-end="119">MouseLeftButtonUp="Student_Click" /&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="119" data-line-end="120">
+<div class="task-step-checkbox" data-foo="194" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="119" data-line-end="120"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Review the following event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="120" data-line-end="123">
+<div class="task-step-checkbox" data-foo="199" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="120" data-line-end="121"> Review the <strong>Student_Click</strong> method which raises the <strong>StudentSelected</strong> event to display the details of the student when a user clicks their photo.</p>
+</li>
+</ol>
+<h3>Task 4: Add a Remove button to the StudentsPage view</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="125" data-line-end="133">
+<div class="task-step-checkbox" data-foo="209" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="125" data-line-end="126"> In <strong>StudentsPage.xaml</strong>, Locate the <strong>&lt;!-- TODO: Exercise 1: Task 4a: Add the "Remove" button to the DataTemplate --&gt;</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Grid VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Right&quot; Background=&quot;#00000000&quot; Opacity=&quot;0.3&quot; Width=&quot;20&quot; Height=&quot;20&quot; ToolTipService.ToolTip=&quot;Remove from class&quot; Tag=&quot;{Binding}&quot; &gt;
+    &lt;Image Source=&quot;../Images/delete.png&quot; Stretch=&quot;Uniform&quot; /&gt;
+&lt;/Grid&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="128" data-line-end="132"><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Top"</span> <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Right"</span> <span class="hljs-attr">Background</span>=<span class="hljs-string">"#00000000"</span> <span class="hljs-attr">Opacity</span>=<span class="hljs-string">"0.3"</span> <span class="hljs-attr">Width</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">ToolTipService.ToolTip</span>=<span class="hljs-string">"Remove from class"</span> <span class="hljs-attr">Tag</span>=<span class="hljs-string">"{Binding}"</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">Source</span>=<span class="hljs-string">"../Images/delete.png"</span> <span class="hljs-attr">Stretch</span>=<span class="hljs-string">"Uniform"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="133" data-line-end="135">
+<div class="task-step-checkbox" data-foo="215" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="133" data-line-end="134"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4b: Review the following event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="135" data-line-end="136">
+<div class="task-step-checkbox" data-foo="220" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="135" data-line-end="136">
+ The code in this method increases the opacity of the grid containing 
+the remove button and reduces the opacity of the grid containing the 
+photo when the user moves the mouse over the delete image.</p>
+</li>
+<li class="task-list-item" data-line-start="136" data-line-end="137">
+<div class="task-step-checkbox" data-foo="225" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="136" data-line-end="137"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4c: Review the following event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="137" data-line-end="138">
+<div class="task-step-checkbox" data-foo="230" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="137" data-line-end="138">
+ The code in this method reduces the opacity of the grid that contains 
+the remove icon and increases the opacity of the grid that contains the 
+photo when the user moves the mouse away from the deleted image.</p>
+</li>
+<li class="task-list-item" data-line-start="138" data-line-end="139">
+<div class="task-step-checkbox" data-foo="235" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="138" data-line-end="139"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4d: Review the following event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="139" data-line-end="140">
+<div class="task-step-checkbox" data-foo="240" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="139" data-line-end="140"> The code in this method removes a student from the current teacher's class when a user clicks the remove icon.</p>
+</li>
+<li class="task-list-item" data-line-start="140" data-line-end="146">
+<div class="task-step-checkbox" data-foo="245" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="140" data-line-end="141"> In <strong>StudentsPage.xaml</strong>, locate the <strong>&lt;!--
+ TODO: Exercise 1: Task 4d: Add event handlers to highlight the "Remove"
+ button as the mouse enters and exits this control --&gt;</strong> comment, and above the comment, click at the end of the <strong>Tag="{Binding}"</strong> code (before the closing &gt; tag), press Enter, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="MouseEnter=&quot;RemoveStudent_MouseEnter&quot; MouseLeave=&quot;RemoveStudent_MouseLeave&quot; MouseLeftButtonUp=&quot;RemoveStudent_Click&quot;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="143" data-line-end="145">MouseEnter="RemoveStudent_MouseEnter" MouseLeave="RemoveStudent_MouseLeave" MouseLeftButtonUp="RemoveStudent_Click"
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="146" data-line-end="154">
+<div class="task-step-checkbox" data-foo="251" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="146" data-line-end="147"> Click at the end of the <strong>&lt;Image Source="../Images/delete.png" Stretch="Uniform" /&gt;&lt;/Grid&gt;</strong> markup, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="        &lt;/Grid&gt;
+    &lt;/DataTemplate&gt;
+&lt;/ItemsControl.ItemTemplate&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="149" data-line-end="153">        &lt;/Grid&gt;
+    &lt;/DataTemplate&gt;
+&lt;/ItemsControl.ItemTemplate&gt;
+</code></pre>
+</li>
+</ol>
+<h3>Task 5: Display all students for the current teacher</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="156" data-line-end="157">
+<div class="task-step-checkbox" data-foo="262" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="156" data-line-end="157"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 5a: Bind the list of students to the "list" ItemsControl</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="157" data-line-end="158">
+<div class="task-step-checkbox" data-foo="267" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="157" data-line-end="158"> In this method, review the code that finds all students for the current teacher and constructs a list of students.</p>
+</li>
+<li class="task-list-item" data-line-start="158" data-line-end="159">
+<div class="task-step-checkbox" data-foo="272" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="158" data-line-end="159"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 5a: Bind the list of students to the "list" ItemsControl</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="159" data-line-end="165">
+<div class="task-step-checkbox" data-foo="277" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="159" data-line-end="160"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="list.ItemsSource = resultData;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="162" data-line-end="164">list.ItemsSource = resultData;
+</code></pre>
+</li>
+</ol>
+<h3>Task 6: Build and test the application</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="167" data-line-end="169">
+<div class="task-step-checkbox" data-foo="288" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="167" data-line-end="168"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="169" data-line-end="171">
+<div class="task-step-checkbox" data-foo="293" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="169" data-line-end="170"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="171" data-line-end="173">
+<div class="task-step-checkbox" data-foo="298" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="171" data-line-end="172"> When the application starts, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="173" data-line-end="175">
+<div class="task-step-checkbox" data-foo="303" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="173" data-line-end="174"> Verify that the student list appears with photographs.</p>
+</li>
+<li class="task-list-item" data-line-start="175" data-line-end="176">
+<div class="task-step-checkbox" data-foo="308" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="175" data-line-end="176"> In the student list, place the mouse over the red <strong>x</strong> for the student <strong>Weber</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="176" data-line-end="178">
+<div class="task-step-checkbox" data-foo="313" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="176" data-line-end="177"> Verify that the student photograph for becomes transparent and that the red <strong>x</strong> becomes opaque.</p>
+</li>
+<li class="task-list-item" data-line-start="178" data-line-end="180">
+<div class="task-step-checkbox" data-foo="318" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="178" data-line-end="179">
+ Move the cursor away from the red x and verify that the student 
+photograph becomes opaque and that the red x becomes transparent.</p>
+</li>
+<li class="task-list-item" data-line-start="180" data-line-end="181">
+<div class="task-step-checkbox" data-foo="323" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="180" data-line-end="181"> Click the red <strong>x</strong> for <strong>Weber</strong>, verify that the <strong>Student</strong> message box appears, and then click <strong>Yes</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="181" data-line-end="182">
+<div class="task-step-checkbox" data-foo="328" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="181" data-line-end="182"> Verify that <strong>Weber</strong> is removed from the student list.</p>
+</li>
+<li class="task-list-item" data-line-start="182" data-line-end="185">
+<div class="task-step-checkbox" data-foo="333" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="182" data-line-end="183"> Close the application, and then close <strong>Visual Studio</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="186" data-line-end="187"><strong>Result:</strong> After completing this exercise, the application will display the photographs of each student on the <strong>Student List</strong> page.</p>
+</div>
+<h3>Exercise 2: Styling the Logon View</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="193" data-line-end="194"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="195" data-line-end="196">In this exercise, you'll update the LogonPage control to have the same look and feel as the rest of the application.</p>
+<ul>
+<li class="has-line-data" data-line-start="197" data-line-end="198">First,
+ you'll define styles for the username and password text boxes on the 
+LogonPage of the application. You'll use the Style property of each 
+control to apply the styles that you have defined.</li>
+<li class="has-line-data" data-line-start="198" data-line-end="200">Then you'll define some global styles for use across the entire application.
+You'll define a style for labels and a style for text.</li>
+<li class="has-line-data" data-line-start="200" data-line-end="201">Finally, you'll run the application to verify that the styling of the text elements has changed throughout the application.</li>
+</ul>
+</div>
+<h3>Task 1: Define and apply styles for the LogonPage view</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="205" data-line-end="207">
+<div class="task-step-checkbox" data-foo="376" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="205" data-line-end="206"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="207" data-line-end="212">
+<div class="task-step-checkbox" data-foo="381" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="207" data-line-end="208"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod09\Labfiles\Starter\Exercise 2</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="209" data-line-end="210"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="212" data-line-end="214">
+<div class="task-step-checkbox" data-foo="391" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="212" data-line-end="213"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="214" data-line-end="215">
+<div class="task-step-checkbox" data-foo="396" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="214" data-line-end="215"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, and verify that <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> are set to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="215" data-line-end="216">
+<div class="task-step-checkbox" data-foo="401" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="215" data-line-end="216"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, expand <strong>Views</strong>, and then double-click <strong>LogonPage.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="216" data-line-end="217">
+<div class="task-step-checkbox" data-foo="406" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="216" data-line-end="217"> In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 2: Task 1a: Define the LoginTextBoxStyle --&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="217" data-line-end="228">
+<div class="task-step-checkbox" data-foo="411" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="217" data-line-end="218"> Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;UserControl.Resources&gt;
+    &lt;Style x:Key=&quot;LoginTextBoxStyle&quot; BasedOn=&quot;{StaticResource TextBoxStyle}&quot;    TargetType=&quot;{x:Type TextBox}&quot;&gt;
+        &lt;Setter Property=&quot;Margin&quot; Value=&quot;5&quot; /&gt;
+        &lt;Setter Property=&quot;FontSize&quot; Value=&quot;24&quot;/&gt;
+        &lt;Setter Property=&quot;MaxLength&quot; Value=&quot;16&quot; /&gt;
+    &lt;/Style&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="220" data-line-end="227"><span class="hljs-tag">&lt;<span class="hljs-name">UserControl.Resources</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Style</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"LoginTextBoxStyle"</span> <span class="hljs-attr">BasedOn</span>=<span class="hljs-string">"{StaticResource TextBoxStyle}"</span>    <span class="hljs-attr">TargetType</span>=<span class="hljs-string">"{x:Type TextBox}"</span>&gt;</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"Margin"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"5"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontSize"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"24"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"MaxLength"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"16"</span> /&gt;</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">Style</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="228" data-line-end="232">
+<div class="task-step-checkbox" data-foo="417" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="228" data-line-end="229"> Locate the <strong>&lt;!-- TODO: Exercise 2: Task 1b: Apply the LoginTextBoxStyle to the "username" TextBox --&gt;</strong> comment.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="230" data-line-end="231">Note: this is not the next <strong>TODO</strong> comment in the file; it is further down.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="232" data-line-end="238">
+<div class="task-step-checkbox" data-foo="427" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="232" data-line-end="233"> In the line of markup below the comment, delete the <strong>FontSize</strong> property, and then modify the markup as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;TextBox x:Name=&quot;username&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Style=&quot;{StaticResource  LoginTextBoxStyle}&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="235" data-line-end="237"><span class="hljs-tag">&lt;<span class="hljs-name">TextBox</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"username"</span> <span class="hljs-attr">Grid.Row</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">Style</span>=<span class="hljs-string">"{StaticResource  LoginTextBoxStyle}"</span> /&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="238" data-line-end="239">
+<div class="task-step-checkbox" data-foo="433" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="238" data-line-end="239"> Locate the <strong>&lt;!-- TODO: Exercise 2: Task 1c: Define the PasswordBoxStyle --&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="239" data-line-end="250">
+<div class="task-step-checkbox" data-foo="438" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="239" data-line-end="240"> Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="    &lt;Style x:Key=&quot;PasswordBoxStyle&quot; TargetType=&quot;{x:Type PasswordBox}&quot;&gt;
+        &lt;Setter Property=&quot;Margin&quot; Value=&quot;5&quot; /&gt;
+        &lt;Setter Property=&quot;FontSize&quot; Value=&quot;24&quot;/&gt;
+        &lt;Setter Property=&quot;MaxLength&quot; Value=&quot;16&quot; /&gt;
+    &lt;/Style&gt;
+&lt;/UserControl.Resources&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="242" data-line-end="249">    <span class="hljs-tag">&lt;<span class="hljs-name">Style</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"PasswordBoxStyle"</span> <span class="hljs-attr">TargetType</span>=<span class="hljs-string">"{x:Type PasswordBox}"</span>&gt;</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"Margin"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"5"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontSize"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"24"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"MaxLength"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"16"</span> /&gt;</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">Style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UserControl.Resources</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="250" data-line-end="251">
+<div class="task-step-checkbox" data-foo="444" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="250" data-line-end="251"> Locate the <strong>TODO: Exercise 2: Task 1d: Apply the PasswordBoxStyle to the "password" TextBox</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="251" data-line-end="257">
+<div class="task-step-checkbox" data-foo="449" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="251" data-line-end="252"> In the line of markup below the comment, delete the <strong>FontSize</strong> property, and then modify the markup as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="    &lt;PasswordBox x:Name=&quot;password&quot; Grid.Row=&quot;2&quot; Grid.Column=&quot;1&quot; Style=&quot;{StaticResource PasswordBoxStyle}&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="254" data-line-end="256">    <span class="hljs-tag">&lt;<span class="hljs-name">PasswordBox</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">Grid.Row</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">Grid.Column</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">Style</span>=<span class="hljs-string">"{StaticResource PasswordBoxStyle}"</span> /&gt;</span>
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Define global styles for the application</h3>
+<ol class="task-list" data-group="8">
+<li class="task-list-item" data-line-start="259" data-line-end="260">
+<div class="task-step-checkbox" data-foo="460" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="259" data-line-end="260"> In <strong>Solution Explorer</strong>, expand <strong>Themes</strong>, and then double-click <strong>Generic.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="260" data-line-end="261">
+<div class="task-step-checkbox" data-foo="465" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="260" data-line-end="261"> In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 2: Task 2a: Define the label styling used throughout the application --&gt;</strong> comment near the end of the file.</p>
+</li>
+<li class="task-list-item" data-line-start="261" data-line-end="270">
+<div class="task-step-checkbox" data-foo="470" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="261" data-line-end="262"> Click in the blank line below the comment, and type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Setter Property=&quot;TextWrapping&quot; Value=&quot;NoWrap&quot;/&gt;
+&lt;Setter Property=&quot;FontFamily&quot; Value=&quot;Papyrus Regular&quot;/&gt;
+&lt;Setter Property=&quot;FontSize&quot; Value=&quot;19&quot;/&gt;
+&lt;Setter Property=&quot;Foreground&quot; Value=&quot;#FF303030&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="264" data-line-end="269"><span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"TextWrapping"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"NoWrap"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontFamily"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"Papyrus Regular"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontSize"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"19"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"Foreground"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"#FF303030"</span> /&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="270" data-line-end="271">
+<div class="task-step-checkbox" data-foo="476" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="270" data-line-end="271"> Locate the <strong>&lt;!-- TODO: Exercise 2: Task 2b: Define the text styling used throughout the application --&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="271" data-line-end="281">
+<div class="task-step-checkbox" data-foo="481" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="271" data-line-end="272"> Click in the blank line below the comment, then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Setter Property=&quot;TextWrapping&quot; Value=&quot;NoWrap&quot;/&gt;
+&lt;Setter Property=&quot;FontFamily&quot; Value=&quot;Papyrus Regular&quot;/&gt;
+&lt;Setter Property=&quot;FontSize&quot; Value=&quot;12&quot;/&gt;
+&lt;Setter Property=&quot;TextAlignment&quot; Value=&quot;Left&quot; /&gt;
+&lt;Setter Property=&quot;Foreground&quot; Value=&quot;#FF303030&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="274" data-line-end="280"><span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"TextWrapping"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"NoWrap"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontFamily"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"Papyrus Regular"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"FontSize"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"12"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"TextAlignment"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"Left"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Setter</span> <span class="hljs-attr">Property</span>=<span class="hljs-string">"Foreground"</span> <span class="hljs-attr">Value</span>=<span class="hljs-string">"#FF303030"</span> /&gt;</span>
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Build and test the application</h3>
+<ol class="task-list" data-group="9">
+<li class="task-list-item" data-line-start="283" data-line-end="285">
+<div class="task-step-checkbox" data-foo="492" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="283" data-line-end="284"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="285" data-line-end="287">
+<div class="task-step-checkbox" data-foo="497" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="285" data-line-end="286"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging.</strong></p>
+</li>
+<li class="task-list-item" data-line-start="287" data-line-end="289">
+<div class="task-step-checkbox" data-foo="502" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="287" data-line-end="288"> When the application starts, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="289" data-line-end="293">
+<div class="task-step-checkbox" data-foo="507" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="289" data-line-end="290"> In the <strong>The School of Fine Arts</strong> window, verify that the styling of the text elements of the application has changed.</p>
+<p class="has-line-data" data-line-start="291" data-line-end="292"><img src="M55339A%20All%20Modules%20-%20go%20deploy_files/94e4ddaf-fce4-4cb6-bdfe-56247f4e970a.png" alt="Screenshot"></p>
+</li>
+<li class="task-list-item" data-line-start="293" data-line-end="294">
+<div class="task-step-checkbox" data-foo="515" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="293" data-line-end="294"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="294" data-line-end="296">
+<div class="task-step-checkbox" data-foo="520" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="294" data-line-end="295"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="297" data-line-end="298"><strong>Result:</strong> After completing this exercise, the Logon view will be styled with a more consistent look and feel.</p>
+</div>
+<h3>Exercise 3: Animating the StudentPhoto Control (If Time Permits)</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="304" data-line-end="306"><strong>Scenario</strong>
+In this exercise, you'll update the StudentPhoto control to animate when the user places the mouse over it.</p>
+<ul>
+<li class="has-line-data" data-line-start="307" data-line-end="308">First,
+ you'll define an animation for the StudentPhoto control, which will 
+cause a student's photograph to pulse when a user places their mouse 
+over it.</li>
+<li class="has-line-data" data-line-start="308" data-line-end="309">You'll then add event handlers for this animation and apply the animation to the control.</li>
+<li class="has-line-data" data-line-start="309" data-line-end="310">Finally, you'll run the application to verify that the animation executes correctly.</li>
+</ul>
+</div>
+<h3>Task 1: Define animations for the StudentPhoto control</h3>
+<ol class="task-list" data-group="10">
+<li class="task-list-item" data-line-start="314" data-line-end="316">
+<div class="task-step-checkbox" data-foo="560" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="314" data-line-end="315"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="316" data-line-end="322">
+<div class="task-step-checkbox" data-foo="565" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="316" data-line-end="317"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod09\Labfiles\Starter\Exercise 3</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="319" data-line-end="320"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="322" data-line-end="323">
+<div class="task-step-checkbox" data-foo="575" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="322" data-line-end="323"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="323" data-line-end="324">
+<div class="task-step-checkbox" data-foo="580" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="323" data-line-end="324"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>. Ensure that <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> are set to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="324" data-line-end="325">
+<div class="task-step-checkbox" data-foo="585" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="324" data-line-end="325"> In <strong>Solution Explorer</strong>, in the <strong>Grades.WPF</strong> project, expand <strong>Controls</strong>, and then double-click <strong>StudentPhoto.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="325" data-line-end="326">
+<div class="task-step-checkbox" data-foo="590" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="325" data-line-end="326"> In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 1a: Define a ScaleTransform called "scale" --&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="326" data-line-end="333">
+<div class="task-step-checkbox" data-foo="595" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="326" data-line-end="327"> Click in the blank line below the comment, then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;UserControl.RenderTransform&gt;
+    &lt;ScaleTransform x:Name=&quot;scale&quot; /&gt;
+&lt;/UserControl.RenderTransform&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="329" data-line-end="333"><span class="hljs-tag">&lt;<span class="hljs-name">UserControl.RenderTransform</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ScaleTransform</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"scale"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UserControl.RenderTransform</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="333" data-line-end="334">
+<div class="task-step-checkbox" data-foo="601" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="333" data-line-end="334"> In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 1b: Define animations for the "scale" transform--&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="334" data-line-end="349">
+<div class="task-step-checkbox" data-foo="606" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="334" data-line-end="335"> Click in the blank line below the comment, then type the following markup.</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;UserControl.Resources&gt;
+    &lt;Storyboard x:Key=&quot;sbMouseEnter&quot;&gt;
+        &lt;DoubleAnimation To=&quot;1.1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.05&quot;   Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleX&quot; /&gt;
+        &lt;DoubleAnimation To=&quot;1.1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.15&quot;   Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleY&quot; /&gt;
+    &lt;/Storyboard&gt;
+    &lt;Storyboard x:Key=&quot;sbMouseLeave&quot;&gt;
+        &lt;DoubleAnimation To=&quot;1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.05&quot;     Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleX&quot; /&gt;
+        &lt;DoubleAnimation To=&quot;1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.15&quot;     Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleY&quot; /&gt;
+    &lt;/Storyboard&gt;
+&lt;/UserControl.Resources&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="337" data-line-end="348"><span class="hljs-tag">&lt;<span class="hljs-name">UserControl.Resources</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Storyboard</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"sbMouseEnter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DoubleAnimation</span> <span class="hljs-attr">To</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">BeginTime</span>=<span class="hljs-string">"00:00:00"</span> <span class="hljs-attr">Duration</span>=<span class="hljs-string">"00:00:00.05"</span>   <span class="hljs-attr">Storyboard.TargetName</span>=<span class="hljs-string">"scale"</span> <span class="hljs-attr">Storyboard.TargetProperty</span>=<span class="hljs-string">"ScaleX"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DoubleAnimation</span> <span class="hljs-attr">To</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">BeginTime</span>=<span class="hljs-string">"00:00:00"</span> <span class="hljs-attr">Duration</span>=<span class="hljs-string">"00:00:00.15"</span>   <span class="hljs-attr">Storyboard.TargetName</span>=<span class="hljs-string">"scale"</span> <span class="hljs-attr">Storyboard.TargetProperty</span>=<span class="hljs-string">"ScaleY"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Storyboard</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Storyboard</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"sbMouseLeave"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DoubleAnimation</span> <span class="hljs-attr">To</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">BeginTime</span>=<span class="hljs-string">"00:00:00"</span> <span class="hljs-attr">Duration</span>=<span class="hljs-string">"00:00:00.05"</span>     <span class="hljs-attr">Storyboard.TargetName</span>=<span class="hljs-string">"scale"</span> <span class="hljs-attr">Storyboard.TargetProperty</span>=<span class="hljs-string">"ScaleX"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DoubleAnimation</span> <span class="hljs-attr">To</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">BeginTime</span>=<span class="hljs-string">"00:00:00"</span> <span class="hljs-attr">Duration</span>=<span class="hljs-string">"00:00:00.15"</span>     <span class="hljs-attr">Storyboard.TargetName</span>=<span class="hljs-string">"scale"</span> <span class="hljs-attr">Storyboard.TargetProperty</span>=<span class="hljs-string">"ScaleY"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Storyboard</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UserControl.Resources</span>&gt;</span>
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Add event handlers to trigger the animations</h3>
+<ol class="task-list" data-group="11">
+<li class="task-list-item" data-line-start="351" data-line-end="352">
+<div class="task-step-checkbox" data-foo="617" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="351" data-line-end="352"> In <strong>Solution Explorer</strong>, expand <strong>StudentPhoto.xaml</strong>, and then double-click <strong>StudentPhoto.xaml.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="352" data-line-end="353">
+<div class="task-step-checkbox" data-foo="622" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="352" data-line-end="353"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2a: Handle mouse events to trigger the storyboards that animate the photograph</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="353" data-line-end="369">
+<div class="task-step-checkbox" data-foo="627" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="353" data-line-end="354"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public void OnMouseEnter()
+{
+    // Trigger the mouse enter animation to grow the size of the photograph currently under the mouse pointer
+    (this.Resources[&quot;sbMouseEnter&quot;] as Storyboard).Begin();
+}
+
+public void OnMouseLeave()
+{
+    // Trigger the mouse leave animation to shrink the size of the photograph currently under the mouse pointer to return it to its original size
+    (this.Resources[&quot;sbMouseLeave&quot;] as Storyboard).Begin();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="356" data-line-end="368"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMouseEnter</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Trigger the mouse enter animation to grow the size of the photograph currently under the mouse pointer</span>
+    (<span class="hljs-keyword">this</span>.Resources[<span class="hljs-string">"sbMouseEnter"</span>] <span class="hljs-keyword">as</span> Storyboard).Begin();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMouseLeave</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">// Trigger the mouse leave animation to shrink the size of the photograph currently under the mouse pointer to return it to its original size</span>
+    (<span class="hljs-keyword">this</span>.Resources[<span class="hljs-string">"sbMouseLeave"</span>] <span class="hljs-keyword">as</span> Storyboard).Begin();
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="369" data-line-end="370">
+<div class="task-step-checkbox" data-foo="633" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="369" data-line-end="370"> In <strong>Solution Explorer</strong>, in <strong>Views</strong>, expand <strong>StudentsPage.xaml</strong>, and then double-click <strong>StudentsPage.xaml.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="370" data-line-end="371">
+<div class="task-step-checkbox" data-foo="638" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="370" data-line-end="371"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2b: Forward the MouseEnter and MouseLeave events to the photograph control</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="371" data-line-end="387">
+<div class="task-step-checkbox" data-foo="643" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="371" data-line-end="372"> In the code editor, click in the blank space below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void Student_MouseEnter(object sender, MouseEventArgs e)
+{
+    // Call the OnMouseEnter event handler on the specific photograph currently under the mouse pointer
+    ((StudentPhoto)sender).OnMouseEnter();
+}
+
+private void Student_MouseLeave(object sender, MouseEventArgs e)
+{
+    // Call the OnMouseLeave event handler on the specific photograph currently under the mouse pointer
+    ((StudentPhoto)sender).OnMouseLeave();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="374" data-line-end="386"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Student_MouseEnter</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, MouseEventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Call the OnMouseEnter event handler on the specific photograph currently under the mouse pointer</span>
+    ((StudentPhoto)sender).OnMouseEnter();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Student_MouseLeave</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, MouseEventArgs e</span>)</span>
+{
+    <span class="hljs-comment">// Call the OnMouseLeave event handler on the specific photograph currently under the mouse pointer</span>
+    ((StudentPhoto)sender).OnMouseLeave();
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="387" data-line-end="388">
+<div class="task-step-checkbox" data-foo="649" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="387" data-line-end="388"> In <strong>Solution Explorer</strong>, double-click <strong>StudentsPage.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="388" data-line-end="389">
+<div class="task-step-checkbox" data-foo="654" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="388" data-line-end="389"> In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 2c: Specify the handlers for the MouseEnter and MouseLeave events --&gt;</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="389" data-line-end="395">
+<div class="task-step-checkbox" data-foo="659" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="389" data-line-end="390"> Below the comment, click at the end of the <strong>MouseLeftButtonUp="Student_Click"</strong> markup, press the space bar, and then type the following markup:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="MouseEnter=&quot;Student_MouseEnter&quot; MouseLeave=&quot;Student_MouseLeave&quot;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="392" data-line-end="394">MouseEnter="Student_MouseEnter" MouseLeave="Student_MouseLeave"
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Build and test the application</h3>
+<ol class="task-list" data-group="12">
+<li class="task-list-item" data-line-start="397" data-line-end="399">
+<div class="task-step-checkbox" data-foo="670" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="397" data-line-end="398"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="399" data-line-end="400">
+<div class="task-step-checkbox" data-foo="675" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="399" data-line-end="400"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging.</strong></p>
+</li>
+<li class="task-list-item" data-line-start="400" data-line-end="401">
+<div class="task-step-checkbox" data-foo="680" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="400" data-line-end="401"> When the application starts, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="401" data-line-end="402">
+<div class="task-step-checkbox" data-foo="685" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="401" data-line-end="402">
+ Place your mouse over one of the students in the student list and 
+verify that the photograph animates-it should expand and contract as the
+ mouse passes over it.</p>
+</li>
+<li class="task-list-item" data-line-start="402" data-line-end="403">
+<div class="task-step-checkbox" data-foo="690" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="402" data-line-end="403"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="403" data-line-end="406">
+<div class="task-step-checkbox" data-foo="695" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="403" data-line-end="404"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="407" data-line-end="408"><strong>Result:</strong> After completing this exercise, the Photograph control will be animated.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="411" data-line-end="412"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div></body></html>

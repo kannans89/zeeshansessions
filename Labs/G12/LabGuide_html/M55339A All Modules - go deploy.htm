@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="" aria-describedby="popover130798">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 12: Designing for Reuse</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="true">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 12: Designing for Reuse</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="3" data-line-end="4"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Managing the Grades Report Assembly</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="13" data-line-end="14"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="15" data-line-end="16">You decide to update the <strong>Grades</strong>
+ application to use custom attributes to define the fields and 
+properties that should be included in a grade report and to format them 
+appropriately. This will enable further reusability of the Microsoft 
+Word reporting functionality.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="19" data-line-end="20"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="21" data-line-end="22">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Use custom attributes.</li>
+<li class="has-line-data" data-line-start="24" data-line-end="26">Use .NET reflection to examine metadata at run time.</li>
+</ul>
+<p class="has-line-data" data-line-start="26" data-line-end="27">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Creating and Applying the IncludeInReport attribute</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="32" data-line-end="33"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="34" data-line-end="35">In this exercise, you'll create the <strong>IncludeInReport</strong> attribute to specify the fields and the format of each field that is included in the grades report.</p>
+<p class="has-line-data" data-line-start="36" data-line-end="39">First, you'll write code for the <strong>IncludeInReportAttribute</strong> class and define the members that are contained in it.<br>
+Next, you'll apply the attribute to the appropriate properties in the <strong>LocalGrade</strong> class in the <strong>Data.cs</strong> file.<br>
+Finally, you'll build the application and then use the MSIL Disassembler
+ utility (ILDASM) to examine the metadata that the attribute generates.</p>
+</div>
+<h3>Task 1: Write the code for the IncludeInReportAttribute class</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="43" data-line-end="45">
+<div class="task-step-checkbox" data-foo="67" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="43" data-line-end="44"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="45" data-line-end="47">
+<div class="task-step-checkbox" data-foo="72" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="45" data-line-end="46"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="47" data-line-end="52">
+<div class="task-step-checkbox" data-foo="77" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="47" data-line-end="48"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod12\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="49" data-line-end="50"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="52" data-line-end="53">
+<div class="task-step-checkbox" data-foo="87" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="52" data-line-end="53"> In <strong>Solution Explorer</strong>, right-click Solution <strong>'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="53" data-line-end="54">
+<div class="task-step-checkbox" data-foo="92" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="53" data-line-end="54"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="54" data-line-end="55">
+<div class="task-step-checkbox" data-foo="97" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="54" data-line-end="55"> In <strong>Solution Explorer</strong>, expand <strong>Grades.Utilities</strong>, and then double-click <strong>IncludeInReport.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="55" data-line-end="56">
+<div class="task-step-checkbox" data-foo="102" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="55" data-line-end="56"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="57">
+<div class="task-step-checkbox" data-foo="107" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1a: Specify that IncludeInReportAttribute is an attribute class</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="57" data-line-end="62">
+<div class="task-step-checkbox" data-foo="112" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="57" data-line-end="58"> In the code editor, below the comment, click at the end of the public <strong>public class IncludeInReportAttribute</strong> code, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code=": Attribute"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="60" data-line-end="62">: Attribute
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="63">
+<div class="task-step-checkbox" data-foo="118" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1b: Specify the possible targets to which the IncludeInReport attribute can be applied</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="63" data-line-end="68">
+<div class="task-step-checkbox" data-foo="123" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="63" data-line-end="64"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple   = false)]"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="66" data-line-end="68">[<span class="hljs-meta">AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple   = false)</span>]
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="68" data-line-end="69">
+<div class="task-step-checkbox" data-foo="129" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="68" data-line-end="69"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1c: Define a private field to hold the value of the attribute</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="69" data-line-end="74">
+<div class="task-step-checkbox" data-foo="134" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="69" data-line-end="70"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private bool _include;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="72" data-line-end="74"><span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> _include;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="74" data-line-end="75">
+<div class="task-step-checkbox" data-foo="140" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="74" data-line-end="75"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1d: Add public properties that specify how an included item should be formatted</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="75" data-line-end="81">
+<div class="task-step-checkbox" data-foo="145" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="75" data-line-end="76"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public bool Underline { get; set; }
+public bool Bold { get; set; }"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="78" data-line-end="81"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> Underline { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> Bold { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="81" data-line-end="82">
+<div class="task-step-checkbox" data-foo="151" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="81" data-line-end="82"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1e: Add a public property that specifies a label (if any) for the item</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="82" data-line-end="87">
+<div class="task-step-checkbox" data-foo="156" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="82" data-line-end="83"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public string Label { get; set; }"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="85" data-line-end="87"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Label { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="87" data-line-end="88">
+<div class="task-step-checkbox" data-foo="162" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="87" data-line-end="88"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1f: Define constructors</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="88" data-line-end="108">
+<div class="task-step-checkbox" data-foo="167" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="88" data-line-end="89"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public IncludeInReportAttribute()
+{
+   this._include = true;
+   this.Underline = false;
+   this.Bold = false;
+   this.Label = string.Empty;
+}
+
+public IncludeInReportAttribute(bool includeInReport)
+{
+   this._include = includeInReport;
+   this.Underline = false;
+   this.Bold = false;
+   this.Label = string.Empty;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="91" data-line-end="107"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">IncludeInReportAttribute</span>(<span class="hljs-params"></span>)</span>
+{
+   <span class="hljs-keyword">this</span>._include = <span class="hljs-literal">true</span>;
+   <span class="hljs-keyword">this</span>.Underline = <span class="hljs-literal">false</span>;
+   <span class="hljs-keyword">this</span>.Bold = <span class="hljs-literal">false</span>;
+   <span class="hljs-keyword">this</span>.Label = <span class="hljs-built_in">string</span>.Empty;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">IncludeInReportAttribute</span>(<span class="hljs-params"><span class="hljs-built_in">bool</span> includeInReport</span>)</span>
+{
+   <span class="hljs-keyword">this</span>._include = includeInReport;
+   <span class="hljs-keyword">this</span>.Underline = <span class="hljs-literal">false</span>;
+   <span class="hljs-keyword">this</span>.Bold = <span class="hljs-literal">false</span>;
+   <span class="hljs-keyword">this</span>.Label = <span class="hljs-built_in">string</span>.Empty;
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Apply the IncludeInReportAttribute attribute to the appropriate properties</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="110" data-line-end="112">
+<div class="task-step-checkbox" data-foo="178" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="110" data-line-end="111"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, expand <strong>ViewModel</strong> and then double-click <strong>Grade.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="112" data-line-end="113">
+<div class="task-step-checkbox" data-foo="183" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="112" data-line-end="113"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2: Add the IncludeInReport attribute to the appropriate properties in the Grade class</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="113" data-line-end="114">
+<div class="task-step-checkbox" data-foo="188" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="113" data-line-end="114"> In the <strong>Grade</strong> class, expand the <strong>Properties</strong> region, and then expand the <strong>Readonly Properties</strong> region.</p>
+</li>
+<li class="task-list-item" data-line-start="114" data-line-end="119">
+<div class="task-step-checkbox" data-foo="193" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="114" data-line-end="115"> Above the <strong>public string SubjectName</strong> code, click in the blank line, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[IncludeInReport(Label=&quot;Subject Name&quot;, Bold=true, Underline=true)]"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="117" data-line-end="119">[<span class="hljs-meta">IncludeInReport(Label=<span class="hljs-meta-string">"Subject Name"</span>, Bold=true, Underline=true)</span>]
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="119" data-line-end="124">
+<div class="task-step-checkbox" data-foo="199" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="119" data-line-end="120"> Above the <strong>public string AssessmentDateString</strong> code, click in the blank line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[IncludeInReport (Label=&quot;Date&quot;)]"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="122" data-line-end="124">[<span class="hljs-meta">IncludeInReport (Label=<span class="hljs-meta-string">"Date"</span>)</span>]
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="124" data-line-end="125">
+<div class="task-step-checkbox" data-foo="205" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="124" data-line-end="125"> Expand the <strong>Form Properties</strong> region.</p>
+</li>
+<li class="task-list-item" data-line-start="125" data-line-end="130">
+<div class="task-step-checkbox" data-foo="210" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="125" data-line-end="126"> Above the <strong>public string Assessment</strong> code, click in the blank line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[IncludeInReport(Label = &quot;Grade&quot;)]"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="128" data-line-end="130">[<span class="hljs-meta">IncludeInReport(Label = <span class="hljs-meta-string">"Grade"</span>)</span>]
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="130" data-line-end="136">
+<div class="task-step-checkbox" data-foo="216" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="130" data-line-end="131"> Above the <strong>public string Comments</strong> code, click in the blank space, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="[IncludeInReport(Label = &quot;Comments&quot;)]"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="133" data-line-end="135">[<span class="hljs-meta">IncludeInReport(Label = <span class="hljs-meta-string">"Comments"</span>)</span>]
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Build the application and review the metadata for the LocalGrades class</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="139" data-line-end="140">
+<div class="task-step-checkbox" data-foo="227" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="139" data-line-end="140"> On the <strong>Debug</strong> menu, click <strong>Start Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="140" data-line-end="141">
+<div class="task-step-checkbox" data-foo="232" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="140" data-line-end="141"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="141" data-line-end="142">
+<div class="task-step-checkbox" data-foo="237" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="141" data-line-end="142"> From the <strong>Tools</strong> menu, choose <strong>Command Line</strong> and then <strong>Developer Command Prompt</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="142" data-line-end="144">
+<div class="task-step-checkbox" data-foo="242" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="142" data-line-end="143"> In the command window, type the command <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="ildasm"><code>ildasm</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="144" data-line-end="146">
+<div class="task-step-checkbox" data-foo="247" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="144" data-line-end="145"> In the <strong>IL DASM</strong> window, on the <strong>File</strong> menu, click <strong>Open</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="146" data-line-end="148">
+<div class="task-step-checkbox" data-foo="252" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="146" data-line-end="147"> In the <strong>Open</strong> dialog box, browse to <strong>E:\Allfiles\Mod12\Labfiles\Starter\Exercise 1\Grades.WPF\bin\Debug\net6.0-windows</strong>, click <strong>Grades.WPF.dll</strong>, and then click <strong>Open</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="148" data-line-end="150">
+<div class="task-step-checkbox" data-foo="257" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="148" data-line-end="149"> In the <strong>IL DASM</strong> application window, expand <strong>Grades.WPF</strong>, expand <strong>Grades.WPF.ViewModel</strong>, expand <strong>Grades.WPF.ViewModel.Grade</strong>, and then double-click <strong>Assessment : instance string()</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="150" data-line-end="160">
+<div class="task-step-checkbox" data-foo="262" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="150" data-line-end="151"> In the <strong>Grades.WPF.LocalGrade::Assessment : instance string()</strong> window, in the <strong>Assessment</strong> method, verify that the <strong>.custom instance void [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor()</strong> code is present. The dissassembled code should look something like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code=".property instance string Assessment()
+{
+.custom instance void [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor() = ( 01 00 01 00 54 0E 05 4C 61 62 65 6C 05 47 72 61 64 65 )  // ....T..Label.Grade
+.get instance string Grades.WPF.ViewModel.Grade::get_Assessment()
+.set instance void Grades.WPF.ViewModel.Grade::set_Assessment(string)
+} // end of property Grade::Assessment"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="152" data-line-end="159">.<span class="hljs-function">property instance <span class="hljs-built_in">string</span> <span class="hljs-title">Assessment</span>(<span class="hljs-params"></span>)</span>
+{
+.custom instance <span class="hljs-keyword">void</span> [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor() = ( <span class="hljs-number">01</span> <span class="hljs-number">00</span> <span class="hljs-number">01</span> <span class="hljs-number">00</span> <span class="hljs-number">54</span> <span class="hljs-number">0</span>E <span class="hljs-number">05</span> <span class="hljs-number">4</span>C <span class="hljs-number">61</span> <span class="hljs-number">62</span> <span class="hljs-number">65</span> <span class="hljs-number">6</span>C <span class="hljs-number">05</span> <span class="hljs-number">47</span> <span class="hljs-number">72</span> <span class="hljs-number">61</span> <span class="hljs-number">64</span> <span class="hljs-number">65</span> )  <span class="hljs-comment">// ....T..Label.Grade</span>
+.<span class="hljs-keyword">get</span> instance <span class="hljs-built_in">string</span> Grades.WPF.ViewModel.Grade::get_Assessment()
+.<span class="hljs-keyword">set</span> instance <span class="hljs-keyword">void</span> Grades.WPF.ViewModel.Grade::set_Assessment(<span class="hljs-built_in">string</span>)
+} <span class="hljs-comment">// end of property Grade::Assessment</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="160" data-line-end="162">
+<div class="task-step-checkbox" data-foo="268" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="160" data-line-end="161"> Close the window <strong>Grades.WPF.LocalGrade::Assessment : instance string()</strong> window.</p>
+</li>
+<li class="task-list-item" data-line-start="162" data-line-end="164">
+<div class="task-step-checkbox" data-foo="273" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="162" data-line-end="163"> In the <strong>IL DASM</strong> application window, double-click <strong>AssessmentDateString : instance string()</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="164" data-line-end="166">
+<div class="task-step-checkbox" data-foo="278" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="164" data-line-end="165"> In the <strong>Grades.WPF.LocalGrade::AssessmentDateString : instance string()</strong> window, in the <strong>AssessmentDateString</strong> method, verify that the <strong>.custom  instance void [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor()</strong> code is present, and then close the window.</p>
+</li>
+<li class="task-list-item" data-line-start="166" data-line-end="168">
+<div class="task-step-checkbox" data-foo="283" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="166" data-line-end="167"> In the <strong>IL DASM</strong> application window, double-click <strong>Comments : instance string()</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="168" data-line-end="170">
+<div class="task-step-checkbox" data-foo="288" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="168" data-line-end="169"> In the <strong>Grades.WPF.LocalGrade::Comments : instance string()</strong> window, in the <strong>Comments</strong> method, verify that the <strong>.custom instance void [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor()</strong> code is present, and then close the window.</p>
+</li>
+<li class="task-list-item" data-line-start="170" data-line-end="172">
+<div class="task-step-checkbox" data-foo="293" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="170" data-line-end="171"> In the <strong>IL DASM</strong> application window, double-click <strong>SubjectName : instance string();</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="172" data-line-end="174">
+<div class="task-step-checkbox" data-foo="298" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="172" data-line-end="173"> In the <strong>Grades.WPF.LocalGrade::SubjectName : instance string()</strong> window, in the <strong>SubjectName</strong> method, verify that the <strong>.custom instance void [Grades.Utilities]Grades.Utilities.IncludeInReportAttribute::.ctor()</strong> code is present, and then close the window.</p>
+</li>
+<li class="task-list-item" data-line-start="174" data-line-end="176">
+<div class="task-step-checkbox" data-foo="303" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="174" data-line-end="175"> Close the <strong>IL DASM</strong> application.</p>
+</li>
+<li class="task-list-item" data-line-start="176" data-line-end="178">
+<div class="task-step-checkbox" data-foo="308" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="176" data-line-end="177"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="179" data-line-end="180"><strong>Result:</strong> After completing this exercise, the <strong>Grades.Utilities</strong> assembly will contain an <strong>IncludeInReport</strong> custom attribute and the <strong>Grades</strong> class will contain fields and properties that are tagged with that attribute.</p>
+</div>
+<h3>Exercise 2: Updating the Report</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="185" data-line-end="187"><strong>Scenario</strong>
+In this exercise, you will update the grades report to include fields and properties only if they are tagged with the <strong>IncludeInReport</strong> attribute.</p>
+<p class="has-line-data" data-line-start="188" data-line-end="189">First, you will implement a method named <strong>GetItemsToInclude</strong> in a static helper class called <strong>IncludeProcessor</strong> that implements the logic that is necessary to discover the fields and properties that are tagged with the <strong>IncludeInReport</strong> attribute. You will then update the code for the <strong>StudentProfile</strong> view to include fields and properties in the report only if they are tagged with the <strong>IncludeInReport</strong> attribute and to format them appropriately.</p>
+</div>
+<h3>Task 1: Implement a static helper class called IncludeProcessor</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="193" data-line-end="195">
+<div class="task-step-checkbox" data-foo="334" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="193" data-line-end="194"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="195" data-line-end="200">
+<div class="task-step-checkbox" data-foo="339" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="195" data-line-end="196"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod12\Labfiles\Starter\Exercise 2</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="197" data-line-end="198"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="200" data-line-end="202">
+<div class="task-step-checkbox" data-foo="349" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="200" data-line-end="201"> In <strong>Solution Explorer</strong>, right-click Solution <strong>'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="202" data-line-end="203">
+<div class="task-step-checkbox" data-foo="354" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="202" data-line-end="203"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="203" data-line-end="205">
+<div class="task-step-checkbox" data-foo="359" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="203" data-line-end="204"> In <strong>Solution Explorer</strong>, expand <strong>Grades.Utilities</strong>, and then double-click <strong>IncludeInReport.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="205" data-line-end="207">
+<div class="task-step-checkbox" data-foo="364" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="205" data-line-end="206"> Below the <strong>Output</strong> window, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="207" data-line-end="209">
+<div class="task-step-checkbox" data-foo="369" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="207" data-line-end="208"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1a: Define a struct that specifies the formatting to apply to an item</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="209" data-line-end="217">
+<div class="task-step-checkbox" data-foo="374" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="209" data-line-end="210"> In the code editor, click in the blank line in the <strong>FormatField</strong> struct, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public string Value;
+public string Label;
+public bool IsBold;
+public bool IsUnderlined;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="212" data-line-end="217"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Value;
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Label;
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> IsBold;
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> IsUnderlined;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="217" data-line-end="218">
+<div class="task-step-checkbox" data-foo="380" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="217" data-line-end="218"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1b: Find all the public fields and properties in the dataForReport object</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="218" data-line-end="226">
+<div class="task-step-checkbox" data-foo="385" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="218" data-line-end="219"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Type dataForReportType = dataForReport.GetType();
+fieldsAndProperties.AddRange(dataForReportType.GetFields());
+fieldsAndProperties.AddRange(dataForReportType.GetProperties());"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="221" data-line-end="225">Type dataForReportType = dataForReport.GetType();
+fieldsAndProperties.AddRange(dataForReportType.GetFields());
+fieldsAndProperties.AddRange(dataForReportType.GetProperties());
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="226" data-line-end="228">
+<div class="task-step-checkbox" data-foo="391" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="226" data-line-end="227"> In the <strong>Task List</strong> window, double-click the <strong>TODO:
+ Exercise 2: Task 1c: Iterate through all public fields and properties, 
+and process each item that is tagged with the IncludeInReport attribute</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="228" data-line-end="234">
+<div class="task-step-checkbox" data-foo="396" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="228" data-line-end="229"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="foreach (MemberInfo member in fieldsAndProperties)
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="231" data-line-end="234"><span class="hljs-keyword">foreach</span> (MemberInfo member <span class="hljs-keyword">in</span> fieldsAndProperties)
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="234" data-line-end="235">
+<div class="task-step-checkbox" data-foo="402" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="234" data-line-end="235"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1d: Determine whether the current member is tagged with the IncludeInReport attribute</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="235" data-line-end="242">
+<div class="task-step-checkbox" data-foo="407" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="235" data-line-end="236"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="object[] attributes = member.GetCustomAttributes(false);
+IncludeInReportAttribute attributeFound = Array.Find(attributes, a =&gt; a.GetType()   == typeof(IncludeInReportAttribute)) as IncludeInReportAttribute;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="238" data-line-end="241"><span class="hljs-built_in">object</span>[] attributes = member.GetCustomAttributes(<span class="hljs-literal">false</span>);
+IncludeInReportAttribute attributeFound = Array.Find(attributes, a =&gt; a.GetType()   == <span class="hljs-keyword">typeof</span>(IncludeInReportAttribute)) <span class="hljs-keyword">as</span> IncludeInReportAttribute;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="242" data-line-end="243">
+<div class="task-step-checkbox" data-foo="413" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="242" data-line-end="243"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1e: If the member is tagged with the IncludeInReport attribute, construct a FormatField item</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="243" data-line-end="260">
+<div class="task-step-checkbox" data-foo="418" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="243" data-line-end="244"> In the code editor, click in the blank line below the two-line comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="if (attributeFound != null)
+{
+   // Find the value of the item tagged with the IncludeInReport attribute
+   string itemValue;
+   if (member is FieldInfo)
+   {
+         itemValue = (member as FieldInfo).GetValue(dataForReport).ToString();
+   }
+   else
+   {
+         itemValue = (member as PropertyInfo).GetValue(dataForReport).ToString();
+   }"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="246" data-line-end="259"><span class="hljs-keyword">if</span> (attributeFound != <span class="hljs-literal">null</span>)
+{
+   <span class="hljs-comment">// Find the value of the item tagged with the IncludeInReport attribute</span>
+   <span class="hljs-built_in">string</span> itemValue;
+   <span class="hljs-keyword">if</span> (member <span class="hljs-keyword">is</span> FieldInfo)
+   {
+         itemValue = (member <span class="hljs-keyword">as</span> FieldInfo).GetValue(dataForReport).ToString();
+   }
+   <span class="hljs-keyword">else</span>
+   {
+         itemValue = (member <span class="hljs-keyword">as</span> PropertyInfo).GetValue(dataForReport).ToString();
+   }
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="260" data-line-end="261">
+<div class="task-step-checkbox" data-foo="424" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="260" data-line-end="261"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1f: Construct a FormatField item with this data</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="261" data-line-end="273">
+<div class="task-step-checkbox" data-foo="429" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="261" data-line-end="262"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="FormatField item = new FormatField()
+{
+   Value = itemValue,
+   Label = attributeFound.Label,
+   IsBold = attributeFound.Bold,
+   IsUnderlined = attributeFound.Underline
+};"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="264" data-line-end="272">FormatField item = <span class="hljs-keyword">new</span> FormatField()
+{
+   Value = itemValue,
+   Label = attributeFound.Label,
+   IsBold = attributeFound.Bold,
+   IsUnderlined = attributeFound.Underline
+};
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="273" data-line-end="274">
+<div class="task-step-checkbox" data-foo="435" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="273" data-line-end="274"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1g: Add the FormatField item to the collection to be returned</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="274" data-line-end="282">
+<div class="task-step-checkbox" data-foo="440" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="274" data-line-end="275"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="      items.Add(item);
+   }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="277" data-line-end="281">      items.Add(item);
+   }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Update the report functionality for the StudentProfile view</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="284" data-line-end="286">
+<div class="task-step-checkbox" data-foo="451" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="284" data-line-end="285"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, expand <strong>Views</strong>, expand <strong>StudentProfile.xaml</strong>, and then double-click <strong>StudentProfile.xaml.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="286" data-line-end="288">
+<div class="task-step-checkbox" data-foo="456" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="286" data-line-end="287"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Use the IncludeProcessor to determine which fields in the Grade object are tagged</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="288" data-line-end="293">
+<div class="task-step-checkbox" data-foo="461" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="288" data-line-end="289"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="List&lt;FormatField&gt; itemsToReport = IncludeProcessor.GetItemsToInclude(grade);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="291" data-line-end="293">List&lt;FormatField&gt; itemsToReport = IncludeProcessor.GetItemsToInclude(grade);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="293" data-line-end="295">
+<div class="task-step-checkbox" data-foo="467" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="293" data-line-end="294"> In the <strong>Task List</strong> window, double-click the <strong>TODO:
+ Exercise 2: Task 2b: Output each tagged item, using the format 
+specified by the properties of the IncludeInReport attribute for each 
+item</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="295" data-line-end="305">
+<div class="task-step-checkbox" data-foo="472" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="295" data-line-end="296"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="foreach (FormatField item in itemsToReport)
+{
+   wrapper.AppendText(item.Label == string.Empty ? item.Value : item.Label + &quot;: &quot; +    item.Value, item.IsBold, item.IsUnderlined);
+   wrapper.InsertCarriageReturn();
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="298" data-line-end="304"><span class="hljs-keyword">foreach</span> (FormatField item <span class="hljs-keyword">in</span> itemsToReport)
+{
+   wrapper.AppendText(item.Label == <span class="hljs-built_in">string</span>.Empty ? item.Value : item.Label + <span class="hljs-string">": "</span> +    item.Value, item.IsBold, item.IsUnderlined);
+   wrapper.InsertCarriageReturn();
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Build and test the application</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="307" data-line-end="309">
+<div class="task-step-checkbox" data-foo="483" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="307" data-line-end="308"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="309" data-line-end="310">
+<div class="task-step-checkbox" data-foo="488" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="309" data-line-end="310"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="310" data-line-end="312">
+<div class="task-step-checkbox" data-foo="493" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="310" data-line-end="311"> In the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="312" data-line-end="314">
+<div class="task-step-checkbox" data-foo="498" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="312" data-line-end="313"> In the <strong>Class 3C</strong> view, click <strong>Kevin Liu</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="314" data-line-end="315">
+<div class="task-step-checkbox" data-foo="503" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="314" data-line-end="315"> Verify that the student report for <strong>Kevin Liu</strong> appears, and then click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="315" data-line-end="317">
+<div class="task-step-checkbox" data-foo="508" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="315" data-line-end="316"> In the <strong>Save As</strong> dialog box, browse to the <strong>E:\Allfiles\Mod12\Labfiles\Starter\Exercise 2</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="317" data-line-end="318">
+<div class="task-step-checkbox" data-foo="513" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="317" data-line-end="318"> In the <strong>File name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="KevinLiuGradesReport"><code>KevinLiuGradesReport</code></a></strong>, and then click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="318" data-line-end="320">
+<div class="task-step-checkbox" data-foo="518" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="318" data-line-end="319"> Close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="320" data-line-end="322">
+<div class="task-step-checkbox" data-foo="523" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="320" data-line-end="321"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="322" data-line-end="323">
+<div class="task-step-checkbox" data-foo="528" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="322" data-line-end="323"> Open <strong>File Explorer</strong>, browse to <strong>E:\Allfiles\Mod12\Labfiles\Starter\Exercise 2</strong>, and then verify that <strong>KevinLiuGradesReport.docx</strong> has been generated.</p>
+</li>
+<li class="task-list-item" data-line-start="323" data-line-end="325">
+<div class="task-step-checkbox" data-foo="533" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="323" data-line-end="324"> Right-click <strong>KevinLiuGradesReport.docx</strong>, and then click <strong>Open</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="325" data-line-end="327">
+<div class="task-step-checkbox" data-foo="538" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="325" data-line-end="326"> Verify that the document contains the grade report for <strong>Kevin Liu</strong> and that it is correctly formatted, and then close<strong>Microsoft Word</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="328" data-line-end="329"><strong>Result:</strong>
+ After completing this exercise, the application will be updated to use 
+reflection to include only the tagged fields and properties in the 
+grades report.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="332" data-line-end="333"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div><div class="popover bs-popover-top show" role="tooltip" id="popover130798" style="position: absolute; transform: translate3d(43px, 10px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="top"><div class="arrow" style="left: 61px;"></div><h3 class="popover-header"></h3><div class="popover-body">Select Lab Guide page</div></div></body></html>

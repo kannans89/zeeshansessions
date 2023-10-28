@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help show" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="" aria-describedby="popover306646">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button">Module 11: C# Interop</button>
+    <div class="dropdown-menu dropdown-menu-left show" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="true">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 11: C# Interop</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<h2>Lab: Working with Word</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="5" data-line-end="6"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">You have 
+been asked to upgrade the grades report functionality to generate 
+reports in Microsoft Word format. In Module 6, you wrote code that 
+generates reports as an XML file; now you'll update the code to generate
+ the report as a Word document.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="11" data-line-end="12"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="13" data-line-end="14">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="15" data-line-end="16">Use dynamic types.</li>
+<li class="has-line-data" data-line-start="16" data-line-end="18">Manage object lifetime and resources.</li>
+</ul>
+<p class="has-line-data" data-line-start="18" data-line-end="19">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Generating the Grades Report by Using Word</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="24" data-line-end="25"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="26" data-line-end="27">In this exercise, you'll update the reporting functionality to generate reports in Word format.</p>
+<ul>
+<li class="has-line-data" data-line-start="28" data-line-end="29">First you'll review the existing code in the <strong>WordWrapper</strong> class that appends headings, text, breaks, and carriage returns to a document.</li>
+<li class="has-line-data" data-line-start="29" data-line-end="30">You'll write code to create an instance of Word, create a blank Word document, and save a Word document.</li>
+<li class="has-line-data" data-line-start="30" data-line-end="31">You'll then review the code in the <strong>GenerateStudentReport</strong>
+ method to create a blank document, add a heading and grade data to the 
+document,and save the document using the methods that you reviewed and 
+wrote in the <strong>WordWrapper</strong> class.</li>
+<li class="has-line-data" data-line-start="31" data-line-end="32">You'll run this method as a separate task. Finally, you'll build and test the application and verify that the reports are now</li>
+</ul>
+</div>
+<h3>Task 1: Examine the WordWrapper class that provides a functional wrapper around the dynamic (COM) API for Word</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="36" data-line-end="38">
+<div class="task-step-checkbox" data-foo="75" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="36" data-line-end="37"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="38" data-line-end="39">
+<div class="task-step-checkbox" data-foo="80" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="38" data-line-end="39"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="39" data-line-end="44">
+<div class="task-step-checkbox" data-foo="85" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="39" data-line-end="40"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod11\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="41" data-line-end="42"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="44" data-line-end="46">
+<div class="task-step-checkbox" data-foo="95" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="44" data-line-end="45"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="46" data-line-end="47">
+<div class="task-step-checkbox" data-foo="100" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="46" data-line-end="47"> In the <strong>Solutions 'Grades' Properties Pages</strong> dialog box, click <strong>Multiple startup projects</strong>. Set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="47" data-line-end="48">
+<div class="task-step-checkbox" data-foo="105" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="47" data-line-end="48"> In <strong>Solution Explorer</strong>, expand <strong>Grades.Utilities</strong>, and then double-click <strong>WordWrapper.cs</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="48" data-line-end="49">
+<div class="task-step-checkbox" data-foo="110" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="48" data-line-end="49"> Examine the code that is currently contained within this class.</p>
+</li>
+<li class="task-list-item" data-line-start="49" data-line-end="50">
+<div class="task-step-checkbox" data-foo="115" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="49" data-line-end="50"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="50" data-line-end="51">
+<div class="task-step-checkbox" data-foo="120" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="50" data-line-end="51"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1a: Create a dynamic variable called _word for activating Word</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="51" data-line-end="56">
+<div class="task-step-checkbox" data-foo="125" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="51" data-line-end="52"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="dynamic _word;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="54" data-line-end="56"><span class="hljs-built_in">dynamic</span> _word;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="57">
+<div class="task-step-checkbox" data-foo="131" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1b: Instantiate _word as a new Word Application object</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="57" data-line-end="62">
+<div class="task-step-checkbox" data-foo="136" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="57" data-line-end="58"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="this._word = new Application { Visible = false };"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="60" data-line-end="62"><span class="hljs-keyword">this</span>._word = <span class="hljs-keyword">new</span> Application { Visible = <span class="hljs-literal">false</span> };
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="63">
+<div class="task-step-checkbox" data-foo="142" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1c: Create a new Word document</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="63" data-line-end="69">
+<div class="task-step-checkbox" data-foo="147" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="63" data-line-end="64"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var doc = this._word.Documents.Add();
+doc.Activate();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="66" data-line-end="69"><span class="hljs-keyword">var</span> doc = <span class="hljs-keyword">this</span>._word.Documents.Add();
+doc.Activate();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="69" data-line-end="70">
+<div class="task-step-checkbox" data-foo="153" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="69" data-line-end="70"> In the <strong>Task List</strong> window, double-click <strong>TODO: Exercise 1: Task 1d: Save the document using the specified filename</strong>task.</p>
+</li>
+<li class="task-list-item" data-line-start="70" data-line-end="76">
+<div class="task-step-checkbox" data-foo="158" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="70" data-line-end="71"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var currentDocument = this._word.ActiveDocument;
+currentDocument.SaveAs(filePath);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="73" data-line-end="76"><span class="hljs-keyword">var</span> currentDocument = <span class="hljs-keyword">this</span>._word.ActiveDocument;
+currentDocument.SaveAs(filePath);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="76" data-line-end="77">
+<div class="task-step-checkbox" data-foo="164" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="76" data-line-end="77"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1e: Close the document</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="77" data-line-end="84">
+<div class="task-step-checkbox" data-foo="169" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="77" data-line-end="78"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="currentDocument.Close();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="80" data-line-end="82">currentDocument.Close();
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Review the code in the GeneratedStudentReport method to generate a Word document</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="86" data-line-end="88">
+<div class="task-step-checkbox" data-foo="180" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="86" data-line-end="87"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Generate a student grade report as a Word document</strong>task.</p>
+</li>
+<li class="task-list-item" data-line-start="88" data-line-end="89">
+<div class="task-step-checkbox" data-foo="185" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="88" data-line-end="89"> Examine the code that is in this method to generate the student report.</p>
+</li>
+<li class="task-list-item" data-line-start="89" data-line-end="90">
+<div class="task-step-checkbox" data-foo="190" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="89" data-line-end="90"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2b: Generate the report by using a separate task</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="90" data-line-end="97">
+<div class="task-step-checkbox" data-foo="195" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="90" data-line-end="91"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="Task.Run(() =&gt; GenerateStudentReport(SessionContext.CurrentStudent, dialog.FileName));"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="93" data-line-end="95">Task.Run(() =&gt; GenerateStudentReport(SessionContext.CurrentStudent, dialog.FileName));
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Build and test the application</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="99" data-line-end="101">
+<div class="task-step-checkbox" data-foo="206" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="99" data-line-end="100"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="101" data-line-end="103">
+<div class="task-step-checkbox" data-foo="211" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="101" data-line-end="102"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="103" data-line-end="105">
+<div class="task-step-checkbox" data-foo="216" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="103" data-line-end="104"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="105" data-line-end="107">
+<div class="task-step-checkbox" data-foo="221" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="105" data-line-end="106"> Click <strong>Kevin Liu</strong>, and then click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="107" data-line-end="108">
+<div class="task-step-checkbox" data-foo="226" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="107" data-line-end="108"> In the <strong>Save As</strong> dialog box, browse to <strong>E:\Allfiles\Mod11\Labfiles\Starter\Exercise 1</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="108" data-line-end="110">
+<div class="task-step-checkbox" data-foo="231" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="108" data-line-end="109"> In the <strong>File name</strong> text box, delete the existing contents, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Kevin Liu Grades Report"><code>Kevin Liu Grades Report</code></a></strong>, for the file name and then click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="110" data-line-end="112">
+<div class="task-step-checkbox" data-foo="236" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="110" data-line-end="111"> Close the application, and then in <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="112" data-line-end="114">
+<div class="task-step-checkbox" data-foo="241" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="112" data-line-end="113"> Open <strong>File Explorer</strong>, browse to the <strong>E:\Allfiles\Mod11\Labfiles\Starter\Exercise1</strong> folder, and then verify that the report has been generated.</p>
+</li>
+<li class="task-list-item" data-line-start="114" data-line-end="116">
+<div class="task-step-checkbox" data-foo="246" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="114" data-line-end="115"> Double-click <strong>Kevin Liu Grades Report.docx</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="116" data-line-end="118">
+<div class="task-step-checkbox" data-foo="251" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="116" data-line-end="117"> Review the grade report, and then close <strong>Microsoft Word</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="119" data-line-end="120"><strong>Result:</strong> After completing this exercise, the application will generate grade reports in the <strong>docx</strong> format.</p>
+</div>
+<h3>Exercise 2: Controlling the Lifetime of Word Objects by Implementing the Dispose Pattern</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="127" data-line-end="128"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="129" data-line-end="130">In this exercise, you'll write code to ensure that Word is correctly terminated after generating a grades report.</p>
+<ul>
+<li class="has-line-data" data-line-start="131" data-line-end="133">
+<p class="has-line-data" data-line-start="131" data-line-end="132">You'll
+ begin by observing that currently the Word object remains in memory 
+after the application has generated a report. You'll verify this by 
+observing the running tasks in Task Manager.</p>
+</li>
+<li class="has-line-data" data-line-start="133" data-line-end="135">
+<p class="has-line-data" data-line-start="133" data-line-end="134">You'll update the code in the <strong>WordWrapper</strong> class to implement the dispose pattern to ensure correct termination of the Word instance.</p>
+</li>
+<li class="has-line-data" data-line-start="135" data-line-end="136">
+<p class="has-line-data" data-line-start="135" data-line-end="136">You'll then update the code in the <strong>GenerateStudentReport</strong> method to ensure that the <strong>WordWrapper</strong> object is disposed of when the method finishes.</p>
+</li>
+<li class="has-line-data" data-line-start="136" data-line-end="137">
+<p class="has-line-data" data-line-start="136" data-line-end="137">Finally, you'll build and test the application and verify that Word now closes after the report is generated.</p>
+</li>
+</ul>
+</div>
+<h3>Task 1: Run the application to generate a grades report and view the Word task in Task Manager</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="141" data-line-end="143">
+<div class="task-step-checkbox" data-foo="299" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="141" data-line-end="142"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="143" data-line-end="149">
+<div class="task-step-checkbox" data-foo="304" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="143" data-line-end="144"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod11\Labfiles\Starter\Exercise 2</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="146" data-line-end="147"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="149" data-line-end="150">
+<div class="task-step-checkbox" data-foo="314" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="149" data-line-end="150"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="150" data-line-end="151">
+<div class="task-step-checkbox" data-foo="319" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="150" data-line-end="151"> In the <strong>Solutions 'Grades' Properties Pages</strong> dialog box, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="151" data-line-end="153">
+<div class="task-step-checkbox" data-foo="324" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="151" data-line-end="152"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="153" data-line-end="155">
+<div class="task-step-checkbox" data-foo="329" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="153" data-line-end="154"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="155" data-line-end="157">
+<div class="task-step-checkbox" data-foo="334" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="155" data-line-end="156"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="157" data-line-end="159">
+<div class="task-step-checkbox" data-foo="339" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="157" data-line-end="158"> Click <strong>Kevin Liu</strong>, and then click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="159" data-line-end="160">
+<div class="task-step-checkbox" data-foo="344" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="159" data-line-end="160"> In the <strong>Save As</strong> dialog box, browse to <strong>E:\Allfiles\Mod11\Labfiles\Starter\Exercise 2</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="160" data-line-end="161">
+<div class="task-step-checkbox" data-foo="349" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="160" data-line-end="161"> In the <strong>File name</strong> text box, delete the existing contents, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Kevin Liu Grades Report"><code>Kevin Liu Grades Report</code></a></strong>, and then click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="161" data-line-end="162">
+<div class="task-step-checkbox" data-foo="354" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="161" data-line-end="162"> In Windows, open <strong>Task Manager</strong>, and notice that the Word process is still running.</p>
+</li>
+<li class="task-list-item" data-line-start="162" data-line-end="164">
+<div class="task-step-checkbox" data-foo="359" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="162" data-line-end="163"> Close the application.</p>
+</li>
+</ol>
+<h3>Task 2: Update the WordWrapper class to terminate Word correctly</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="166" data-line-end="167">
+<div class="task-step-checkbox" data-foo="369" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="166" data-line-end="167"> In <strong>Visual Studio</strong>, in the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Specify that the WordWrapper class implements the IDisposable interface</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="167" data-line-end="172">
+<div class="task-step-checkbox" data-foo="374" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="167" data-line-end="168"> In the code editor, on the line below the comment, click at the end of the <strong>public class WordWrapper</strong> code, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code=":IDisposable"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="170" data-line-end="172">:IDisposable
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="172" data-line-end="173">
+<div class="task-step-checkbox" data-foo="380" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="172" data-line-end="173"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2b: Create the protected Dispose(bool) method</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="173" data-line-end="193">
+<div class="task-step-checkbox" data-foo="385" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="173" data-line-end="174"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="protected virtual void Dispose(bool isDisposing)
+{
+      if (!this.isDisposed)
+      {
+            if (isDisposing)
+            {
+                  // Release managed resources here
+                  if (this._word != null)
+                  {
+                     this._word.Quit();
+                  }
+            }
+
+            this.isDisposed = true;
+      }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="176" data-line-end="193"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"><span class="hljs-built_in">bool</span> isDisposing</span>)</span>
+{
+      <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.isDisposed)
+      {
+            <span class="hljs-keyword">if</span> (isDisposing)
+            {
+                  <span class="hljs-comment">// Release managed resources here</span>
+                  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._word != <span class="hljs-literal">null</span>)
+                  {
+                     <span class="hljs-keyword">this</span>._word.Quit();
+                  }
+            }
+
+            <span class="hljs-keyword">this</span>.isDisposed = <span class="hljs-literal">true</span>;
+      }
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="193" data-line-end="194">
+<div class="task-step-checkbox" data-foo="391" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="193" data-line-end="194"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2c: Create the public Dispose method</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="194" data-line-end="203">
+<div class="task-step-checkbox" data-foo="396" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="194" data-line-end="195"> In the code editor, click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public void Dispose()
+{
+      this.Dispose(true);
+      GC.SuppressFinalize(this);
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="197" data-line-end="203"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"></span>)</span>
+{
+      <span class="hljs-keyword">this</span>.Dispose(<span class="hljs-literal">true</span>);
+      GC.SuppressFinalize(<span class="hljs-keyword">this</span>);
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="203" data-line-end="204">
+<div class="task-step-checkbox" data-foo="402" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="203" data-line-end="204"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2d: Create a finalizer that calls the Dispose method</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="204" data-line-end="211">
+<div class="task-step-checkbox" data-foo="407" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="204" data-line-end="205"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private bool isDisposed = false;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="207" data-line-end="209"><span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isDisposed = <span class="hljs-literal">false</span>;
+</code></pre>
+</li>
+</ol>
+<h4>Task 3: Wrap the object that generates the Word doc in a using statement</h4>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="213" data-line-end="214">
+<div class="task-step-checkbox" data-foo="418" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="213" data-line-end="214"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3: Ensure that the WordWrapper is disposed when the method finishes</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="214" data-line-end="220">
+<div class="task-step-checkbox" data-foo="423" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="214" data-line-end="215"> Below the comment, modify the <strong>WordWrapper wrapper = new WordWrapper();</strong> code to look like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var wrapper = new WordWrapper())
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="217" data-line-end="220"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> wrapper = <span class="hljs-keyword">new</span> WordWrapper())
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="220" data-line-end="221">
+<div class="task-step-checkbox" data-foo="429" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="220" data-line-end="221"> At the end of the method, after the <strong>wrapper.SaveAs(reportPath);</strong> line of code, add a closing brace to end the <strong>using</strong> block.</p>
+</li>
+<li class="task-list-item" data-line-start="221" data-line-end="257">
+<div class="task-step-checkbox" data-foo="434" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="221" data-line-end="222"> Your code should look like the following:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public void GenerateStudentReport(LocalStudent studentData, string reportPath)
+{
+   // TODO: Exercise 2: Task 3: Ensure that the WordWrapper is disposed when the method finishes
+   using (var wrapper = new WordWrapper())
+   {
+         // Create a new Word document in memory
+         wrapper.CreateBlankDocument();
+
+         // Add a heading to the document
+wrapper.AppendHeading(String.Format(&quot;Grade Report: {0} {1}&quot;,    studentData.FirstName, studentData.LastName));
+         wrapper.InsertCarriageReturn();
+         wrapper.InsertCarriageReturn();
+
+         // Output the details of each grade for the student
+         foreach (var grade in SessionContext.CurrentGrades)
+         {
+wrapper.AppendText(grade.SubjectName, true, true);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(&quot;Assessment: &quot; + grade.Assessment, false, false);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(&quot;Date: &quot; + grade.AssessmentDateString, false,    false);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(&quot;Comment: &quot; + grade.Comments, false, false);
+            wrapper.InsertCarriageReturn();
+            wrapper.InsertCarriageReturn();
+         }
+
+         // Save the Word document
+         wrapper.SaveAs(reportPath);
+   }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="224" data-line-end="256"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GenerateStudentReport</span>(<span class="hljs-params">LocalStudent studentData, <span class="hljs-built_in">string</span> reportPath</span>)</span>
+{
+   <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Exercise 2: Task 3: Ensure that the WordWrapper is disposed when the method finishes</span>
+   <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> wrapper = <span class="hljs-keyword">new</span> WordWrapper())
+   {
+         <span class="hljs-comment">// Create a new Word document in memory</span>
+         wrapper.CreateBlankDocument();
+
+         <span class="hljs-comment">// Add a heading to the document</span>
+wrapper.AppendHeading(String.Format(<span class="hljs-string">"Grade Report: {0} {1}"</span>,    studentData.FirstName, studentData.LastName));
+         wrapper.InsertCarriageReturn();
+         wrapper.InsertCarriageReturn();
+
+         <span class="hljs-comment">// Output the details of each grade for the student</span>
+         <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> grade <span class="hljs-keyword">in</span> SessionContext.CurrentGrades)
+         {
+wrapper.AppendText(grade.SubjectName, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(<span class="hljs-string">"Assessment: "</span> + grade.Assessment, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(<span class="hljs-string">"Date: "</span> + grade.AssessmentDateString, <span class="hljs-literal">false</span>,    <span class="hljs-literal">false</span>);
+            wrapper.InsertCarriageReturn();
+            wrapper.AppendText(<span class="hljs-string">"Comment: "</span> + grade.Comments, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+            wrapper.InsertCarriageReturn();
+            wrapper.InsertCarriageReturn();
+         }
+
+         <span class="hljs-comment">// Save the Word document</span>
+         wrapper.SaveAs(reportPath);
+   }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Use Task Manager to observe that Word terminates correctly after generating a report</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="259" data-line-end="261">
+<div class="task-step-checkbox" data-foo="445" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="259" data-line-end="260"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="261" data-line-end="262">
+<div class="task-step-checkbox" data-foo="450" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="261" data-line-end="262"> In Windows, start <strong>Task Manager</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="262" data-line-end="264">
+<div class="task-step-checkbox" data-foo="455" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="262" data-line-end="263"> In <strong>Visual Studio</strong>, on the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="264" data-line-end="266">
+<div class="task-step-checkbox" data-foo="460" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="264" data-line-end="265"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="266" data-line-end="268">
+<div class="task-step-checkbox" data-foo="465" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="266" data-line-end="267"> Click <strong>Kevin Liu</strong>, and then click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="268" data-line-end="270">
+<div class="task-step-checkbox" data-foo="470" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="268" data-line-end="270"> In the <strong>Save As</strong> dialog box, browse to
+<strong>Mod11\Labfiles\Starter\Exercise 2</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="270" data-line-end="271">
+<div class="task-step-checkbox" data-foo="475" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="270" data-line-end="271"> In the <strong>File name</strong> text box, delete the existing contents, and then type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="Kevin Liu Grades Report"><code>Kevin Liu Grades Report</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="271" data-line-end="275">
+<div class="task-step-checkbox" data-foo="480" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="271" data-line-end="272"> As you click <strong>Save</strong>, in the <strong>Task Manager</strong> window, watch the <strong>Processes</strong> and verify that <strong>Microsoft Word</strong> appears and then disappears from the list.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="273" data-line-end="274">Note: it may take half a minute for the Word process to dissappear from the process list.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="275" data-line-end="276">
+<div class="task-step-checkbox" data-foo="490" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="275" data-line-end="276"> Close <strong>Task Manager</strong> and then close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="276" data-line-end="279">
+<div class="task-step-checkbox" data-foo="495" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="276" data-line-end="277"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="280" data-line-end="281"><strong>Result:</strong> After completing this exercise, the application will terminate <strong>Word</strong> correctly after it has generated a grades report.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div><div class="popover bs-popover-top show" role="tooltip" id="popover306646" style="position: absolute; transform: translate3d(43px, 10px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="top"><div class="arrow" style="left: 61px;"></div><h3 class="popover-header"></h3><div class="popover-body">Select Lab Guide page</div></div></body></html>

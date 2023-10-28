@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 10: Application Performance</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="true">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="false">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 10: Application Performance</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="3" data-line-end="4"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Performance Tuning</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="13" data-line-end="14"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="15" data-line-end="16">You 
+have been asked to update the Grades application to ensure that the UI 
+remains responsive while the user is waiting for operations to complete.
+ To achieve this improvement in responsiveness, you decide to convert 
+the logic that retrieves the list of students for a teacher to use 
+asynchronous methods. You also decide to provide visual feedback to the 
+user to indicate when an operation is taking place.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="19" data-line-end="20"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="21" data-line-end="22">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Use the async and await keywords to implement asynchronous methods.</li>
+<li class="has-line-data" data-line-start="24" data-line-end="26">Use events and user controls to provide visual feedback during long-running operations.</li>
+</ul>
+<p class="has-line-data" data-line-start="26" data-line-end="27">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Ensuring That the UI Remains Responsive When Retrieving Teacher Data</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="32" data-line-end="33"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="34" data-line-end="35">In this
+ exercise, you'll modify the functionality that retrieves data for 
+teachers to make use of asynchronous programming techniques.</p>
+<ul>
+<li class="has-line-data" data-line-start="36" data-line-end="37">First, you'll modify the code that gets the details of the current user (when the user is a teacher) to run asynchronously.</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38">You'll use an asynchronous task to run the LINQ query and use the await operator to return the results of the query.</li>
+<li class="has-line-data" data-line-start="38" data-line-end="39">Next, 
+you'll modify the code that retrieves the list of students for a 
+teacher. In this case, you'll configure the code that retrieves the list
+ of students to run asynchronously.</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40">When the operation is complete, your code will invoke a callback method to update the UI with the list of students.</li>
+<li class="has-line-data" data-line-start="40" data-line-end="41">Finally,
+ you'll build and test the application and verify that the UI remains 
+responsive while the application is retrieving data.</li>
+</ul>
+</div>
+<h3>Task 1: Build and run the application</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="45" data-line-end="47">
+<div class="task-step-checkbox" data-foo="91" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="45" data-line-end="46"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="47" data-line-end="48">
+<div class="task-step-checkbox" data-foo="96" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="47" data-line-end="48"> On the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="48" data-line-end="53">
+<div class="task-step-checkbox" data-foo="101" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="48" data-line-end="49"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod10\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="50" data-line-end="51"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="53" data-line-end="55">
+<div class="task-step-checkbox" data-foo="111" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="53" data-line-end="54"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="55" data-line-end="56">
+<div class="task-step-checkbox" data-foo="116" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="55" data-line-end="56"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="56" data-line-end="57">
+<div class="task-step-checkbox" data-foo="121" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="56" data-line-end="57"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="57" data-line-end="59">
+<div class="task-step-checkbox" data-foo="126" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="57" data-line-end="58"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="59" data-line-end="61">
+<div class="task-step-checkbox" data-foo="131" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="59" data-line-end="60"> If prompted, select <strong>Yes</strong> to trust the <strong>IIS Express SSL Certificate</strong> and install it.</p>
+</li>
+<li class="task-list-item" data-line-start="61" data-line-end="62">
+<div class="task-step-checkbox" data-foo="136" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="61" data-line-end="62"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="63">
+<div class="task-step-checkbox" data-foo="141" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63">
+ Notice that the UI briefly freezes while fetching the list of students 
+for Esther Valle (try moving the application window after logging on but
+ before the list of students appears).</p>
+</li>
+<li class="task-list-item" data-line-start="63" data-line-end="67">
+<div class="task-step-checkbox" data-foo="146" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="63" data-line-end="64"> Close the application window.</p>
+</li>
+</ol>
+<h3>Task 2: Modify the code that retrieves teacher data to run asynchronously</h3>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="69" data-line-end="71">
+<div class="task-step-checkbox" data-foo="156" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="69" data-line-end="70"> On the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="71" data-line-end="72">
+<div class="task-step-checkbox" data-foo="161" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="71" data-line-end="72"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Convert GetTeacher into an async method that returns a Task&lt;Teacher&gt;</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="72" data-line-end="77">
+<div class="task-step-checkbox" data-foo="166" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="72" data-line-end="73"> In the code editor, delete the following line of code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public Teacher GetTeacher(string userName)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="75" data-line-end="77"><span class="hljs-function"><span class="hljs-keyword">public</span> Teacher <span class="hljs-title">GetTeacher</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> userName</span>)
+</span></code></pre>
+</li>
+<li class="task-list-item" data-line-start="77" data-line-end="82">
+<div class="task-step-checkbox" data-foo="172" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="77" data-line-end="78"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public async Task&lt;Teacher&gt; GetTeacher(string userName)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="80" data-line-end="82"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;Teacher&gt; <span class="hljs-title">GetTeacher</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> userName</span>)
+</span></code></pre>
+</li>
+<li class="task-list-item" data-line-start="82" data-line-end="83">
+<div class="task-step-checkbox" data-foo="178" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="82" data-line-end="83"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2b: Perform the LINQ query to fetch Teacher information asynchronously</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="83" data-line-end="92">
+<div class="task-step-checkbox" data-foo="183" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="83" data-line-end="84"> In the code editor, modify the statement below the comment as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var teacher = await Task.Run(() =&gt;
+            (from t in DBContext.Teachers
+            where t.User.UserName == userName
+            select t).FirstOrDefault());"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="86" data-line-end="91"><span class="hljs-keyword">var</span> teacher = <span class="hljs-keyword">await</span> Task.Run(() =&gt;
+            (<span class="hljs-keyword">from</span> t <span class="hljs-keyword">in</span> DBContext.Teachers
+            <span class="hljs-keyword">where</span> t.User.UserName == userName
+            <span class="hljs-keyword">select</span> t).FirstOrDefault());
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Modify the code that retrieves and displays the list of students for a teacher to run asynchronously</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="94" data-line-end="95">
+<div class="task-step-checkbox" data-foo="194" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="94" data-line-end="95"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Mark StudentsPage.Refresh as an asynchronous method</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="95" data-line-end="100">
+<div class="task-step-checkbox" data-foo="199" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="95" data-line-end="96"> In the code editor, modify the statement below the comment as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public async void Refresh()"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="98" data-line-end="100"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Refresh</span>(<span class="hljs-params"></span>)
+</span></code></pre>
+</li>
+<li class="task-list-item" data-line-start="100" data-line-end="101">
+<div class="task-step-checkbox" data-foo="205" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="100" data-line-end="101"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Implement the OnGetStudentsByTeacherComplete callback to display the students for a teacher here</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="101" data-line-end="109">
+<div class="task-step-checkbox" data-foo="210" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="101" data-line-end="102"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void OnGetStudentsByTeacherComplete(IEnumerable&lt;DataModel.Student&gt; students)
+{
+
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="104" data-line-end="109"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnGetStudentsByTeacherComplete</span>(<span class="hljs-params">IEnumerable&lt;DataModel.Student&gt; students</span>)</span>
+{
+
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="109" data-line-end="110">
+<div class="task-step-checkbox" data-foo="216" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="109" data-line-end="110"> In the <strong>Task List</strong> window, double-click the <strong>Exercise
+ 1: Task 3c: Relocate the remaining code in this method to create the 
+OnGetStudentsByTeacherComplete callback (in the Callbacks region)</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="110" data-line-end="111">
+<div class="task-step-checkbox" data-foo="221" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="110" data-line-end="111"> In the code editor, move all of the code between the comment and the end of the <strong>Refresh</strong> method to the <strong>Clipboard</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="111" data-line-end="112">
+<div class="task-step-checkbox" data-foo="226" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="111" data-line-end="112"> In the <strong>Task List</strong>  window, double-click the <strong>TODO: Exercise 1: Task 3b: Implement the OnGetStudentsByTeacherComplete callback to display the students for a teacher here</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="112" data-line-end="113">
+<div class="task-step-checkbox" data-foo="231" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="112" data-line-end="113"> Click in the blank line between the curly braces and paste the code from the <strong>Clipboard</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="113" data-line-end="114">
+<div class="task-step-checkbox" data-foo="236" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="113" data-line-end="114"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Use a Dispatcher object to update the UI</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="114" data-line-end="119">
+<div class="task-step-checkbox" data-foo="241" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="114" data-line-end="115"> In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="this.Dispatcher.Invoke(() =&gt; {"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="117" data-line-end="119"><span class="hljs-keyword">this</span>.Dispatcher.Invoke(() =&gt; {
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="119" data-line-end="124">
+<div class="task-step-checkbox" data-foo="247" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="119" data-line-end="120"> Immediately after the last line of code in the method, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="});"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="122" data-line-end="124">});
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="124" data-line-end="125">
+<div class="task-step-checkbox" data-foo="253" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="124" data-line-end="125"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3e: Convert GetStudentsByTeacher into an async method that invokes a callback</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="125" data-line-end="130">
+<div class="task-step-checkbox" data-foo="258" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="125" data-line-end="126"> In the code editor, delete the following line of code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public List&lt;Student&gt; GetStudentsByTeacher(string teacherName)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="128" data-line-end="130"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Student&gt; <span class="hljs-title">GetStudentsByTeacher</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> teacherName</span>)
+</span></code></pre>
+</li>
+<li class="task-list-item" data-line-start="130" data-line-end="135">
+<div class="task-step-checkbox" data-foo="264" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="130" data-line-end="131"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public async Task GetStudentsByTeacher(string teacherName,  Action&lt;IEnumerable&lt;DataModel.Student&gt;&gt; callback)"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="133" data-line-end="135"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">GetStudentsByTeacher</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> teacherName,  Action&lt;IEnumerable&lt;DataModel.Student&gt;&gt; callback</span>)
+</span></code></pre>
+</li>
+<li class="task-list-item" data-line-start="135" data-line-end="140">
+<div class="task-step-checkbox" data-foo="270" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="135" data-line-end="136"> In the code editor, modify the return statement below the <strong>if(!IsConnected())</strong> line to return without passing a value to the caller:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="return;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="138" data-line-end="140"><span class="hljs-keyword">return</span>;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="140" data-line-end="141">
+<div class="task-step-checkbox" data-foo="276" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="140" data-line-end="141"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3f: Perform the LINQ query to fetch Student data asynchronously</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="141" data-line-end="149">
+<div class="task-step-checkbox" data-foo="281" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="141" data-line-end="142"> In the code editor, modify the statement below the comment as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var students = await Task.Run(() =&gt;
+         (from s in DBContext.Students
+         where s.TeacherUser.User.UserName == teacherName
+         select s).OrderBy(s =&gt; s.LastName).ToList());"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="144" data-line-end="149"><span class="hljs-keyword">var</span> students = <span class="hljs-keyword">await</span> Task.Run(() =&gt;
+         (<span class="hljs-keyword">from</span> s <span class="hljs-keyword">in</span> DBContext.Students
+         <span class="hljs-keyword">where</span> s.TeacherUser.User.UserName == teacherName
+         <span class="hljs-keyword">select</span> s).OrderBy(s =&gt; s.LastName).ToList());
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="149" data-line-end="150">
+<div class="task-step-checkbox" data-foo="287" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="149" data-line-end="150"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3g: Run the callback by using a new task rather than returning a list of students</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="150" data-line-end="155">
+<div class="task-step-checkbox" data-foo="292" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="150" data-line-end="151"> In the code editor, delete the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="return students;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="153" data-line-end="155"><span class="hljs-keyword">return</span> students;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="155" data-line-end="160">
+<div class="task-step-checkbox" data-foo="298" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="155" data-line-end="156"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="await Task.Run(() =&gt; callback(students));"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="158" data-line-end="160"><span class="hljs-keyword">await</span> Task.Run(() =&gt; callback(students));
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="160" data-line-end="161">
+<div class="task-step-checkbox" data-foo="304" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="160" data-line-end="161"> In the <strong>Task List</strong> window, double-click the <strong>TODO:
+ Exercise 1: Task 3h: Invoke GetStudentsByTeacher asynchronously and 
+pass the OnGetStudentsByTeacherComplete callback as the second argument</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="161" data-line-end="168">
+<div class="task-step-checkbox" data-foo="309" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="161" data-line-end="162"> In the code editor, modify the statement below the comment as shown in bold below:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="await utils.GetStudentsByTeacher(SessionContext.UserName, OnGetStudentsByTeacherComplete);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="164" data-line-end="166"><span class="hljs-keyword">await</span> utils.GetStudentsByTeacher(SessionContext.UserName, OnGetStudentsByTeacherComplete);
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Build and test the application.</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="170" data-line-end="172">
+<div class="task-step-checkbox" data-foo="320" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="170" data-line-end="171"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="172" data-line-end="173">
+<div class="task-step-checkbox" data-foo="325" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="172" data-line-end="173"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="173" data-line-end="174">
+<div class="task-step-checkbox" data-foo="330" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="173" data-line-end="174"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="174" data-line-end="175">
+<div class="task-step-checkbox" data-foo="335" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="174" data-line-end="175"> Verify that the application is more responsive than before while fetching the list of students for <strong>Esther Valle</strong>, and then close the application window.</p>
+</li>
+<li class="task-list-item" data-line-start="175" data-line-end="178">
+<div class="task-step-checkbox" data-foo="340" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="175" data-line-end="176"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="179" data-line-end="180"><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades</strong> application to retrieve data asynchronously.</p>
+</div>
+<h3>Exercise 2: Providing Visual Feedback During Long-Running Operations</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="186" data-line-end="187"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="188" data-line-end="189">In 
+this exercise, you'll create a user control that displays a progress 
+indicator while the Grades application is retrieving data.</p>
+<ul>
+<li class="has-line-data" data-line-start="190" data-line-end="191">You'll add this user control to the main page but will initially hide it from view.</li>
+<li class="has-line-data" data-line-start="191" data-line-end="192">Next,
+ you'll modify the code that retrieves data so that it raises one event 
+when the data retrieval starts and another event when the data retrieval
+ is complete.</li>
+<li class="has-line-data" data-line-start="192" data-line-end="193">You'll
+ create handler methods for these events that toggle the visibility of 
+the progress indicator control, so that the application displays the 
+progress indicator when data retrieval starts and hides it when data 
+retrieval is complete.</li>
+<li class="has-line-data" data-line-start="193" data-line-end="194">Finally,
+ you'll build and test the application and verify that the UI displays 
+the progress indicator while the application is retrieving data.</li>
+</ul>
+</div>
+<h3>Task 1: Create the BusyIndicator user control</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="198" data-line-end="200">
+<div class="task-step-checkbox" data-foo="388" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="198" data-line-end="199"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="200" data-line-end="206">
+<div class="task-step-checkbox" data-foo="393" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="200" data-line-end="201"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod10\Labfiles\Starter\Exercise 2</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="203" data-line-end="204"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="206" data-line-end="207">
+<div class="task-step-checkbox" data-foo="403" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="206" data-line-end="207"> In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="207" data-line-end="208">
+<div class="task-step-checkbox" data-foo="408" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="207" data-line-end="208"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="208" data-line-end="209">
+<div class="task-step-checkbox" data-foo="413" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="208" data-line-end="209"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="209" data-line-end="210">
+<div class="task-step-checkbox" data-foo="418" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="209" data-line-end="210"> In <strong>Solution Explorer</strong>, right-click <strong>Grades.WPF</strong>, point to <strong>Add</strong>, and then click <strong>User Control (WPF)...</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="210" data-line-end="211">
+<div class="task-step-checkbox" data-foo="423" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="210" data-line-end="211"> In the <strong>Name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="BusyIndicator.xaml"><code>BusyIndicator.xaml</code></a></strong>, and then click <strong>Add</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="211" data-line-end="217">
+<div class="task-step-checkbox" data-foo="428" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="211" data-line-end="212"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, and then drag <strong>BusyIndicator.xaml</strong> into the <strong>Controls</strong> folder, answerring <strong>No</strong> to the question on adjusting the namespace.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="214" data-line-end="215"><strong>Note:</strong> It is better to create the user control at the project level and then move it into the <strong>Controls</strong> folder when it is created. This ensures that the user control is created in the same namespace as other project resources.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="217" data-line-end="222">
+<div class="task-step-checkbox" data-foo="438" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="217" data-line-end="218"> In the <strong>BusyIndicator.xaml</strong> file, in the <strong>UserControl</strong> element, delete the following attributes:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="d:DesignWidth=&quot;450&quot; d:DesignHeight=&quot;800&quot;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="220" data-line-end="222">d:DesignWidth=<span class="hljs-string">"450"</span> d:DesignHeight=<span class="hljs-string">"800"</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="222" data-line-end="230">
+<div class="task-step-checkbox" data-foo="444" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="222" data-line-end="223"> Modify the <strong>Grid</strong> element to include a <strong>Background</strong> attribute, as the following markup shows:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Grid Background=&quot;#99000000&quot;&gt;
+
+&lt;/Grid&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="225" data-line-end="229"><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Background</span>=<span class="hljs-string">"#99000000"</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="230" data-line-end="254">
+<div class="task-step-checkbox" data-foo="450" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="230" data-line-end="231"> Type the following markup between the opening and closing <strong>Grid</strong> tags:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Border CornerRadius=&quot;6&quot;
+         HorizontalAlignment=&quot;Center&quot;
+         VerticalAlignment=&quot;Center&quot;&gt;
+   &lt;Border.Background&gt;
+      &lt;LinearGradientBrush&gt;
+         &lt;GradientStop
+            Color=&quot;LightGray&quot;
+            Offset=&quot;0&quot; /&gt;
+         &lt;GradientStop
+            Color=&quot;DarkGray&quot;
+            Offset=&quot;1&quot; /&gt;
+      &lt;/LinearGradientBrush&gt;
+   &lt;/Border.Background&gt;
+   &lt;Border.Effect&gt;
+      &lt;DropShadowEffect
+         Opacity=&quot;0.75&quot; /&gt;
+   &lt;/Border.Effect&gt;
+
+&lt;/Border&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="233" data-line-end="253"><span class="hljs-tag">&lt;<span class="hljs-name">Border</span> <span class="hljs-attr">CornerRadius</span>=<span class="hljs-string">"6"</span>
+         <span class="hljs-attr">HorizontalAlignment</span>=<span class="hljs-string">"Center"</span>
+         <span class="hljs-attr">VerticalAlignment</span>=<span class="hljs-string">"Center"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Border.Background</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">LinearGradientBrush</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">GradientStop</span>
+            <span class="hljs-attr">Color</span>=<span class="hljs-string">"LightGray"</span>
+            <span class="hljs-attr">Offset</span>=<span class="hljs-string">"0"</span> /&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">GradientStop</span>
+            <span class="hljs-attr">Color</span>=<span class="hljs-string">"DarkGray"</span>
+            <span class="hljs-attr">Offset</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">LinearGradientBrush</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">Border.Background</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Border.Effect</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">DropShadowEffect</span>
+         <span class="hljs-attr">Opacity</span>=<span class="hljs-string">"0.75"</span> /&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">Border.Effect</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">Border</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="254" data-line-end="265">
+<div class="task-step-checkbox" data-foo="456" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="254" data-line-end="255"> On the blank line before the closing <strong>Border</strong> tag, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;Grid Margin=&quot;10&quot;&gt;
+   &lt;Grid.RowDefinitions&gt;
+      &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+      &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+   &lt;/Grid.RowDefinitions&gt;
+
+&lt;/Grid&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="257" data-line-end="265"><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"10"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Grid.RowDefinitions</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RowDefinition</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"Auto"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RowDefinition</span> <span class="hljs-attr">Height</span>=<span class="hljs-string">"Auto"</span> /&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">Grid.RowDefinitions</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="265" data-line-end="273">
+<div class="task-step-checkbox" data-foo="462" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="265" data-line-end="266"> On the blank line before the closing <strong>Grid</strong> tag, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;ProgressBar x:Name=&quot;progress&quot;
+   IsIndeterminate=&quot;True&quot;
+   Width=&quot;200&quot;
+   Height=&quot;25&quot; Margin=&quot;20&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="268" data-line-end="273"><span class="hljs-tag">&lt;<span class="hljs-name">ProgressBar</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"progress"</span>
+   <span class="hljs-attr">IsIndeterminate</span>=<span class="hljs-string">"True"</span>
+   <span class="hljs-attr">Width</span>=<span class="hljs-string">"200"</span>
+   <span class="hljs-attr">Height</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">Margin</span>=<span class="hljs-string">"20"</span> /&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="273" data-line-end="274">
+<div class="task-step-checkbox" data-foo="468" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="273" data-line-end="274"> Click after the end of the <strong>ProgressBar</strong> element, and then press Enter.</p>
+</li>
+<li class="task-list-item" data-line-start="274" data-line-end="283">
+<div class="task-step-checkbox" data-foo="473" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="274" data-line-end="275"> In the new line, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;TextBlock x:Name=&quot;txtMessage&quot;
+   Grid.Row=&quot;1&quot; FontSize=&quot;14&quot;
+   FontFamily=&quot;Verdana&quot;
+   Text=&quot;Please Wait...&quot;
+   TextAlignment=&quot;Center&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="277" data-line-end="283"><span class="hljs-tag">&lt;<span class="hljs-name">TextBlock</span> <span class="hljs-attr">x:Name</span>=<span class="hljs-string">"txtMessage"</span>
+   <span class="hljs-attr">Grid.Row</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">FontSize</span>=<span class="hljs-string">"14"</span>
+   <span class="hljs-attr">FontFamily</span>=<span class="hljs-string">"Verdana"</span>
+   <span class="hljs-attr">Text</span>=<span class="hljs-string">"Please Wait..."</span>
+   <span class="hljs-attr">TextAlignment</span>=<span class="hljs-string">"Center"</span> /&gt;</span>
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="283" data-line-end="284">
+<div class="task-step-checkbox" data-foo="479" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="283" data-line-end="284"> On the <strong>File</strong> menu, click <strong>Save All</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="284" data-line-end="285">
+<div class="task-step-checkbox" data-foo="484" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="284" data-line-end="285"> In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, and then double-click <strong>MainWindow.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="285" data-line-end="286">
+<div class="task-step-checkbox" data-foo="489" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="285" data-line-end="286"> Towards the bottom of the <strong>MainWindow.xaml</strong> file, locate the <strong>TODO: Exercise 2: Task 1b: Add the BusyIndicator control to MainWindow</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="286" data-line-end="291">
+<div class="task-step-checkbox" data-foo="494" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="286" data-line-end="287"> Click at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;y:BusyIndicator x:Name=&quot;busyIndicator&quot; Margin=&quot;0&quot; Visibility=&quot;Collapsed&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="289" data-line-end="291">&lt;y:BusyIndicator x:Name="busyIndicator" Margin="0" Visibility="Collapsed" /&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="291" data-line-end="295">
+<div class="task-step-checkbox" data-foo="500" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="291" data-line-end="292"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+</ol>
+<h3>Task 2: Add StartBusy and EndBusy event handler methods.</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="297" data-line-end="298">
+<div class="task-step-checkbox" data-foo="510" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="297" data-line-end="298"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Implement the StartBusy event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="298" data-line-end="306">
+<div class="task-step-checkbox" data-foo="515" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="298" data-line-end="299"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void StartBusy(object sender, EventArgs e)
+{
+   busyIndicator.Visibility = Visibility.Visible;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="301" data-line-end="306"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartBusy</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, EventArgs e</span>)</span>
+{
+   busyIndicator.Visibility = Visibility.Visible;
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="306" data-line-end="307">
+<div class="task-step-checkbox" data-foo="521" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="306" data-line-end="307"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2b: Implement the EndBusy event handler</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="307" data-line-end="317">
+<div class="task-step-checkbox" data-foo="526" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="307" data-line-end="308"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void EndBusy(object sender, EventArgs e)
+{
+   busyIndicator.Visibility = Visibility.Hidden;
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="310" data-line-end="315"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">EndBusy</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, EventArgs e</span>)</span>
+{
+   busyIndicator.Visibility = Visibility.Hidden;
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Raise the StartBusy and EndBusy events.</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="319" data-line-end="320">
+<div class="task-step-checkbox" data-foo="537" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="319" data-line-end="320"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3a: Add the StartBusy public event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="320" data-line-end="325">
+<div class="task-step-checkbox" data-foo="542" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="320" data-line-end="321"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public event EventHandler StartBusy;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="323" data-line-end="325"><span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> EventHandler StartBusy;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="325" data-line-end="326">
+<div class="task-step-checkbox" data-foo="548" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="325" data-line-end="326"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3b: Add the EndBusy public event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="326" data-line-end="331">
+<div class="task-step-checkbox" data-foo="553" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="326" data-line-end="327"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="public event EventHandler EndBusy;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="329" data-line-end="331"><span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> EventHandler EndBusy;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="331" data-line-end="332">
+<div class="task-step-checkbox" data-foo="559" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="331" data-line-end="332"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3c: Implement the StartBusyEvent method to raise the StartBusy event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="332" data-line-end="341">
+<div class="task-step-checkbox" data-foo="564" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="332" data-line-end="333"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void StartBusyEvent()
+{
+   if (StartBusy != null)
+      StartBusy(this, new EventArgs());
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="335" data-line-end="341"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartBusyEvent</span>(<span class="hljs-params"></span>)</span>
+{
+   <span class="hljs-keyword">if</span> (StartBusy != <span class="hljs-literal">null</span>)
+      StartBusy(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> EventArgs());
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="341" data-line-end="342">
+<div class="task-step-checkbox" data-foo="570" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="341" data-line-end="342"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3d: Implement the EndBusyEvent method to raise the EndBusy event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="342" data-line-end="351">
+<div class="task-step-checkbox" data-foo="575" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="342" data-line-end="343"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="private void EndBusyEvent()
+{
+   if (EndBusy != null)
+      EndBusy(this, new EventArgs());
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="345" data-line-end="351"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">EndBusyEvent</span>(<span class="hljs-params"></span>)</span>
+{
+   <span class="hljs-keyword">if</span> (EndBusy != <span class="hljs-literal">null</span>)
+      EndBusy(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> EventArgs());
+}
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="351" data-line-end="352">
+<div class="task-step-checkbox" data-foo="581" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="351" data-line-end="352"> In <strong>Solution Explorer</strong>, double-click <strong>MainWindow.xaml</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="352" data-line-end="353">
+<div class="task-step-checkbox" data-foo="586" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="352" data-line-end="353"> In the <strong>MainWindow.xaml</strong> file, locate the <strong>TODO: Exercise 2: Task 3e: Wire up the StartBusy and EndBusy event handlers for the StudentsPage view</strong> comment.</p>
+</li>
+<li class="task-list-item" data-line-start="353" data-line-end="358">
+<div class="task-step-checkbox" data-foo="591" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="353" data-line-end="354"> Immediately below the comment, modify the <strong>StudentsPage</strong> element to include <strong>StartBusy</strong> and <strong>EndBusy</strong> attributes, as the following code shows:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">xml</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="&lt;y:StudentsPage x:Name=&quot;studentsPage&quot; StartBusy=&quot;StartBusy&quot; EndBusy=&quot;EndBusy&quot;   StudentSelected=&quot;studentsPage_StudentSelected&quot; Visibility=&quot;Collapsed&quot; /&gt;"></i>
+        </div>
+     </div><code class="has-line-data language-xml hljs" data-line-start="356" data-line-end="358">&lt;y:StudentsPage x:Name="studentsPage" StartBusy="StartBusy" EndBusy="EndBusy"   StudentSelected="studentsPage_StudentSelected" Visibility="Collapsed" /&gt;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="358" data-line-end="359">
+<div class="task-step-checkbox" data-foo="597" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="358" data-line-end="359"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3f: Raise the StartBusy event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="359" data-line-end="364">
+<div class="task-step-checkbox" data-foo="602" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="359" data-line-end="360"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="StartBusyEvent();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="362" data-line-end="364">StartBusyEvent();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="364" data-line-end="365">
+<div class="task-step-checkbox" data-foo="608" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="364" data-line-end="365"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3g: Raise the EndBusy event</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="365" data-line-end="372">
+<div class="task-step-checkbox" data-foo="613" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="365" data-line-end="366"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="EndBusyEvent();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="368" data-line-end="370">EndBusyEvent();
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Build and test the application.</h3>
+<ol class="task-list" data-group="8">
+<li class="task-list-item" data-line-start="374" data-line-end="376">
+<div class="task-step-checkbox" data-foo="624" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="374" data-line-end="375"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="376" data-line-end="377">
+<div class="task-step-checkbox" data-foo="629" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="376" data-line-end="377"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="377" data-line-end="378">
+<div class="task-step-checkbox" data-foo="634" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="377" data-line-end="378"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="378" data-line-end="379">
+<div class="task-step-checkbox" data-foo="639" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="378" data-line-end="379">
+ Verify that the application displays the busy indicator while waiting 
+for the list of students to load, and then close the application window.</p>
+</li>
+<li class="task-list-item" data-line-start="379" data-line-end="382">
+<div class="task-step-checkbox" data-foo="644" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="379" data-line-end="380"> On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="383" data-line-end="384"><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades</strong> application to display a progress indicator while the application is retrieving data.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="387" data-line-end="388"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div></body></html>

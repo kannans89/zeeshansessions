@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\bin\Debug\net6.0\SimpleDelegateApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\bin\Debug\net6.0\SimpleDelegateApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\bin\Debug\net6.0\SimpleDelegateApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\bin\Debug\net6.0\SimpleDelegateApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\bin\Debug\net6.0\SimpleDelegateApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\refint\SimpleDelegateApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\SimpleDelegateApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SimpleDelegateApp\SimpleDelegateApp\obj\Debug\net6.0\ref\SimpleDelegateApp.dll

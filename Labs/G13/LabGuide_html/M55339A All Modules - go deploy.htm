@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M55339A | All Modules - go  deploy</title>
+
+        <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/godeployMain.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/lms.min.css">
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/all.min.css">
+
+    
+    <link rel="stylesheet" href="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.min.css">
+
+    <style type="text/css">
+        #skipToMainContentLink {
+            position: fixed;
+            left: -10000px;
+            top: 0;
+            border: 1px solid #000;
+            background-color: #ccc;
+            text-align: center;
+            align-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        #skipToMainContentLink:focus {
+            display: block;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="skipToMainContentLink" href="#mainContentAnchor" tabindex="0">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar" role="banner">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-nav-menu" aria-controls="header-nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse header-nav ml-auto" id="header-nav-menu">
+    <div class="d-flex justify-content-end w-100">
+<form action="/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eq5dKycSwpCmxe4r506WtQEmiKj0buo5jeJS2YbjyQuqP5Oc_94f1gndAa43h5dHGloZXsKGjjEhB9_rCNSC-dqOu1g6ynn2dAWlWnmfasVXw7mMx9Sh0kpdX2Xrwbs4Y2SnKmtRteL5zHI7in3NdOx8t7knSdElXHf04IcgKEg93faOhcH-mdRk9x_M63W4g"></form>        <ul class="navbar-nav ml-auto" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" aria-label="Home" data-content="Home" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-home"></i>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Instructor" aria-label="Instructor Home" data-content="Instructor Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-chalkboard-teacher"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link popover-help" style="font-size: 1.4em;" href="https://lms.godeploy.it/Courses/DelegateHome" aria-label="Student Home" data-content="Student Home" data-placement="bottom" data-original-title="" title="">
+                        <i class="fad fa-user-graduate"></i>
+                    </a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <button class="nav-link bg-transparent border-0 popover-help" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="My Profile Options" data-content="My Profile Options" data-placement="bottom" data-original-title="" title="">
+                    <i class="fad fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">niket.bovlekar@outlook.com</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="http://help.godeploy.com/" target="_blank" class="nav-link popover-help" style="font-size: 1.4em;" data-content="Get Help" data-placement="bottom" data-original-title="" title=""><i class="fad fa-question-circle" aria-label="Get Help"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+
+    <a id="mainContentAnchor"></a>
+    
+<div style="max-height: calc(100vh - 46px);min-height: calc(100vh - 46px);" class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-light bg-light flex-grow-0">
+        <div class="collapse navbar-collapse">
+            <div style="max-width:200px;min-width:200px;">
+
+<div class="btn-group btn-group-sm w-100 popover-help" id="labGuidePageSelector" data-toggle="popover" data-content="Select Lab Guide page" style="" data-original-title="" title="">
+    <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block text-left" data-boundary="window" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Module 13: Encryption and Decryption</button>
+    <div class="dropdown-menu dropdown-menu-left" role="menu" tabindex="-1">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=39e12d85-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="39e12d85-47a9-ed11-9561-00155d800002" aria-checked="false">Module 1: C# Syntax</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f0f17f9f-47a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f0f17f9f-47a9-ed11-9561-00155d800002" aria-checked="false">Module 2: C# Language Concepts</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=c67d183e-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="c67d183e-48a9-ed11-9561-00155d800002" aria-checked="false">Module 3: C# Structures, Collections and Events</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=05603a44-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="05603a44-48a9-ed11-9561-00155d800002" aria-checked="false">Module 4: C# Classes</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=f9a17851-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="f9a17851-48a9-ed11-9561-00155d800002" aria-checked="false">Module 5: C# Inheritance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=10c6f457-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="10c6f457-48a9-ed11-9561-00155d800002" aria-checked="false">Module 6: Input and Output</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=b570405f-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="b570405f-48a9-ed11-9561-00155d800002" aria-checked="false">Module 7: Database Access</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fde83a65-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fde83a65-48a9-ed11-9561-00155d800002" aria-checked="false">Module 8: Using the Network</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=73e22e6c-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="73e22e6c-48a9-ed11-9561-00155d800002" aria-checked="false">Module 9: Graphical User Interfaces</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=1c628678-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="1c628678-48a9-ed11-9561-00155d800002" aria-checked="false">Module 10: Application Performance</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=a21cd885-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="a21cd885-48a9-ed11-9561-00155d800002" aria-checked="false">Module 11: C# Interop</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=fbd61f8d-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link" data-page-id="fbd61f8d-48a9-ed11-9561-00155d800002" aria-checked="false">Module 12: Designing for Reuse</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/5fdbb157-0301-ee11-9561-00155d800002?pageId=3edfb493-48a9-ed11-9561-00155d800002" role="menuitemradio" class="dropdown-item lab-guide-page-link active" data-page-id="3edfb493-48a9-ed11-9561-00155d800002" aria-checked="true">Module 13: Encryption and Decryption</a>
+    </div>
+</div>
+            </div>
+            <div class="btn-group btn-group-sm ml-2" id="labGuideScreenshotBtn" data-toggle="popover" data-content="Select Lab Guide page">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle popover-help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-content="Lab guide screenshot visibility options" data-original-title="" title="">
+                    Screenshots
+                </button>
+                <div class="dropdown-menu shadow" role="menu" tabindex="-1">
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="hide">Hide Screenshots</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option" role="menuitemradio" aria-checked="false" data-show="thumb">Show Screenshot Thumbnails</a>
+                    <a href="#" class="dropdown-item lab-screenshot-option active" role="menuitemradio" aria-checked="true" data-show="full">Show Full Size Screenshots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid lab-markdown reduced-headers pt-3 flex-grow-1" style="overflow-y: auto;overflow-x: hidden;" id="lab-guide-area" data-mei-id="5fdbb157-0301-ee11-9561-00155d800002" role="main"><h1>Module 13: Encryption and Decryption</h1>
+<!-- markdownlint-disable DOCSMD004 -->
+<div class="alert alert-danger" role="alert">
+<p class="has-line-data" data-line-start="3" data-line-end="4"><strong>Important Information about running this class.</strong></p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p class="has-line-data" data-line-start="7" data-line-end="8">FAILING 
+TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY 
+WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p>
+</div>
+<h2>Lab: Protecting the Grades Report Data</h2>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="13" data-line-end="14"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="15" data-line-end="16">You 
+have been asked to update the Grades application to ensure that reports 
+are secure when they are stored on a user's computer. You decide to use 
+asymmetric encryption to protect the report as it is generated, before 
+it is written to disk. Administrative staff will need to merge reports 
+for each class into one document, so you decide to develop a separate 
+application that generates a combined report and prints it.</p>
+</div>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="19" data-line-end="20"><strong>Objectives</strong></p>
+<p class="has-line-data" data-line-start="21" data-line-end="22">After completing this lab, you'll be able to:</p>
+<ul>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Encrypt data by using asymmetric encryption.</li>
+<li class="has-line-data" data-line-start="24" data-line-end="26">Decrypt data.</li>
+</ul>
+<p class="has-line-data" data-line-start="26" data-line-end="27">Estimated Time: <strong>60 minutes</strong></p>
+</div>
+<h3>Exercise 1: Encrypting the Grades Report</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="32" data-line-end="34">Scenario
+In
+ this exercise, you'll update the reporting functionality to encrypt the
+ report as it is generated, but before it is saved to disk.</p>
+<ul>
+<li class="has-line-data" data-line-start="35" data-line-end="37">
+<p class="has-line-data" data-line-start="35" data-line-end="36">First, you'll create an asymmetric certificate by using a the New-SelfSignedCertificate PowerShell cmdlet.</p>
+</li>
+<li class="has-line-data" data-line-start="37" data-line-end="39">
+<p class="has-line-data" data-line-start="37" data-line-end="38">You'll create a self-signed certificate named <strong>Grades</strong> using the SHA-1 hash algorithm and store it in the CurrentUser certificate store.</p>
+</li>
+<li class="has-line-data" data-line-start="39" data-line-end="41">
+<p class="has-line-data" data-line-start="39" data-line-end="40">You'll then write code in the <strong>Grades</strong>
+ application to retrieve the certificate by looping through the 
+certificates in the LocalMachine store and checking the name of the 
+certificate against the name that is stored in the <strong>App.Config</strong> file.</p>
+</li>
+<li class="has-line-data" data-line-start="41" data-line-end="43">
+<p class="has-line-data" data-line-start="41" data-line-end="42">Next, you'll use the classes that are provided in the <strong>System.Security.Cryptography</strong> and <strong>System.Security.Cryptography.X509Certificates</strong> namespaces to write the <strong>EncryptWithX509</strong> method in the Grades.Utilities.WordWrapper class.</p>
+</li>
+<li class="has-line-data" data-line-start="43" data-line-end="45">
+<p class="has-line-data" data-line-start="43" data-line-end="44">You'll get the public key from the certificate that you created and use it to create an instance of the <strong>RSAPKCS1KeyExchangeFormatter</strong> class.</p>
+</li>
+<li class="has-line-data" data-line-start="45" data-line-end="47">
+<p class="has-line-data" data-line-start="45" data-line-end="46">You'll 
+use this to encrypt the data for the report and then return the 
+encrypted buffered data to the calling method as a byte array. You'll 
+then write code in the <strong>EncryptAndSaveToDisk</strong> method to write the returned data to the file that the user specifies.</p>
+</li>
+<li class="has-line-data" data-line-start="47" data-line-end="48">
+<p class="has-line-data" data-line-start="47" data-line-end="48">Finally, you'll build and test the application and verify that the reports are now encrypted.</p>
+</li>
+</ul>
+</div>
+<h3>Task 1: Create an asymmetric certificate</h3>
+<ol class="task-list" data-group="1">
+<li class="task-list-item" data-line-start="52" data-line-end="54">
+<div class="task-step-checkbox" data-foo="98" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="52" data-line-end="53"> Open <strong>Visual Studio</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="54" data-line-end="55">
+<div class="task-step-checkbox" data-foo="103" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="54" data-line-end="55"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="55" data-line-end="60">
+<div class="task-step-checkbox" data-foo="108" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="55" data-line-end="56"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod13\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="57" data-line-end="58"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="60" data-line-end="62">
+<div class="task-step-checkbox" data-foo="118" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="60" data-line-end="61"> In <strong>Solution Explorer</strong>, right-click Solution <strong>'Grades'</strong>, and then click <strong>Properties</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="62" data-line-end="63">
+<div class="task-step-checkbox" data-foo="123" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="62" data-line-end="63"> On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="63" data-line-end="64">
+<div class="task-step-checkbox" data-foo="128" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="63" data-line-end="64"> In <strong>Solution Explorer</strong>, expand the <strong>Grades.Utilities</strong> node, and then double-click the <strong>CreateCertificate.cmd</strong> file.</p>
+</li>
+<li class="task-list-item" data-line-start="64" data-line-end="65">
+<div class="task-step-checkbox" data-foo="133" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="64" data-line-end="65"> Review the contents of this file.</p>
+</li>
+<li class="task-list-item" data-line-start="65" data-line-end="66">
+<div class="task-step-checkbox" data-foo="138" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="65" data-line-end="66"> Go to the Windows Start menu, and in the search bar, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="PowerShell"><code>PowerShell</code></a></strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="66" data-line-end="67">
+<div class="task-step-checkbox" data-foo="143" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="66" data-line-end="67"> Click on <strong>Run as administrator</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="67" data-line-end="68">
+<div class="task-step-checkbox" data-foo="148" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="67" data-line-end="68"> In the <strong>User Account Control</strong> dialog box and then click <strong>Yes</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="68" data-line-end="78">
+<div class="task-step-checkbox" data-foo="153" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="68" data-line-end="69"> In the <strong>Administrator: Windows PowerShell</strong> window, type the following command, followed by Enter, to create a self-signed certificate:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="New-SelfSignedCertificate -Subject &quot;CN=Grades&quot; -HashAlgorithm sha1 -KeyExportPolicy Exportable -CertStoreLocation &quot;Cert:\CurrentUser\My&quot; -KeySpec KeyExchange"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="71" data-line-end="73">New-SelfSignedCertificate -Subject <span class="hljs-string">"CN=Grades"</span> -HashAlgorithm sha1 -KeyExportPolicy Exportable -CertStoreLocation <span class="hljs-string">"Cert:\CurrentUser\My"</span> -KeySpec KeyExchange
+</code></pre>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="75" data-line-end="76">Note: if you have problems pasting the command, you can run it from the <strong>CreateCertificate.cmd</strong> file.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="78" data-line-end="85">
+<div class="task-step-checkbox" data-foo="164" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="78" data-line-end="79"> Verify that the command returns a success message, and then close the <strong>Command Prompt</strong> window.</p>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="81" data-line-end="82"><strong>Note:</strong> If you want to check the certificate, you can run <strong>mmc.exe</strong>, click <strong>Yes</strong> in the UAC dialog, then click on <strong>File-&gt;Add/Remove Snap-in</strong>, and then choose <strong>Certificates</strong>, and select <strong>My user account</strong>, and then <strong>Finish</strong>. Then drill down to <strong>Certificates (Current User)-&gt;Personal-&gt;Certificates</strong>. If necessary you can then delete any additional certificates with the subject "CN=Grades".</p>
+</div>
+</li>
+</ol>
+<h4>Task 2: Retrieve the Grade certificate</h4>
+<ol class="task-list" data-group="2">
+<li class="task-list-item" data-line-start="87" data-line-end="89">
+<div class="task-step-checkbox" data-foo="179" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="87" data-line-end="88"> In <strong>Visual Studio</strong>, on the <strong>View</strong> menu, click <strong>Task List</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="89" data-line-end="91">
+<div class="task-step-checkbox" data-foo="184" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="89" data-line-end="90"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Loop through the certificates in the X509 store to return the one matching _certificateSubjectName</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="91" data-line-end="99">
+<div class="task-step-checkbox" data-foo="189" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="91" data-line-end="92"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="foreach (var cert in store.Certificates)
+   if (cert.SubjectName.Name.Equals(this._certificateSubjectName, StringComparison.InvariantCultureIgnoreCase))
+   return cert;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="94" data-line-end="98"><span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> cert <span class="hljs-keyword">in</span> store.Certificates)
+   <span class="hljs-keyword">if</span> (cert.SubjectName.Name.Equals(<span class="hljs-keyword">this</span>._certificateSubjectName, StringComparison.InvariantCultureIgnoreCase))
+   <span class="hljs-keyword">return</span> cert;
+</code></pre>
+</li>
+</ol>
+<h3>Task 3: Encrypt the data</h3>
+<ol class="task-list" data-group="3">
+<li class="task-list-item" data-line-start="101" data-line-end="102">
+<div class="task-step-checkbox" data-foo="200" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="101" data-line-end="102"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Get the public key from the X509 certificate</strong>task.</p>
+</li>
+<li class="task-list-item" data-line-start="102" data-line-end="107">
+<div class="task-step-checkbox" data-foo="205" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="102" data-line-end="103"> In the code editor, delete the following line of code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="throw new NotImplementedException();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="105" data-line-end="107"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NotImplementedException();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="107" data-line-end="112">
+<div class="task-step-checkbox" data-foo="211" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="107" data-line-end="108"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var provider = this._certificate.GetRSAPublicKey();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="110" data-line-end="112"><span class="hljs-keyword">var</span> provider = <span class="hljs-keyword">this</span>._certificate.GetRSAPublicKey();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="112" data-line-end="114">
+<div class="task-step-checkbox" data-foo="217" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="112" data-line-end="113"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Create an instance of the Aes algorithm</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="114" data-line-end="120">
+<div class="task-step-checkbox" data-foo="222" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="114" data-line-end="115"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var algorithm = Aes.Create())
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="117" data-line-end="120"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> algorithm = Aes.Create())
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="120" data-line-end="121">
+<div class="task-step-checkbox" data-foo="228" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="120" data-line-end="121"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3c: Create an underlying stream for the unencrypted data</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="121" data-line-end="127">
+<div class="task-step-checkbox" data-foo="233" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="121" data-line-end="122"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var outStream = new MemoryStream())
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="124" data-line-end="127"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> outStream = <span class="hljs-keyword">new</span> MemoryStream())
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="127" data-line-end="129">
+<div class="task-step-checkbox" data-foo="239" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="127" data-line-end="128"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Create an AES encryptor based on the key and IV</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="129" data-line-end="138">
+<div class="task-step-checkbox" data-foo="244" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="129" data-line-end="130"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var encryptor = algorithm.CreateEncryptor())
+{
+   var keyFormatter = new RSAPKCS1KeyExchangeFormatter(provider);
+   var encryptedKey = keyFormatter.CreateKeyExchange(algorithm.Key,  algorithm.GetType());"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="132" data-line-end="137"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> encryptor = algorithm.CreateEncryptor())
+{
+   <span class="hljs-keyword">var</span> keyFormatter = <span class="hljs-keyword">new</span> RSAPKCS1KeyExchangeFormatter(provider);
+   <span class="hljs-keyword">var</span> encryptedKey = keyFormatter.CreateKeyExchange(algorithm.Key,  algorithm.GetType());
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="138" data-line-end="140">
+<div class="task-step-checkbox" data-foo="250" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="138" data-line-end="139"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3e: Create byte arrays to get the length of the encryption key and IV</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="140" data-line-end="147">
+<div class="task-step-checkbox" data-foo="255" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="140" data-line-end="141"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var keyLength = BitConverter.GetBytes(encryptedKey.Length);
+var ivLength = BitConverter.GetBytes(algorithm.IV.Length);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="143" data-line-end="146"><span class="hljs-keyword">var</span> keyLength = BitConverter.GetBytes(encryptedKey.Length);
+<span class="hljs-keyword">var</span> ivLength = BitConverter.GetBytes(algorithm.IV.Length);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="147" data-line-end="149">
+<div class="task-step-checkbox" data-foo="261" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="147" data-line-end="148"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3f: Write the following to the out stream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="149" data-line-end="157">
+<div class="task-step-checkbox" data-foo="266" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="149" data-line-end="150"> In the code editor, click in the blank line below the comment block, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="outStream.Write(keyLength, 0, keyLength.Length);
+outStream.Write(ivLength, 0, ivLength.Length);
+outStream.Write(encryptedKey, 0, encryptedKey.Length);
+outStream.Write(algorithm.IV, 0, algorithm.IV.Length);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="152" data-line-end="157">outStream.Write(keyLength, <span class="hljs-number">0</span>, keyLength.Length);
+outStream.Write(ivLength, <span class="hljs-number">0</span>, ivLength.Length);
+outStream.Write(encryptedKey, <span class="hljs-number">0</span>, encryptedKey.Length);
+outStream.Write(algorithm.IV, <span class="hljs-number">0</span>, algorithm.IV.Length);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="157" data-line-end="159">
+<div class="task-step-checkbox" data-foo="272" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="157" data-line-end="158"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3g: Create a CryptoStream that will write the encrypted data to the underlying buffer</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="159" data-line-end="165">
+<div class="task-step-checkbox" data-foo="277" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="159" data-line-end="160"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var encrypt = new CryptoStream(outStream, encryptor,     CryptoStreamMode.Write))
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="162" data-line-end="165"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> encrypt = <span class="hljs-keyword">new</span> CryptoStream(outStream, encryptor,     CryptoStreamMode.Write))
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="165" data-line-end="166">
+<div class="task-step-checkbox" data-foo="283" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="165" data-line-end="166"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3h: Write all the data to the stream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="166" data-line-end="172">
+<div class="task-step-checkbox" data-foo="288" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="166" data-line-end="167"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="encrypt.Write(bytesToEncrypt, 0, bytesToEncrypt.Length);
+encrypt.FlushFinalBlock();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="169" data-line-end="172">encrypt.Write(bytesToEncrypt, <span class="hljs-number">0</span>, bytesToEncrypt.Length);
+encrypt.FlushFinalBlock();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="172" data-line-end="173">
+<div class="task-step-checkbox" data-foo="294" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="172" data-line-end="173"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3i: Return the encrypted buffered data as a byte[].</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="173" data-line-end="184">
+<div class="task-step-checkbox" data-foo="299" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="173" data-line-end="174"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="         return outStream.ToArray();
+         }
+      }
+   }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="176" data-line-end="182">         <span class="hljs-keyword">return</span> outStream.ToArray();
+         }
+      }
+   }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 4: Write the encrypted data to disk</h3>
+<ol class="task-list" data-group="4">
+<li class="task-list-item" data-line-start="186" data-line-end="188">
+<div class="task-step-checkbox" data-foo="310" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="186" data-line-end="187"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4a: Write the encrypted bytes to disk</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="188" data-line-end="194">
+<div class="task-step-checkbox" data-foo="315" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="188" data-line-end="189"> In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="File.WriteAllBytes(filePath, encryptedBytes);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="191" data-line-end="193">File.WriteAllBytes(filePath, encryptedBytes);
+</code></pre>
+</li>
+</ol>
+<h3>Task 5: Build and test the application</h3>
+<ol class="task-list" data-group="5">
+<li class="task-list-item" data-line-start="196" data-line-end="198">
+<div class="task-step-checkbox" data-foo="326" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="196" data-line-end="197"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="198" data-line-end="200">
+<div class="task-step-checkbox" data-foo="331" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="198" data-line-end="199"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="200" data-line-end="202">
+<div class="task-step-checkbox" data-foo="336" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="200" data-line-end="201"> When the application loads, in the <strong>Username</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="vallee"><code>vallee</code></a></strong>, and in the <strong>Password</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="password99"><code>password99</code></a></strong>, and then click <strong>Log on</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="202" data-line-end="204">
+<div class="task-step-checkbox" data-foo="341" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="202" data-line-end="203"> In the <strong>Class 3C</strong> view, click <strong>Kevin Liu</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="204" data-line-end="206">
+<div class="task-step-checkbox" data-foo="346" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="204" data-line-end="205"> In the <strong>Report Card</strong> view, click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="206" data-line-end="207">
+<div class="task-step-checkbox" data-foo="351" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="206" data-line-end="207"> In the <strong>Save As</strong> dialog box, browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports</strong> folder, in the <strong>File name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="KevinLiu"><code>KevinLiu</code></a></strong>, and then click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="207" data-line-end="209">
+<div class="task-step-checkbox" data-foo="356" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="207" data-line-end="208"> Click <strong>Back</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="209" data-line-end="211">
+<div class="task-step-checkbox" data-foo="361" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="209" data-line-end="210"> In the <strong>Class 3C</strong> view, click <strong>George Li</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="211" data-line-end="212">
+<div class="task-step-checkbox" data-foo="366" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="211" data-line-end="212"> In the <strong>Report Card</strong> view, click <strong>save report</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="212" data-line-end="214">
+<div class="task-step-checkbox" data-foo="371" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="212" data-line-end="213"> In the <strong>Save As</strong> dialog box, browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports</strong> folder, in the <strong>File name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="GeorgeLi"><code>GeorgeLi</code></a></strong>, and then click <strong>Save</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="214" data-line-end="216">
+<div class="task-step-checkbox" data-foo="376" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="214" data-line-end="215"> Click <strong>Log off</strong>, and then close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="216" data-line-end="218">
+<div class="task-step-checkbox" data-foo="381" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="216" data-line-end="217"> On the <strong>File</strong> menu in <strong>Visual Studio</strong>, click <strong>Close Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="218" data-line-end="220">
+<div class="task-step-checkbox" data-foo="386" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="218" data-line-end="219"> Open <strong>File Explorer</strong>, and then browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="220" data-line-end="222">
+<div class="task-step-checkbox" data-foo="391" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="220" data-line-end="221"> In <strong>File Explorer</strong>, locate the file <strong>KevinLiu.encrypted</strong>, and then right-click it, choose <strong>Open with...</strong> and then choose <strong>Notepad</strong> (or any text editor, e.g. Visual Studio Code).</p>
+</li>
+<li class="task-list-item" data-line-start="222" data-line-end="224">
+<div class="task-step-checkbox" data-foo="396" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="222" data-line-end="223"> Review the file contents and verify that it appears to be encrypted, close <strong>Notepad</strong>, and then close <strong>File Explorer</strong>.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="225" data-line-end="226"><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades</strong> application to encrypt generated reports.</p>
+</div>
+<h3>Exercise 2: Decrypting the Grades Report</h3>
+<div class="alert alert-secondary" role="alert">
+<p class="has-line-data" data-line-start="231" data-line-end="232"><strong>Scenario</strong></p>
+<p class="has-line-data" data-line-start="233" data-line-end="234">In 
+this exercise, you'll create a separate utility to enable users to print
+ reports. Users will be able to select a folder that contains encrypted 
+reports, and the application will then generate one combined report and 
+send it to the default printer.</p>
+<ul>
+<li class="has-line-data" data-line-start="235" data-line-end="237">
+<p class="has-line-data" data-line-start="235" data-line-end="236">First,
+ you'll use the classes that are provided in the 
+System.Security.Cryptography and 
+System.Security.Cryptography.X509Certificates namespaces to write the 
+DecryptWithX509 method in the SchoolReports.WordWrapper class.</p>
+</li>
+<li class="has-line-data" data-line-start="237" data-line-end="238">
+<p class="has-line-data" data-line-start="237" data-line-end="238">You'll
+ get the private key from the certificate and use it to create an 
+instance of the RSACryptoServiceProvider class. You'll use this to 
+decrypt the data from the individual reports and then return the 
+decrypted data to the calling method as a byte array. Finally, you'll 
+build and test the application and verify that a printed version of the 
+composite report has been generated.</p>
+</li>
+</ul>
+</div>
+<h3>Task 1: Decrypt the data</h3>
+<ol class="task-list" data-group="6">
+<li class="task-list-item" data-line-start="242" data-line-end="244">
+<div class="task-step-checkbox" data-foo="434" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="242" data-line-end="243"> In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="244" data-line-end="249">
+<div class="task-step-checkbox" data-foo="439" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="244" data-line-end="245"> In the <strong>Open Project</strong> dialog box, browse to <strong>E:\Allfiles\Mod13\Labfiles\Starter\Exercise 2</strong>, click <strong>School-Reports.sln</strong>, and then click <strong>Open</strong>.</p>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="246" data-line-end="247"><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="249" data-line-end="250">
+<div class="task-step-checkbox" data-foo="449" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="249" data-line-end="250"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1a: Get the private key from the X509 certificate</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="250" data-line-end="255">
+<div class="task-step-checkbox" data-foo="454" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="250" data-line-end="251"> In the code editor, delete the following line of code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="throw new NotImplementedException();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="253" data-line-end="255"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NotImplementedException();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="255" data-line-end="260">
+<div class="task-step-checkbox" data-foo="460" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="255" data-line-end="256"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var provider = this._certificate.GetRSAPrivateKey();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="258" data-line-end="260"><span class="hljs-keyword">var</span> provider = <span class="hljs-keyword">this</span>._certificate.GetRSAPrivateKey();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="260" data-line-end="261">
+<div class="task-step-checkbox" data-foo="466" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="260" data-line-end="261"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1b: Create an instance of the AES algorithm which the data is encrypted with</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="261" data-line-end="267">
+<div class="task-step-checkbox" data-foo="471" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="261" data-line-end="262"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var algorithm = Aes.Create())
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="264" data-line-end="267"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> algorithm = Aes.Create())
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="267" data-line-end="268">
+<div class="task-step-checkbox" data-foo="477" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="267" data-line-end="268"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1c: Create a stream to process the bytes</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="268" data-line-end="274">
+<div class="task-step-checkbox" data-foo="482" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="268" data-line-end="269"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var inStream = new MemoryStream(bytesToDecrypt))
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="271" data-line-end="274"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> inStream = <span class="hljs-keyword">new</span> MemoryStream(bytesToDecrypt))
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="274" data-line-end="275">
+<div class="task-step-checkbox" data-foo="488" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="274" data-line-end="275"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1d: Create byte arrays to get the length of the encryption key and IV</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="275" data-line-end="281">
+<div class="task-step-checkbox" data-foo="493" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="275" data-line-end="276"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var keyLength = new byte[4];
+var ivLength = new byte[4];"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="278" data-line-end="281"><span class="hljs-keyword">var</span> keyLength = <span class="hljs-keyword">new</span> <span class="hljs-built_in">byte</span>[<span class="hljs-number">4</span>];
+<span class="hljs-keyword">var</span> ivLength = <span class="hljs-keyword">new</span> <span class="hljs-built_in">byte</span>[<span class="hljs-number">4</span>];
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="281" data-line-end="283">
+<div class="task-step-checkbox" data-foo="499" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="281" data-line-end="282"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1e: Read the key and IV lengths starting from index 0 in the in stream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="283" data-line-end="290">
+<div class="task-step-checkbox" data-foo="504" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="283" data-line-end="284"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="inStream.Seek(0, SeekOrigin.Begin);
+inStream.Read(keyLength, 0, keyLength.Length);
+inStream.Read(ivLength, 0, ivLength.Length);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="286" data-line-end="290">inStream.Seek(<span class="hljs-number">0</span>, SeekOrigin.Begin);
+inStream.Read(keyLength, <span class="hljs-number">0</span>, keyLength.Length);
+inStream.Read(ivLength, <span class="hljs-number">0</span>, ivLength.Length);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="290" data-line-end="292">
+<div class="task-step-checkbox" data-foo="510" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="290" data-line-end="291"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1f: Convert the lengths to ints for later use</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="292" data-line-end="299">
+<div class="task-step-checkbox" data-foo="515" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="292" data-line-end="293"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var convertedKeyLength = BitConverter.ToInt32(keyLength, 0);
+var convertedIvLength = BitConverter.ToInt32(ivLength, 0);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="295" data-line-end="298"><span class="hljs-keyword">var</span> convertedKeyLength = BitConverter.ToInt32(keyLength, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">var</span> convertedIvLength = BitConverter.ToInt32(ivLength, <span class="hljs-number">0</span>);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="299" data-line-end="301">
+<div class="task-step-checkbox" data-foo="521" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="299" data-line-end="300"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1g: Determine the starting position and length of data</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="301" data-line-end="307">
+<div class="task-step-checkbox" data-foo="526" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="301" data-line-end="302"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var dataStartPos = convertedKeyLength + convertedIvLength + keyLength.Length +  ivLength.Length;
+var dataLength = (int)inStream.Length - dataStartPos;"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="304" data-line-end="307"><span class="hljs-keyword">var</span> dataStartPos = convertedKeyLength + convertedIvLength + keyLength.Length +  ivLength.Length;
+<span class="hljs-keyword">var</span> dataLength = (<span class="hljs-built_in">int</span>)inStream.Length - dataStartPos;
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="307" data-line-end="309">
+<div class="task-step-checkbox" data-foo="532" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="307" data-line-end="308"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1h: Create the byte arrays for the encrypted key, the IV, and the encrypted data.</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="309" data-line-end="316">
+<div class="task-step-checkbox" data-foo="537" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="309" data-line-end="310"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var encryptionKey = new byte[convertedKeyLength];
+var iv = new byte[convertedIvLength];
+var encryptedData = new byte[dataLength];"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="312" data-line-end="316"><span class="hljs-keyword">var</span> encryptionKey = <span class="hljs-keyword">new</span> <span class="hljs-built_in">byte</span>[convertedKeyLength];
+<span class="hljs-keyword">var</span> iv = <span class="hljs-keyword">new</span> <span class="hljs-built_in">byte</span>[convertedIvLength];
+<span class="hljs-keyword">var</span> encryptedData = <span class="hljs-keyword">new</span> <span class="hljs-built_in">byte</span>[dataLength];
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="316" data-line-end="318">
+<div class="task-step-checkbox" data-foo="543" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="316" data-line-end="317"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1i: Read the key, IV, and encrypted data from the in stream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="318" data-line-end="325">
+<div class="task-step-checkbox" data-foo="548" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="318" data-line-end="319"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="inStream.Read(encryptionKey, 0, convertedKeyLength);
+inStream.Read(iv, 0, convertedIvLength);
+inStream.Read(encryptedData, 0, dataLength);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="321" data-line-end="325">inStream.Read(encryptionKey, <span class="hljs-number">0</span>, convertedKeyLength);
+inStream.Read(iv, <span class="hljs-number">0</span>, convertedIvLength);
+inStream.Read(encryptedData, <span class="hljs-number">0</span>, dataLength);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="325" data-line-end="327">
+<div class="task-step-checkbox" data-foo="554" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="325" data-line-end="326"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1j: Decrypt the encrypted Aes encryption key</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="327" data-line-end="333">
+<div class="task-step-checkbox" data-foo="559" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="327" data-line-end="328"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="var decryptedKey = provider.Decrypt(encryptionKey, RSAEncryptionPadding.Pkcs1);"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="330" data-line-end="332"><span class="hljs-keyword">var</span> decryptedKey = provider.Decrypt(encryptionKey, RSAEncryptionPadding.Pkcs1);
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="333" data-line-end="335">
+<div class="task-step-checkbox" data-foo="565" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="333" data-line-end="334"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1k: Create an underlying stream for the decrypted data</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="335" data-line-end="341">
+<div class="task-step-checkbox" data-foo="570" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="335" data-line-end="336"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var outStream = new MemoryStream())
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="338" data-line-end="341"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> outStream = <span class="hljs-keyword">new</span> MemoryStream())
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="341" data-line-end="343">
+<div class="task-step-checkbox" data-foo="576" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="341" data-line-end="342"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1l: Create an AES decryptor based on the key and IV</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="343" data-line-end="349">
+<div class="task-step-checkbox" data-foo="581" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="343" data-line-end="344"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var decryptor = algorithm.CreateDecryptor(decryptedKey, iv))
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="346" data-line-end="349"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> decryptor = algorithm.CreateDecryptor(decryptedKey, iv))
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="349" data-line-end="351">
+<div class="task-step-checkbox" data-foo="587" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="349" data-line-end="350"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1m: Create a CryptoStream that will write the decrypted data to the underlying buffer</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="351" data-line-end="357">
+<div class="task-step-checkbox" data-foo="592" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="351" data-line-end="352"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="using (var decrypt = new CryptoStream(outStream, decryptor,     CryptoStreamMode.Write))
+{"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="354" data-line-end="357"><span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> decrypt = <span class="hljs-keyword">new</span> CryptoStream(outStream, decryptor,     CryptoStreamMode.Write))
+{
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="357" data-line-end="359">
+<div class="task-step-checkbox" data-foo="598" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="357" data-line-end="358"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1n: Write all the data to the stream</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="359" data-line-end="366">
+<div class="task-step-checkbox" data-foo="603" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="359" data-line-end="360"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="decrypt.Write(encryptedData, 0, dataLength);
+decrypt.FlushFinalBlock();"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="362" data-line-end="365">decrypt.Write(encryptedData, <span class="hljs-number">0</span>, dataLength);
+decrypt.FlushFinalBlock();
+</code></pre>
+</li>
+<li class="task-list-item" data-line-start="366" data-line-end="368">
+<div class="task-step-checkbox" data-foo="609" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="366" data-line-end="367"> In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1o: Return the decrypted buffered data as a byte[].</strong> task.</p>
+</li>
+<li class="task-list-item" data-line-start="368" data-line-end="380">
+<div class="task-step-checkbox" data-foo="614" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="368" data-line-end="369"> In the blank line below the comment, type the following code:</p>
+<pre class="code-badge-pre"><div class="code-badge align-items-top">
+        <div class="code-badge-language">csharp</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon" data-code="            return outStream.ToArray();
+            }
+         }
+      }
+   }
+}"></i>
+        </div>
+     </div><code class="has-line-data language-csharp hljs" data-line-start="371" data-line-end="378">            <span class="hljs-keyword">return</span> outStream.ToArray();
+            }
+         }
+      }
+   }
+}
+</code></pre>
+</li>
+</ol>
+<h3>Task 2: Build and test the solution</h3>
+<ol class="task-list" data-group="7">
+<li class="task-list-item" data-line-start="382" data-line-end="384">
+<div class="task-step-checkbox" data-foo="625" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="382" data-line-end="383"> On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="384" data-line-end="385">
+<div class="task-step-checkbox" data-foo="630" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="384" data-line-end="385"> On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="385" data-line-end="386">
+<div class="task-step-checkbox" data-foo="635" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="385" data-line-end="386"> When the application loads, click <strong>Browse</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="386" data-line-end="387">
+<div class="task-step-checkbox" data-foo="640" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="386" data-line-end="387"> In the <strong>Select Folder</strong> dialog box, browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports</strong> folder, and then click <strong>Select Folder</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="387" data-line-end="388">
+<div class="task-step-checkbox" data-foo="645" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="387" data-line-end="388"> Click <strong>Print</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="388" data-line-end="398">
+<div class="task-step-checkbox" data-foo="650" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="388" data-line-end="389"> In the <strong>Save Print Output As</strong> dialog box, browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports\ClassReport</strong> folder, in the <strong>File name</strong> text box, type <strong><a href="urn:gd:lg:a:send-vm-keys" class="paste-action-link action-link" title="Paste text into VM" data-str="3CReport"><code>3CReport</code></a></strong>, and then click <strong>Save</strong>.</p>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="391" data-line-end="392">Note:
+ You should see the decrypted .xml files appear briefly in the folder, 
+before they are automatically deleted after the report file is 
+generated.</p>
+</div>
+<div class="alert alert-warning" role="alert">
+<p class="has-line-data" data-line-start="395" data-line-end="396">If 
+you carry this out on your own machine, and you have a default printer 
+configured, the report will be sent directly to the printer, and you 
+will not see the <strong>Save Print Output As</strong> dialog box.</p>
+</div>
+</li>
+<li class="task-list-item" data-line-start="398" data-line-end="400">
+<div class="task-step-checkbox" data-foo="665" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="398" data-line-end="399"> In the <strong>The School of Fine Arts</strong> dialog box, click <strong>OK</strong>, and then close the application.</p>
+</li>
+<li class="task-list-item" data-line-start="400" data-line-end="402">
+<div class="task-step-checkbox" data-foo="670" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="400" data-line-end="401"> Open <strong>File Explorer</strong>, and browse to the <strong>E:\Allfiles\Mod13\Labfiles\Reports\ClassReport</strong> folder.</p>
+</li>
+<li class="task-list-item" data-line-start="402" data-line-end="404">
+<div class="task-step-checkbox" data-foo="675" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="402" data-line-end="403"> Double-click <strong>3CReport</strong>.</p>
+</li>
+<li class="task-list-item" data-line-start="404" data-line-end="407">
+<div class="task-step-checkbox" data-foo="680" tabindex="0" role="checkbox" aria-checked="false"></div><p class="has-line-data" data-line-start="404" data-line-end="405"> Review the unencrypted report, verify that it contains the aggregated class report, and then close the file.</p>
+</li>
+</ol>
+<div class="alert alert-success" role="alert">
+<p class="has-line-data" data-line-start="408" data-line-end="409"><strong>Result:</strong> After completing this exercise, you should have a composite unencrypted report that was generated from the encrypted reports.</p>
+</div>
+<div class="alert alert-info" role="alert">
+<p class="has-line-data" data-line-start="412" data-line-end="413"><strong>Congratulations!</strong>
+  You have now completed this lab.  You should ensure you save your lab 
+environment.  Failure to do so will result in the loss of all work.</p>
+</div>
+</main>
+    <div class="d-flex flex-grow-0 container-fluid lab-guide-paging p-0 justify-content-between d-none p-1 border-top">
+        <button class="btn btn-secondary rounded-0 d-none prev-page">&lt; Previous</button>
+        <button class="btn btn-primary rounded-0 d-none next-page ml-auto">Next &gt;</button>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content" style="min-height: calc(100vh - 60px);">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: contain;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/jquery.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/bootstrap.bundle.min.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/popover-help.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/show-hide-password.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/mvc-form-validation.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/accessible-pagination.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/modal-trap.js"></script>
+    <script src="M55339A%20All%20Modules%20-%20go%20deploy_files/v3"></script>
+    
+    <script type="text/javascript" src="M55339A%20All%20Modules%20-%20go%20deploy_files/labGuidePopout.js"></script>
+
+
+
+<iframe name="__privateStripeMetricsController8710" allowtransparency="true" scrolling="no" role="presentation" src="M55339A%20All%20Modules%20-%20go%20deploy_files/m-outer-93afeeb17bc37e711759584dbfc50d47.htm" aria-hidden="true" tabindex="-1" style="border: medium none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" frameborder="0"></iframe><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge align-items-top">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div></body></html>

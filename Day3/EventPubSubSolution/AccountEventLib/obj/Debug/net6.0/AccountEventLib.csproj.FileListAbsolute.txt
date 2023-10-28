@@ -1,0 +1,11 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\bin\Debug\net6.0\AccountEventLib.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\bin\Debug\net6.0\AccountEventLib.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\bin\Debug\net6.0\AccountEventLib.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\refint\AccountEventLib.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\AccountEventLib.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\EventPubSubSolution\AccountEventLib\obj\Debug\net6.0\ref\AccountEventLib.dll

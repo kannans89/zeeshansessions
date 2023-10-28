@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\bin\Debug\net6.0\ExtensionMethodApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\bin\Debug\net6.0\ExtensionMethodApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\bin\Debug\net6.0\ExtensionMethodApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\bin\Debug\net6.0\ExtensionMethodApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\bin\Debug\net6.0\ExtensionMethodApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\refint\ExtensionMethodApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ExtensionMethodApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\ExtensionMethodApp\ExtensionMethodApp\obj\Debug\net6.0\ref\ExtensionMethodApp.dll

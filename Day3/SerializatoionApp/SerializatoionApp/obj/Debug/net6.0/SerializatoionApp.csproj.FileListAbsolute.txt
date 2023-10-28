@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\bin\Debug\net6.0\SerializatoionApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\bin\Debug\net6.0\SerializatoionApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\bin\Debug\net6.0\SerializatoionApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\bin\Debug\net6.0\SerializatoionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\bin\Debug\net6.0\SerializatoionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\refint\SerializatoionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\SerializatoionApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day3\SerializatoionApp\SerializatoionApp\obj\Debug\net6.0\ref\SerializatoionApp.dll
