@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ar7Mxw/cMVfWPloZgqaNGlT3nwYprnntWMx1HXqcBIS5Ft1mh0X5mdCASmXv19o1aopR5ybKEUg+MD2AFKqegg==",
+  "success": true,
+  "projectFilePath": "C:\\LiveSessionKoenig\\SessionWithZeeshan\\zeeshansessions\\Day4\\WordDocInteroperability\\WordDocInteroperability\\WordDocInteroperability.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kanna\\.nuget\\packages\\microsoft.office.interop.word\\15.0.4797.1004\\microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512"
+  ],
+  "logs": []
+}

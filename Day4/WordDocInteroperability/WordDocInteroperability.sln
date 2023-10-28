@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordDocInteroperability", "WordDocInteroperability\WordDocInteroperability.csproj", "{E9B8D911-7993-4368-AF26-C097A25E8679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9B8D911-7993-4368-AF26-C097A25E8679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B8D911-7993-4368-AF26-C097A25E8679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B8D911-7993-4368-AF26-C097A25E8679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B8D911-7993-4368-AF26-C097A25E8679}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AB48DBB-F8E1-428E-B657-2BCB4004BA2C}
+	EndGlobalSection
+EndGlobal

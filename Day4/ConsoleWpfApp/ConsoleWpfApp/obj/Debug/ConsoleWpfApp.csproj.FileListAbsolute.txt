@@ -1,0 +1,9 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\bin\Debug\ConsoleWpfApp.exe.config
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\bin\Debug\ConsoleWpfApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\bin\Debug\ConsoleWpfApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\bin\Debug\PresentationFramework.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\obj\Debug\ConsoleWpfApp.csproj.AssemblyReference.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\obj\Debug\ConsoleWpfApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\obj\Debug\ConsoleWpfApp.csproj.CopyComplete
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\obj\Debug\ConsoleWpfApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day4\ConsoleWpfApp\ConsoleWpfApp\obj\Debug\ConsoleWpfApp.pdb
