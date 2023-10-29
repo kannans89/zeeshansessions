@@ -1,0 +1,14 @@
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\bin\Debug\net6.0\SymmerticEncryptionApp.exe
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\bin\Debug\net6.0\SymmerticEncryptionApp.deps.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\bin\Debug\net6.0\SymmerticEncryptionApp.runtimeconfig.json
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\bin\Debug\net6.0\SymmerticEncryptionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\bin\Debug\net6.0\SymmerticEncryptionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.AssemblyInfoInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.AssemblyInfo.cs
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.csproj.CoreCompileInputs.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\refint\SymmerticEncryptionApp.dll
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.pdb
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\SymmerticEncryptionApp.genruntimeconfig.cache
+C:\LiveSessionKoenig\SessionWithZeeshan\zeeshansessions\Day5\SymmerticEncryptionApp\SymmerticEncryptionApp\obj\Debug\net6.0\ref\SymmerticEncryptionApp.dll

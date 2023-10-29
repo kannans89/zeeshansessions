@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "O3cDzEyLkLBBBhO8xWaJK4tiM6+xvtRs3b1kgQU3dZM=",
+  "Source": "SimpleWebAPiApp",
+  "BasePath": "_content/SimpleWebAPiApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

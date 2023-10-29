@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfViewModelApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfViewModelApp"
+        mc:Ignorable="d"
+        Title="MainWindow" FontSize="30" Height="450" Width="800">
+
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center">Simple Customer View Model</TextBlock>
+        <StackPanel Orientation="Horizontal">
+        <TextBlock>Enter first name:</TextBlock>
+        <TextBox Name="txtFirstName" 
+                 Text="{Binding FirstName,Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Enter last name:</TextBlock>
+            <TextBox Name="txtLastName" 
+                     Text="{Binding LastName,Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <Button Name="btnCheckState" Click="btnCheckState_Click">CheckState</Button>
+            <Button Name="updateFirstName" Click="updateFirstName_Click" >UPdate</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

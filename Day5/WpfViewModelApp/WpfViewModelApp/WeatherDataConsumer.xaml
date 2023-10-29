@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfViewModelApp.WeatherDataConsumer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfViewModelApp"
+        mc:Ignorable="d"
+        Title="WeatherDataConsumer" Height="450" Width="800">
+    <Grid>
+        <Button Content="CallApi" 
+                Name="CallApi"
+                HorizontalAlignment="Left" 
+                Margin="259,38,0,0" VerticalAlignment="Top" Height="90" Width="207" Click="CallApi_Click"/>
+        <Label Content="Label" Name="lblREsult" HorizontalAlignment="Left" Margin="148,191,0,0" VerticalAlignment="Top" Height="214" Width="542"/>
+
+    </Grid>
+</Window>

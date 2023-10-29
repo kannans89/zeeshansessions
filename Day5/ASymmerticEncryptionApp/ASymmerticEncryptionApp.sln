@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASymmerticEncryptionApp", "ASymmerticEncryptionApp\ASymmerticEncryptionApp.csproj", "{57B37ABD-B029-41C5-965B-3C775A8EC17A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDataREader", "EncryptedDataREader\EncryptedDataREader.csproj", "{9A9348F8-12FA-420B-B7B2-92C33A59BBE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57B37ABD-B029-41C5-965B-3C775A8EC17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B37ABD-B029-41C5-965B-3C775A8EC17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B37ABD-B029-41C5-965B-3C775A8EC17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B37ABD-B029-41C5-965B-3C775A8EC17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9348F8-12FA-420B-B7B2-92C33A59BBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9348F8-12FA-420B-B7B2-92C33A59BBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9348F8-12FA-420B-B7B2-92C33A59BBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9348F8-12FA-420B-B7B2-92C33A59BBE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38DC5B7E-36D1-4935-889E-1734253190B4}
+	EndGlobalSection
+EndGlobal
